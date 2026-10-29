@@ -1,0 +1,16 @@
+/* Intro originale: animazioni di trasformazione/opacità, nessun video o libreria. */
+.intro-pending .brand-intro { display:grid; place-items:center; position:fixed; inset:0; z-index:100; pointer-events:none; overflow:hidden; background:radial-gradient(ellipse at 40% 48%,rgba(168,209,240,.075),transparent 60%),#080F20; animation:intro-exit .35s ease 1.55s both; }
+.intro-scene { position:relative; width:min(360px,85vw); margin-top:-50px; text-align:center; }
+.intro-lamp { display:block; width:100%; overflow:visible; }
+.intro-lamp-head { transform-origin:244px 88px; animation:lamp-search 1.5s cubic-bezier(.4,0,.2,1) both; }
+.intro-beam { animation:beam-find 1.5s ease both; }
+.intro-pool { animation:pool-find 1.5s ease both; }
+.intro-wordmark { display:flex; align-items:baseline; justify-content:center; margin-top:-14px; font-family:'Jost',sans-serif; font-size:74px; line-height:1; font-weight:800; letter-spacing:-.09em; color:#A8D1F0; animation:signature-find 1.5s ease both; }
+.intro-wordmark span:last-child { color:#F09A62; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:90px; font-weight:700; padding-right:.12em; }
+.intro-signature { margin-top:12px; font-family:'Jost',sans-serif; color:#C1CDDC; font-size:12px; letter-spacing:.18em; text-transform:uppercase; animation:signature-find 1.5s ease both; }
+@keyframes lamp-search { 0% { transform:rotate(-28deg); } 30% { transform:rotate(22deg); } 64% { transform:rotate(-12deg); } 85%,100% { transform:rotate(0); } }
+@keyframes beam-find { 0% { opacity:0; } 18% { opacity:.7; } 38% { opacity:.4; } 72%,100% { opacity:1; } }
+@keyframes pool-find { 0%,40% { opacity:0; transform:translateX(-35px); } 75%,100% { opacity:1; transform:none; } }
+@keyframes signature-find { 0%,32% { opacity:0; transform:translateY(5px); } 76%,100% { opacity:1; transform:none; } }
+@keyframes intro-exit { from { opacity:1; visibility:visible; } to { opacity:0; visibility:hidden; } }
+@media (prefers-reduced-motion:reduce) { .intro-pending .brand-intro { display:none!important; animation:none; } .brand-intro * { animation:none!important; } }

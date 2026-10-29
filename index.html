@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Omar Vásquez</title>
+<meta name="description" content="Omar Vásquez — eventi, produzione audiovisiva, marketing e gestione. Santa Marinella (RM).">
+<link rel="canonical" href="https://omar-vasquez.vercel.app/">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="favicon.svg" type="image/svg+xml" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Omar Vásquez — Portfolio &amp; CV">
+<meta property="og:url" content="https://omar-vasquez.vercel.app/">
+<meta property="og:title" content="Omar Vásquez — Portfolio &amp; CV">
+<meta property="og:description" content="Faccio funzionare le cose: squadre, conti, clienti.">
+<meta property="og:locale" content="it_IT">
+<meta property="og:image" content="https://omar-vasquez.vercel.app/assets/omar-vasquez-social-v1.png">
+<meta property="og:image:secure_url" content="https://omar-vasquez.vercel.app/assets/omar-vasquez-social-v1.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Omar Vásquez. Portfolio e CV. Eventi, produzione e marketing, in blu e arancione.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Omar Vásquez — Portfolio &amp; CV">
+<meta name="twitter:description" content="Faccio funzionare le cose: squadre, conti, clienti.">
+<meta name="twitter:image" content="https://omar-vasquez.vercel.app/assets/omar-vasquez-social-v1.png">
+<meta name="twitter:image:alt" content="Omar Vásquez. Portfolio e CV. Eventi, produzione e marketing, in blu e arancione.">
+<meta name="theme-color" content="#F2F4F7">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="fonts/fonts.css">
+<script>
+  // Aplicar preferencias antes de pintar para evitar un destello del tema contrario.
+  (() => {
+    let theme, language;
+    try { theme = localStorage.getItem('ov-theme'); language = localStorage.getItem('ov-language'); } catch (_) {}
+    document.documentElement.dataset.theme = ['light', 'dark'].includes(theme) ? theme : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    if (['it', 'es', 'en'].includes(language)) document.documentElement.lang = language;
+  })();
+  // Intro decorativa breve: una vez por sesión, sin bloquear la carga real.
+  (() => {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const replay = new URLSearchParams(location.search).get('intro') === '1';
+    let seen = false;
+    try { seen = sessionStorage.getItem('ov-intro') === '1'; sessionStorage.setItem('ov-intro', '1'); } catch (_) {}
+    if (!seen || replay) document.documentElement.classList.add('intro-pending');
+  })();
+</script>
+<style>
+:root{
+  --ink:#141821; --paper:#F2F4F7; --orange:#D2601F; --orange-d:#C4551A; --sky:#A8D1F0;
+  --navy:#1E4A6E; --deep:#1A0C04; --muted:#2A3140; --ease:cubic-bezier(.2,.8,.2,1);
+}
+html,body{margin:0;background:var(--paper);overflow-x:clip;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:var(--ink);text-decoration:none}
+/* iOS convierte fechas como 02/2019–08 en enlaces automáticos: que hereden el color */
+a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important;font:inherit!important}
+a:focus-visible{outline:2px solid var(--orange);outline-offset:4px;border-radius:12px}
+::selection{background:var(--orange);color:#fff}
+.serif{font-family:'Cormorant Garamond',serif}
+@keyframes blobA{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(12vw,18vh) scale(1.2)}}
+@keyframes blobB{0%,100%{transform:translate(0,0) scale(1.1)}50%{transform:translate(-14vw,-12vh) scale(.9)}}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(58,170,110,.55)}80%,100%{box-shadow:0 0 0 10px rgba(58,170,110,0)}}
+
+/* ---------- escenario: fondo, foco y grano ---------- */
+.stage-bg{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.blob{position:absolute;border-radius:50%}
+.blob-a{width:70vmax;height:70vmax;left:-25vmax;top:-20vmax;background:radial-gradient(circle,rgba(168,209,240,.85),rgba(168,209,240,0) 65%);animation:blobA 26s ease-in-out infinite}
+.blob-b{width:60vmax;height:60vmax;right:-22vmax;top:30vh;background:radial-gradient(circle,rgba(232,140,80,.45),rgba(232,140,80,0) 65%);animation:blobB 32s ease-in-out infinite}
+.blob-c{width:50vmax;height:50vmax;left:10vw;bottom:-30vmax;background:radial-gradient(circle,rgba(168,209,240,.6),rgba(168,209,240,0) 65%);animation:blobB 40s ease-in-out infinite reverse}
+/* el foco: un haz circular con borde suave, como un seguidor de teatro */
+.spot{position:fixed;left:0;top:0;width:var(--spot-size,680px);height:var(--spot-size,680px);margin:calc(var(--spot-size,680px) / -2) 0 0 calc(var(--spot-size,680px) / -2);border-radius:50%;pointer-events:none;z-index:1;mix-blend-mode:soft-light;
+  background:radial-gradient(circle,rgba(255,248,236,.95) 0,rgba(255,248,236,.55) 30%,rgba(255,248,236,.12) 52%,rgba(255,248,236,0) 64%);
+  transform:translate(var(--lx,-999px),var(--ly,-999px));will-change:transform}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.22;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* La intro permanece oculta si JavaScript no la activa. */
+.brand-intro{display:none}
+
+/* ---------- barra flotante ---------- */
+.bar{position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:50;width:min(calc(100% - 24px),760px);display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 8px 8px 16px;border-radius:999px;background:rgba(255,255,255,.55);backdrop-filter:blur(18px) saturate(1.5);-webkit-backdrop-filter:blur(18px) saturate(1.5);border:1px solid rgba(255,255,255,.8);box-shadow:0 10px 30px -12px rgba(20,24,33,.25);transition:background .4s,box-shadow .4s}
+.bar.scrolled{background:rgba(255,255,255,.72);box-shadow:0 14px 40px -14px rgba(20,24,33,.35)}
+.dot{width:10px;height:10px;border-radius:50%;background:#3AAA6E;flex-shrink:0;animation:pulse 2s ease-out infinite}
+.pill-ink{background:var(--ink)}
+.pill-orange{background:var(--orange)}
+.pill{display:flex;align-items:center;height:40px;padding:0 16px;border-radius:999px;color:#fff;font-size:13px;font-weight:600;letter-spacing:.04em;transition:transform .2s}
+
+main{position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:88px clamp(14px,3vw,32px) 24px}
+.grid{display:flex;flex-wrap:wrap;gap:12px}
+
+/* ---------- hero ---------- */
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:#4A5568;padding-left:4px}
+.name{margin:0;font-weight:900;font-size:clamp(88px,min(calc(36vw - 36px),30vw),380px);line-height:.78;letter-spacing:-.055em;margin-left:-.055em;white-space:nowrap;padding-top:.06em;padding-right:.08em;width:fit-content;
+  /* El espaciado negativo deja la R fuera del avance: ampliar el fondo evita recortar su trazo. */
+  /* el brillo del foco recorre las letras */
+  background:radial-gradient(420px circle at var(--x,-999px) var(--y,-999px),rgba(190,225,250,.95),rgba(190,225,250,0) 62%),linear-gradient(170deg,#141821 35%,#2D4A66 75%,#A8D1F0 120%);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.surname{position:relative;z-index:2;font-style:italic;font-weight:500;font-size:clamp(72px,19vw,300px);line-height:.8;color:var(--orange);margin-top:-.34em;padding-left:.08em;letter-spacing:-.02em}
+.card.claim{margin:clamp(-120px,-9vw,-24px) 0 0 auto;max-width:560px;padding:clamp(22px,4vw,36px);border-radius:32px;z-index:3}
+.claim p{margin:0;font-weight:500;font-size:clamp(30px,7.2vw,50px);line-height:1.02;letter-spacing:-.01em;text-wrap:balance}
+.claim em{color:var(--orange-d)}
+
+/* ---------- tarjetas iluminadas por el foco ----------
+   El JS escribe en cada tarjeta visible: --x/--y (posición del foco dentro de la tarjeta),
+   --k (cercanía 0..1) y --sx/--sy (sombra hacia el lado opuesto a la luz). */
+.card{position:relative;isolation:isolate;border-radius:32px;padding:28px;
+  --rgb:20,24,33; --rim:.9; --sheen:.55;
+  box-shadow:var(--sx,0px) var(--sy,18px) 50px -24px rgba(var(--rgb),calc(.16 + .24 * var(--k,0))),var(--own,0 0 0 transparent);
+  transition:transform .45s var(--ease),background .35s}
+.card::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;pointer-events:none;z-index:2;
+  background:radial-gradient(260px circle at var(--x,50%) var(--y,-40%),rgba(255,255,255,var(--rim)),rgba(255,255,255,0) 70%),linear-gradient(160deg,rgba(255,255,255,calc(var(--rim) * .7)),rgba(255,255,255,0) 38%,rgba(255,255,255,0) 70%,rgba(255,255,255,calc(var(--rim) * .25)));
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
+.card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:0;
+  background:radial-gradient(520px circle at var(--x,50%) var(--y,-40%),rgba(255,255,255,calc(var(--sheen) * var(--k,0))),rgba(255,255,255,0) 60%)}
+.card > *{position:relative;z-index:1}
+.card > .orb{position:absolute;z-index:0;border-radius:50%;pointer-events:none}
+
+.glass{background:rgba(255,255,255,.52);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4)}
+.claim.glass{background:rgba(255,255,255,.42);backdrop-filter:blur(22px) saturate(1.6);-webkit-backdrop-filter:blur(22px) saturate(1.6)}
+.dark{background:var(--ink);color:#F2F4F7;--rim:.35;--sheen:.12}
+.orange{background:var(--orange);color:#fff;--rgb:150,60,10;--rim:.6;--sheen:.3}
+.sky{background:var(--sky);--rgb:30,74,110;--rim:.8;--sheen:.4}
+
+/* pared LED: la retícula solo se enciende donde cae el foco */
+.led{position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:0;
+  background-image:radial-gradient(circle,rgba(168,209,240,.55) 1.1px,rgba(168,209,240,0) 1.7px);background-size:14px 14px;
+  -webkit-mask-image:radial-gradient(340px circle at var(--x,-999px) var(--y,-999px),#000,transparent 72%);mask-image:radial-gradient(340px circle at var(--x,-999px) var(--y,-999px),#000,transparent 72%);
+  opacity:calc(.25 + .75 * var(--k,0))}
+
+/* ---------- piezas de contenido ---------- */
+.idea-main{flex:1 1 560px;border-radius:36px;padding:clamp(26px,5vw,56px);overflow:hidden}
+.idea-side{flex:1 1 300px;border-radius:36px;padding:clamp(26px,4vw,44px);display:flex;flex-direction:column;justify-content:space-between;gap:28px}
+.big-num{font-weight:900;font-size:clamp(72px,12vw,120px);line-height:.8;letter-spacing:-.06em}
+.stat{min-height:200px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+.label{font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase}
+.h2{margin:0;font-weight:800;font-size:clamp(44px,9vw,96px);line-height:.9;letter-spacing:-.045em}
+.sec{margin-top:clamp(56px,9vw,120px)}
+.sec-head{margin-bottom:18px;padding:0 4px}
+.cap{flex:1 1 280px;display:flex;flex-direction:column;gap:14px}
+.cap .n{font-weight:300;font-size:44px;line-height:1}
+.cap h3{margin:0;font-weight:700;font-size:26px;letter-spacing:-.02em;line-height:1.05}
+.cap p,.step p{margin:0;font-size:16px;line-height:1.5;text-wrap:pretty}
+.step{flex:1 1 300px;display:flex;flex-direction:column;gap:12px}
+.step .yr{font-weight:900;font-size:clamp(56px,9vw,84px);line-height:.85;letter-spacing:-.055em}
+.step h3{margin:6px 0 0;font-style:italic;font-weight:600;font-size:28px;line-height:1.05}
+
+.strip{margin-top:12px;border-radius:32px;overflow:hidden;display:flex;flex-wrap:wrap;align-items:stretch;padding:0}
+.strip-head{flex:0 0 auto;padding:20px 24px;display:flex;align-items:center;gap:12px}
+.strip-track{flex:1 1 280px;min-width:0;overflow:hidden;display:flex;align-items:center;padding:14px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marquee{display:flex;width:max-content}
+.marquee-langs{animation:marquee 22s linear infinite}
+.marquee-tools{animation:marquee 60s linear infinite}
+.seq{display:flex;flex-shrink:0}
+.seq-langs{gap:36px;padding-right:36px}
+.seq-tools{gap:28px;padding-right:28px}
+.lang{display:flex;align-items:baseline;gap:10px;white-space:nowrap}
+.lang b{font-weight:700;font-size:30px;letter-spacing:-.02em}
+.lang i{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;color:var(--navy)}
+.lang::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--orange);margin-left:26px;align-self:center}
+.tool{display:flex;align-items:center;gap:28px;white-space:nowrap;font-weight:600;font-size:22px;letter-spacing:-.01em}
+.tool::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--orange)}
+
+/* experiencia */
+.xp{border-radius:40px;padding:clamp(24px,5vw,56px);overflow:hidden}
+.row{position:relative;display:grid;grid-template-columns:minmax(96px,170px) minmax(0,1fr);gap:14px 20px;padding:20px 12px;border-top:1px solid rgba(255,255,255,.14);border-radius:18px;transition:background .25s}
+.row::before{content:"";position:absolute;left:0;top:18px;bottom:18px;width:2px;border-radius:2px;background:var(--orange);transform:scaleY(0);transition:transform .35s var(--ease)}
+.row.hl{background:rgba(210,96,31,.14)}
+.row.hl .row-date{color:#F0A070}
+.kpi{margin-top:8px;font-size:15px;font-weight:600;color:#F0A070}
+.row-date{font-weight:600;font-size:14px;color:var(--sky);letter-spacing:.02em;padding-top:4px}
+.row-role{font-weight:600;font-size:19px;line-height:1.2}
+.row-org{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:21px;color:#C9D1DC}
+.row-note{margin-top:8px;font-size:15px;line-height:1.5;color:#AEB8C6;text-wrap:pretty;max-width:78ch}
+
+/* contacto: el borde gira como un moving head */
+@property --ang{syntax:'<angle>';inherits:false;initial-value:0deg}
+@keyframes spin{to{--ang:360deg}}
+.contact{flex:1.4 1 380px;border-radius:36px;padding:clamp(24px,4vw,44px);display:flex;flex-direction:column;justify-content:space-between;gap:36px;overflow:hidden;--own:0 40px 70px -36px rgba(210,96,31,.8)}
+.contact .beam{position:absolute;inset:-40%;z-index:0;pointer-events:none;opacity:.55;
+  background:conic-gradient(from var(--ang) at 70% 20%,rgba(255,230,205,0) 0deg,rgba(255,230,205,.55) 14deg,rgba(255,230,205,0) 34deg,rgba(255,230,205,0) 180deg,rgba(168,209,240,.5) 196deg,rgba(168,209,240,0) 216deg);
+  animation:spin 14s linear infinite;mix-blend-mode:soft-light}
+.mail{color:#fff;font-weight:800;font-size:clamp(26px,4.2vw,52px);line-height:1;letter-spacing:-.035em;display:inline-block;background:linear-gradient(currentColor,currentColor) 0 100%/0 3px no-repeat;padding-bottom:6px;transition:color .2s,background-size .45s var(--ease)}
+.phone{color:var(--deep);font-style:italic;font-weight:500;font-size:clamp(30px,6vw,52px);line-height:1.1;transition:color .2s}
+.dl{flex:1 1 260px;border-radius:36px;padding:clamp(24px,4vw,40px);display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+.dl a{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;border-radius:20px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);color:#F2F4F7;font-weight:600;font-size:16px;transition:background .25s,transform .25s}
+.credit{margin-top:12px;border-radius:32px;padding:clamp(24px,4vw,40px);display:flex;flex-wrap:wrap;align-items:baseline;gap:12px 40px}
+.credit h2{margin:0;flex:0 0 auto;font-weight:700;font-size:clamp(22px,3vw,28px);letter-spacing:-.02em;line-height:1.1}
+.credit p{margin:0;flex:1 1 420px;font-size:clamp(20px,2.4vw,24px);line-height:1.4;color:var(--muted);max-width:62ch;text-wrap:pretty}
+.dl a span{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:18px;color:var(--sky)}
+
+/* aparición al hacer scroll: solo si hay JS y movimiento permitido */
+.js [data-reveal].pending{opacity:0;translate:0 28px}
+.js [data-reveal]{transition:opacity .8s var(--ease),translate .8s var(--ease),transform .45s var(--ease),background .35s}
+
+/* efectos al pasar el ratón: solo en dispositivos con ratón */
+@media (hover:hover){
+  a:hover{color:var(--orange-d)}
+  .pill:hover{transform:scale(1.05)}
+  .pill-ink:hover{color:var(--sky)}
+  .pill-orange:hover{color:#fff}
+  .lift:hover{transform:translateY(-6px)}
+  .lift-rot:hover{transform:translateY(-6px) rotate(.6deg)}
+  .tilt:hover{transform:rotate(-1.2deg) translateY(-4px)}
+  .glass.lift:hover{background:rgba(255,255,255,.72)}
+  .strip:hover .marquee{animation-play-state:paused}
+  .row:hover{background:rgba(255,255,255,.05)}
+  .row:hover::before{transform:scaleY(1)}
+  .mail:hover{color:var(--ink);background-size:100% 3px}
+  .phone:hover{color:#fff}
+  .dl a:hover{background:rgba(255,255,255,.14);color:#fff;transform:translateY(-2px)}
+  .row.hl:hover{background:rgba(210,96,31,.24)}
+}
+@media (max-width:640px){
+  .row{grid-template-columns:1fr;gap:4px;padding:18px 4px}
+  .row.hl{padding:18px 14px;margin:0 -10px}
+  .row-date{padding-top:0;white-space:nowrap}
+  .xp{padding:28px 20px}
+}
+@media (hover:none){ .spot{--spot-size:460px} }
+@media (max-width:640px){ .card.claim{margin-top:18px} }
+@media (prefers-reduced-motion: reduce){
+  .blob,.dot,.marquee,.contact .beam{animation:none!important}
+  .brand-intro{display:none}
+  .js [data-reveal].pending{opacity:1;translate:none}
+}
+</style>
+<link rel="stylesheet" href="preferences.css">
+<link rel="stylesheet" href="intro.css">
+</head>
+<body>
+<!-- Intro decorativa propia: luz de trabajo que busca y encuentra la firma. -->
+<div class="brand-intro" aria-hidden="true">
+  <div class="intro-scene">
+    <svg class="intro-lamp" viewBox="0 0 400 280" fill="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="intro-beam" x1="224" y1="106" x2="124" y2="246" gradientUnits="userSpaceOnUse"><stop stop-color="#FFE4BB" stop-opacity=".7"/><stop offset="1" stop-color="#A8D1F0" stop-opacity="0"/></linearGradient>
+        <radialGradient id="intro-pool"><stop stop-color="#F09A62" stop-opacity=".32"/><stop offset="1" stop-color="#F09A62" stop-opacity="0"/></radialGradient>
+      </defs>
+      <ellipse class="intro-pool" cx="120" cy="251" rx="103" ry="20" fill="url(#intro-pool)"/>
+      <path d="M234 249h83" stroke="#6C91AE" stroke-width="10" stroke-linecap="round"/>
+      <path d="M275 242v-17l-51-70 40-66" stroke="#A8D1F0" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="m288 225-48-72 39-60" stroke="#6C91AE" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="225" cy="155" r="10" fill="#121D33" stroke="#F09A62" stroke-width="4"/>
+      <circle cx="275" cy="225" r="7" fill="#F09A62"/>
+      <g class="intro-lamp-head">
+        <path class="intro-beam" d="m212 100 28 22-67 152L28 193Z" fill="url(#intro-beam)"/>
+        <path d="m266 87-20-13" stroke="#A8D1F0" stroke-width="7" stroke-linecap="round"/>
+        <path d="M241 62c13 0 27 11 26 24l-27 38-33-26 27-34Z" fill="#A8D1F0"/>
+        <path d="m212 100 28 22" stroke="#FFE4BB" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="250" cy="83" r="4" fill="#1E4A6E"/>
+      </g>
+    </svg>
+    <div class="intro-wordmark"><span>O</span><span>V</span></div>
+    <div class="intro-signature">Omar Vásquez</div>
+  </div>
+</div>
+<script src="intro.js"></script>
+<div style="position:relative;min-height:100vh;font-family:'Jost',sans-serif;color:var(--ink);">
+
+  <div class="stage-bg" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="blob blob-c"></div></div>
+  <div class="spot" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- barra flotante -->
+  <nav class="bar" aria-label="Contatti e preferenze" data-label="navigation">
+    <div class="availability">
+      <span class="dot"></span>
+      <span style="font-size:13px;font-weight:500;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Disponibile · Santa Marinella (RM)</span>
+    </div>
+    <div class="bar-actions">
+      <div class="language-picker">
+        <button class="icon-button planet-button" id="language-toggle" type="button" aria-expanded="false" aria-controls="language-panel" aria-label="Scegli la lingua" data-label="chooseLanguage">
+          <svg class="planet-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="8.5" fill="currentColor" opacity=".16"/><circle cx="16" cy="16" r="8.5" stroke="currentColor" stroke-width="1.5"/><path d="M9 11c4 1 4 5 7 5s4 4 4 7M19 8c-3 3-2 5 3 6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><ellipse cx="16" cy="17" rx="14" ry="4.5" transform="rotate(-28 16 17)" stroke="currentColor" stroke-width="1.5"/><path class="planet-star" d="M27 3v4m-2-2h4M4 25v3m-1.5-1.5h3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="language-panel" id="language-panel" hidden>
+          <p data-ui="languageHeading">Lingua del sito</p>
+          <div role="group" aria-label="Lingua del sito" data-label="languageHeading">
+            <button type="button" data-language="it" lang="it" aria-pressed="true">Italiano <span aria-hidden="true">✓</span></button>
+            <button type="button" data-language="es" lang="es" aria-pressed="false">Español <span aria-hidden="true">✓</span></button>
+            <button type="button" data-language="en" lang="en" aria-pressed="false">English <span aria-hidden="true">✓</span></button>
+          </div>
+        </div>
+      </div>
+      <button class="icon-button compact-theme" type="button" role="switch" aria-checked="false" aria-label="Modalità scura" data-label="darkMode" data-theme-toggle>
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5" stroke-linecap="round"/></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20.5 14.2A8.7 8.7 0 0 1 9.8 3.5a8.7 8.7 0 1 0 10.7 10.7Z" stroke-linejoin="round"/></svg>
+      </button>
+      <a class="pill pill-ink call-link" href="tel:+393756695949" aria-label="Chiama Omar" data-label="callOmar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m8 3 3 5-3 2c1.5 3 3 4.5 6 6l2-3 5 3c0 3-2 5-5 4C9 18 6 15 4 9 3 6 5 3 8 3Z" stroke-linejoin="round"/></svg><span>Chiama</span></a>
+      <a class="pill pill-orange" href="mailto:omarvasqz@icloud.com">Email</a>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- nombre -->
+    <section style="position:relative;">
+      <div class="eyebrow">Omar Vásquez</div>
+      <h1 class="name" data-lit aria-label="Omar Vásquez">OMAR</h1>
+      <div class="surname serif" aria-hidden="true">Vásquez</div>
+      <div class="card glass claim" data-lit data-reveal>
+        <p class="serif">Faccio funzionare le cose: <em>squadre, conti, clienti.</em></p>
+      </div>
+    </section>
+
+    <!-- idea -->
+    <section class="grid" data-reveal style="margin-top:clamp(40px,7vw,90px);">
+      <div class="card dark idea-main" data-lit style="--own:0 30px 60px -30px rgba(20,24,33,.6);">
+        <div class="led"></div>
+        <div class="orb" style="width:340px;height:340px;right:-120px;top:-140px;background:radial-gradient(circle,rgba(168,209,240,.45),rgba(168,209,240,0) 70%);"></div>
+        <p style="margin:0 0 22px;font-weight:800;font-size:clamp(34px,7vw,64px);line-height:.95;letter-spacing:-.035em;text-wrap:balance;">Un'attività non cresce per caso.</p>
+        <p class="serif" style="margin:0;font-size:clamp(22px,3.4vw,30px);line-height:1.28;color:#DCE3EC;max-width:36ch;text-wrap:pretty;">Cresce quando qualcuno tiene i conti, il gruppo e il cliente nella stessa mano. L'ho fatto in un reparto d'albergo, in un'agenzia con clienti in sei paesi e in un'impresa mia.</p>
+      </div>
+      <div class="card sky idea-side tilt" data-lit>
+        <div class="label">In Italia</div>
+        <p class="serif" style="margin:0;font-size:clamp(22px,3vw,28px);line-height:1.25;text-wrap:pretty;">Sono ripartito dal lavaggio e dalla sala: a chi fa questo mestiere da una vita non si arriva a spiegare niente, <em style="font-weight:600;color:#7A2E06;">prima si impara.</em></p>
+      </div>
+    </section>
+
+    <!-- mosaico de cifras -->
+    <section class="grid" style="margin-top:12px;">
+      <div class="card glass stat lift" data-lit data-reveal style="flex:1 1 220px;">
+        <div class="big-num">15</div>
+        <div style="font-size:16px;font-weight:500;line-height:1.3;display:flex;flex-direction:column;gap:6px;"><span>anni, dal 2011</span><span class="serif" style="font-style:italic;font-size:19px;line-height:1.25;color:var(--muted);text-wrap:pretty;">Fino a tre allestimenti in una sola giornata, in stagioni da oltre duecento eventi.</span></div>
+      </div>
+      <div class="card orange stat lift-rot" data-lit data-reveal style="flex:2 1 340px;overflow:hidden;--own:0 30px 50px -28px rgba(210,96,31,.7);">
+        <div class="orb" style="width:280px;height:280px;left:-80px;bottom:-160px;background:radial-gradient(circle,rgba(255,220,190,.55),rgba(255,220,190,0) 70%);"></div>
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+          <div class="big-num">+25%</div>
+          <div style="font-size:15px;font-weight:600;line-height:1.25;max-width:22ch;">vendite di un reparto all'Hotel Pullman (Accor)</div>
+        </div>
+        <div class="serif" style="font-size:20px;line-height:1.3;color:var(--deep);max-width:44ch;">Riorganizzando processi, costi, servizi e formando la squadra commerciale. <em style="font-weight:600;">Non con pubblicità.</em></div>
+      </div>
+      <div class="card dark stat lift" data-lit data-reveal style="flex:1 1 170px;">
+        <div class="big-num" style="color:var(--sky);">6</div>
+        <div style="font-size:16px;font-weight:500;line-height:1.3;">paesi serviti<br><span class="serif" style="font-style:italic;font-size:20px;color:#B9C3D0;">dall'agenzia</span></div>
+      </div>
+    </section>
+
+    <!-- idiomas -->
+    <section class="card sky strip" data-lit data-reveal>
+      <div class="strip-head">
+        <span style="font-weight:900;font-size:64px;line-height:.8;letter-spacing:-.06em;">3</span>
+        <span style="font-size:16px;font-weight:600;">lingue</span>
+      </div>
+      <div class="strip-track">
+        <div class="marquee marquee-langs">
+          <div class="seq seq-langs">
+            <span class="lang"><b>Spagnolo</b><i>madrelingua</i></span>
+            <span class="lang"><b>Inglese</b><i>C2</i></span>
+            <span class="lang"><b>Italiano</b><i>intermedio-avanzato</i></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- capacidades -->
+    <section class="sec">
+      <div class="sec-head" data-reveal><h2 class="h2">Capacità</h2></div>
+      <div class="grid">
+        <div class="card glass cap lift" data-lit data-reveal>
+          <span class="n" style="color:var(--orange);">01</span>
+          <h3>Guidare una squadra</h3>
+          <p style="color:var(--muted);">Tecnici, fornitori e team multidisciplinari in eventi corporate e alberghieri; ritmo nelle ore di punta.</p>
+        </div>
+        <div class="card dark cap lift" data-lit data-reveal>
+          <span class="n" style="color:var(--sky);">02</span>
+          <h3>Analizzare e ottimizzare</h3>
+          <p style="color:#C9D1DC;">Leggere un'attività, trovare dove si perde il margine e rimetterla in ordine: processi, costi, fornitori, budget e reportistica alla proprietà.</p>
+        </div>
+        <div class="card orange cap lift" data-lit data-reveal>
+          <span class="n" style="color:var(--deep);">03</span>
+          <h3>Scala</h3>
+          <p style="color:var(--deep);">Centinaia di eventi, dai matrimoni alle serate in discoteca, dagli eventi corporate in albergo alle attivazioni di marca che si vedono da tutta una città.</p>
+        </div>
+        <div class="card sky cap lift" data-lit data-reveal>
+          <span class="n" style="color:var(--navy);">04</span>
+          <h3>Digitale e IA</h3>
+          <p style="color:var(--ink);">Campagne Meta, Google e TikTok Ads; automazione delle prenotazioni via telefono e WhatsApp; gestione clienti; siti web.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- percorso -->
+    <section class="sec">
+      <div class="sec-head" data-reveal><h2 class="h2">Percorso</h2></div>
+      <div class="grid">
+        <div class="card glass step lift" data-lit data-reveal>
+          <span class="yr" style="color:var(--orange);">2011</span>
+          <h3 class="serif">Imparare il mestiere</h3>
+          <p style="color:var(--muted);">Tecnico audiovisivo a Caracas. Mi sono dedicato a imparare tutto sul campo: audio, illuminazione, visuali, allestimento. Un'ingegneria del suono fatta per pura pratica.</p>
+        </div>
+        <div class="card glass step lift" data-lit data-reveal>
+          <span class="yr" style="color:var(--orange);">2014</span>
+          <h3 class="serif">Da tecnico a produttore</h3>
+          <p style="color:var(--muted);">Coordinatore di allestimenti molto giovane, in contatto con i grandi nomi della produzione a Caracas. Poi il Cile, ripartendo dal basso fino alle principali società di eventi corporate del paese.</p>
+        </div>
+        <div class="card sky step lift" data-lit data-reveal>
+          <span class="yr" style="color:var(--navy);">2017</span>
+          <h3 class="serif">Dentro l'albergo</h3>
+          <p style="color:var(--ink);">RLA-Latam gestisce il reparto audiovisivo dentro gli hotel. Sono entrato come tecnico e dopo tre mesi mi hanno promosso a responsabile del reparto all'Hotel Pullman Vitacura (Accor): vendite, costi, personale e rapporto diretto con la direzione.</p>
+        </div>
+        <div class="card orange step lift" data-lit data-reveal>
+          <span class="yr" style="color:var(--deep);">2020</span>
+          <h3 class="serif">Impresa mia</h3>
+          <p style="color:var(--deep);">Quando la pandemia ha fermato gli eventi non mi sono fermato io: ho fondato un e-commerce con piano di import-export e mi sono formato nel marketing digitale. Cambiare mestiere senza perdere il passo.</p>
+        </div>
+        <div class="card glass step lift" data-lit data-reveal>
+          <span class="yr" style="color:var(--orange);">2023</span>
+          <h3 class="serif">Mi chiamavano loro</h3>
+          <p style="color:var(--muted);">Diverse società di produzione mi cercavano come coordinatore di allestimenti e attivazioni, e per farsi consigliare nella pianificazione con il cliente. Reputazione e modo di lavorare.</p>
+        </div>
+        <div class="card dark step lift" data-lit data-reveal>
+          <span class="yr" style="color:var(--sky);">2024</span>
+          <h3 class="serif">Il salto</h3>
+          <p style="color:#C9D1DC;">Dalla produzione alla direzione: marketing, relazioni pubbliche, consulenza commerciale e creazione di esperienze, lanci ed eventi, questa volta da capo. Responsabile dei clienti di un'agenzia con mercati in sei paesi, fino alla chiusura ordinata delle attività.</p>
+        </div>
+        <div class="card orange step lift" data-lit data-reveal>
+          <span class="yr" style="color:var(--deep);">2025</span>
+          <h3 class="serif">Italia, dal basso</h3>
+          <p style="color:var(--deep);">Lavapiatti e cameriere sul litorale romano, e l'italiano da imparare. Nel 2026 cameriere, pittura e carpenteria nella ristrutturazione di un chiosco sul mare, e poi barman.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- experiencia -->
+    <section class="card dark xp sec" data-lit>
+      <div class="led"></div>
+      <div class="orb" style="width:520px;height:520px;right:-200px;bottom:-240px;background:radial-gradient(circle,rgba(210,96,31,.35),rgba(210,96,31,0) 70%);"></div>
+      <div data-reveal style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:24px;">
+        <h2 class="h2">Esperienza</h2>
+        <span class="serif" style="font-style:italic;font-size:22px;color:var(--sky);">dal 2011</span>
+      </div>
+      <div style="display:flex;flex-direction:column;">
+        <div class="row" data-reveal>
+          <div class="row-date">02/2026–09/2026</div>
+          <div><div class="row-role">Cameriere, allestimento e barman</div><div class="row-org">Il Kiosco, Santa Marinella</div><div class="row-note">Pittura, carpenteria e allestimento durante la ristrutturazione del locale, poi servizio in sala e al banco.</div></div>
+        </div>
+        <div class="row" data-reveal>
+          <div class="row-date">05/2025–12/2025</div>
+          <div><div class="row-role">Lavapiatti e cameriere</div><div class="row-org">Acquamarina, Il Porticciolo (Santa Marinella), Gambero Rosso (Civitavecchia)</div></div>
+        </div>
+        <div class="row hl" data-reveal>
+          <div class="row-date">2024–2026</div>
+          <div><div class="row-role">Direttore clienti e team leader</div><div class="row-org">Aguacate Comunicaciones (Cile, da remoto)</div><div class="kpi">6 paesi · marchi portati da zero alla redditività</div><div class="row-note">Portfolio di clienti di settori, lingue, paesi e dimensioni di mercato diversi: Panduit, Adagio Teas, FLY Racing, Nutrición en Balance, Astara, Taller Phantom, Ares Consulting, Darkone, FELS Latino e Bark in Style. Direzione e supervisione delle strategie di comunicazione interna ed esterna, marketing e relazioni pubbliche. Coordinamento dei team di lavoro dei diversi clienti e, insieme agli specialisti di ogni area, supervisione dei processi amministrativi e contabili nei paesi in cui operavamo: Cile, Perù, Argentina, Colombia, Spagna e Italia. Marchi accompagnati da zero fino a diventare attività redditizie. Chiusura ordinata dell'agenzia.</div></div>
+        </div>
+        <div class="row" data-reveal>
+          <div class="row-date">2023–2024</div>
+          <div><div class="row-role">Coordinatore di montaggi e attivazioni — freelance</div><div class="row-org">MAGIX Producciones · Vibra Producciones · Lafirma Producciones (Santiago del Cile)</div><div class="row-note">Montaggi di schermi LED e attivazioni di marca. Tra queste, nel team tecnico dell'attivazione con cui il BCI ha annunciato la sponsorizzazione della Nazionale cilena: comunicazione, direzione sul campo e coordinamento del personale e della logistica.</div></div>
+        </div>
+        <div class="row" data-reveal>
+          <div class="row-date">2022–2023</div>
+          <div><div class="row-role">Consulente</div><div class="row-org">Aguacate Comunicaciones</div><div class="row-note">Darkone, Bark in Style e FELS Latino: clienti portati da me in agenzia. Strategia, pianificazione e reportistica.</div></div>
+        </div>
+        <div class="row hl" data-reveal>
+          <div class="row-date">2020–2023</div>
+          <div><div class="row-role">Imprenditore</div><div class="row-org">Tree of Life SpA</div><div class="kpi">Impresa fondata da me · import-export</div><div class="row-note">E-commerce di giardinaggio e coltivazione indoor con piano di import-export.</div></div>
+        </div>
+        <div class="row" data-reveal>
+          <div class="row-date">2020–2021</div>
+          <div><div class="row-role">Community manager</div><div class="row-org">Aguacate Comunicaciones</div></div>
+        </div>
+        <div class="row hl" data-reveal>
+          <div class="row-date">02/2019–08/2020</div>
+          <div><div class="row-role">Responsabile del dipartimento audiovisivo</div><div class="row-org">RLA-Latam, Hotel Pullman Vitacura (Accor)</div><div class="kpi">+25% vendite del reparto</div></div>
+        </div>
+        <div class="row" data-reveal>
+          <div class="row-date">05/2018–02/2019</div>
+          <div><div class="row-role">Tecnico audiovisivo</div><div class="row-org">RLA-Latam</div></div>
+        </div>
+        <div class="row" data-reveal>
+          <div class="row-date">09/2017–05/2018</div>
+          <div><div class="row-role">Tecnico audiovisivo</div><div class="row-org">ByZ Traducciones</div></div>
+        </div>
+        <div class="row" data-reveal>
+          <div class="row-date">2014–2017</div>
+          <div><div class="row-role">Senior Event Producer</div><div class="row-org">Balza Producciones, Caracas</div></div>
+        </div>
+        <div class="row" data-reveal>
+          <div class="row-date">2011–2014</div>
+          <div><div class="row-role">Tecnico audiovisivo e produttore</div><div class="row-org">Carpe Diem / Play &amp; Go, Caracas</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- herramientas -->
+    <section class="card glass strip" data-lit data-reveal>
+      <div class="strip-head">
+        <h2 style="margin:0;font-weight:800;font-size:clamp(30px,5vw,44px);line-height:1;letter-spacing:-.04em;">Strumenti</h2>
+      </div>
+      <div class="strip-track">
+        <div class="marquee marquee-tools">
+          <div class="seq seq-tools">
+            <span class="tool">vMix</span><span class="tool">OBS</span><span class="tool">Resolume</span><span class="tool">Novastar</span><span class="tool">Consolle audio</span><span class="tool">Illuminazione robotizzata</span><span class="tool">Schermi LED</span><span class="tool">Meta Ads</span><span class="tool">Google Ads</span><span class="tool">TikTok Ads</span><span class="tool">WordPress</span><span class="tool">Wix</span><span class="tool">Squarespace</span><span class="tool">Claude e strumenti di IA</span><span class="tool">Excel</span><span class="tool">Google Workspace</span><span class="tool">Windows</span><span class="tool">macOS</span><span class="tool">Linux</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- formación -->
+    <section class="card glass" data-lit data-reveal style="margin-top:12px;border-radius:40px;padding:clamp(26px,5vw,56px);display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,56px);background:rgba(255,255,255,.55);">
+      <div style="flex:1 1 360px;display:flex;flex-direction:column;gap:20px;">
+        <h2 class="h2">Formazione</h2>
+        <div>
+          <div lang="es" style="font-weight:700;font-size:clamp(22px,3vw,28px);line-height:1.15;letter-spacing:-.015em;">Licenciatura en Estudios Internacionales</div>
+          <div class="serif" style="font-style:italic;font-weight:500;font-size:clamp(24px,3.2vw,30px);color:var(--orange-d);margin-top:4px;">Titolo universitario venezuelano in Studi Internazionali</div>
+          <div class="education-meta" style="margin-top:10px;font-size:15px;line-height:1.5;color:#3A4354;">Università Santa María, Caracas · Facoltà di Giurisprudenza · 2011–2016 (titolo 2018)</div>
+        </div>
+      </div>
+      <div style="flex:1 1 360px;display:flex;flex-direction:column;justify-content:space-between;gap:24px;">
+        <p class="serif" style="margin:0;font-size:clamp(22px,2.8vw,28px);line-height:1.3;color:var(--ink);text-wrap:pretty;">Un percorso di cinque anni tra diritto, economia e relazioni internazionali. Mi ha lasciato il modo di lavorare che uso ogni giorno: analizzare una situazione prima di decidere, negoziare, muovermi tra mercati e culture diverse e scrivere in modo che si capisca.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <span style="padding:10px 16px;border-radius:999px;background:var(--ink);color:#fff;font-size:14px;font-weight:500;">Claude 101 — Anthropic Academy</span>
+          <span style="padding:10px 16px;border-radius:999px;background:var(--sky);font-size:14px;font-weight:500;">Digital Marketing — Udemy</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- contacto -->
+    <section class="grid" style="margin-top:12px;">
+      <div class="card orange contact" data-lit data-reveal>
+        <div class="beam"></div>
+        <div class="orb" style="width:420px;height:420px;right:-140px;top:-180px;background:radial-gradient(circle,rgba(168,209,240,.6),rgba(168,209,240,0) 70%);"></div>
+        <div class="label" style="color:var(--deep);">Contatti · Disponibile</div>
+        <div style="display:flex;flex-direction:column;gap:6px;align-items:flex-start;">
+          <a class="mail" href="mailto:omarvasqz@icloud.com">omarvasqz@<wbr>icloud.com</a>
+          <a class="phone serif" href="tel:+393756695949">+39 375 669 5949</a>
+        </div>
+        <div style="font-size:15px;font-weight:500;color:var(--deep);">Santa Marinella (RM)</div>
+      </div>
+      <!-- solo-web:inicio -->
+      <div class="card dark dl" data-lit data-reveal>
+        <div class="led"></div>
+        <p class="serif" style="margin:0;font-size:clamp(24px,3vw,30px);line-height:1.2;color:#DCE3EC;">Da portare con sé, in PDF.</p>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <a href="Omar-Vasquez-CV.pdf" download>Formato schermo <span>Italiano · computer</span></a>
+          <a href="Omar-Vasquez-CV-telefono.pdf" download>Formato verticale <span>Italiano · telefono</span></a>
+          <small data-ui="pdfNote">I PDF attuali sono in italiano.</small>
+        </div>
+      </div>
+      <!-- solo-web:fin -->
+    </section>
+
+    <!-- cómo se hizo -->
+    <section class="card glass credit" data-lit data-reveal>
+      <h2>Come è nata questa pagina</h2>
+      <p class="serif">L'ho costruita insieme a Claude, l'intelligenza artificiale di Anthropic, in uno spazio di lavoro controllato. Le regole con cui ha lavorato l'IA, l'identità, le idee e ogni contenuto sono miei; la realizzazione l'abbiamo fatta insieme.</p>
+    </section>
+
+    <section class="appearance-panel" aria-label="Aspetto" data-label="appearance">
+      <div><span class="label" data-ui="appearance">Aspetto</span><p class="serif" data-ui="lightYourWay">La luce, come piace a te.</p></div>
+      <div class="theme-control">
+        <span class="theme-caption" data-ui="day">Giorno</span>
+        <button class="theme-switch" type="button" role="switch" aria-checked="false" aria-label="Modalità scura" data-label="darkMode" data-theme-toggle>
+          <span class="switch-stars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <svg class="switch-cloud" viewBox="0 0 40 20" aria-hidden="true"><path d="M0 19h40v-6c-3-5-9-5-12-1 0-13-18-14-20-2C3 9 0 12 0 19Z" fill="currentColor"/></svg>
+          <span class="toggle-orb" aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
+        <span class="theme-caption" data-ui="night">Notte</span>
+      </div>
+    </section>
+    <p class="sr-only" id="preference-status" aria-live="polite" aria-atomic="true"></p>
+    <noscript><p>Le preferenze interattive richiedono JavaScript. La pagina e i PDF in italiano restano disponibili.</p></noscript>
+    <footer style="padding:28px 4px 12px;font-size:12px;line-height:1.5;color:#4A5568;max-width:70ch;">Autorizzo il trattamento dei dati personali ai sensi del D.Lgs. 196/2003 e del Regolamento UE 2016/679 (GDPR).</footer>
+  </main>
+</div>
+
+<script>
+(() => {
+  const root = document.documentElement;
+  root.classList.add('js');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const canHover = matchMedia('(hover: hover)').matches;
+
+  // Duplica cada secuencia del marquee para que el bucle sea continuo
+  document.querySelectorAll('.marquee').forEach(m => {
+    const clone = m.firstElementChild.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    m.appendChild(clone);
+  });
+
+  // Barra más opaca al hacer scroll
+  const bar = document.querySelector('.bar');
+  const onScrollBar = () => bar.classList.toggle('scrolled', scrollY > 40);
+  addEventListener('scroll', onScrollBar, { passive: true }); onScrollBar();
+
+  // ---------- El foco ----------
+  // Una sola fuente de luz: sigue al ratón; en táctil va a donde se toca y deriva sola.
+  const spot = document.querySelector('.spot');
+  const lit = Array.from(document.querySelectorAll('[data-lit]'));
+  const visible = new Set();
+  const vio = new IntersectionObserver(es => es.forEach(e => e.isIntersecting ? visible.add(e.target) : visible.delete(e.target)), { rootMargin: '200px' });
+  lit.forEach(el => vio.observe(el));
+
+  let tx = innerWidth * .72, ty = innerHeight * .28;   // objetivo
+  let lx = tx, ly = ty;                                   // posición suavizada
+  let lastInput = -1e9, raf = 0;
+
+  const paint = () => {
+    spot.style.setProperty('--lx', lx + 'px');
+    spot.style.setProperty('--ly', ly + 'px');
+    visible.forEach(el => {
+      const r = el.getBoundingClientRect();
+      const dx = Math.max(r.left - lx, 0, lx - r.right), dy = Math.max(r.top - ly, 0, ly - r.bottom);
+      const k = Math.max(0, 1 - Math.hypot(dx, dy) / 700);
+      const vx = (r.left + r.width / 2 - lx) / Math.max(r.width, 1), vy = (r.top + r.height / 2 - ly) / Math.max(r.height, 1);
+      const s = el.style;
+      s.setProperty('--x', (lx - r.left).toFixed(0) + 'px');
+      s.setProperty('--y', (ly - r.top).toFixed(0) + 'px');
+      s.setProperty('--k', k.toFixed(3));
+      s.setProperty('--sx', (Math.max(-1, Math.min(1, vx)) * 22 * k).toFixed(1) + 'px');
+      s.setProperty('--sy', (18 + Math.max(-1, Math.min(1, vy)) * 14 * k).toFixed(1) + 'px');
+    });
+  };
+
+  const tick = t => {
+    raf = 0;
+    // Deriva lenta cuando nadie mueve la luz (sobre todo en móvil)
+    if (!reduce && t - lastInput > 3500) {
+      const w = innerWidth, h = innerHeight, p = t / 1000;
+      tx = w * (.5 + .34 * Math.sin(p * .23)); ty = h * (.42 + .26 * Math.sin(p * .31 + 1));
+    }
+    const ease = reduce ? 1 : .09;
+    lx += (tx - lx) * ease; ly += (ty - ly) * ease;
+    paint();
+    if (!reduce || Math.abs(tx - lx) + Math.abs(ty - ly) > .5) raf = requestAnimationFrame(tick);
+  };
+  const wake = () => { if (!raf) raf = requestAnimationFrame(tick); };
+
+  addEventListener('pointermove', e => { if (e.pointerType === 'mouse') { tx = e.clientX; ty = e.clientY; lastInput = performance.now(); wake(); } }, { passive: true });
+  addEventListener('pointerdown', e => { tx = e.clientX; ty = e.clientY; lastInput = performance.now(); wake(); }, { passive: true });
+  addEventListener('scroll', () => { if (reduce) paint(); else wake(); }, { passive: true });
+  addEventListener('resize', wake);
+  if (!canHover) lastInput = -1e9;
+  wake();
+
+  // ---------- Aparición al hacer scroll ----------
+  if (reduce || !('IntersectionObserver' in window)) return;
+  const io = new IntersectionObserver(es => es.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.remove('pending'); io.unobserve(en.target); }
+  }), { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('[data-reveal]').forEach(el => {
+    if (el.getBoundingClientRect().top < innerHeight) return;
+    el.classList.add('pending');
+    io.observe(el);
+  });
+})();
+</script>
+<script src="preferences.js"></script>
+</body>
+</html>
