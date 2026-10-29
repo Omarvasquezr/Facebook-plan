@@ -1,0 +1,24 @@
+[
+  {
+    "engine": "chromium",
+    "reduced_motion": false,
+    "intersection_observer": true,
+    "idle_animation_frames": 0,
+    "passed": true
+  },
+  {
+    "engine": "chromium",
+    "reduced_motion": true,
+    "intersection_observer": true,
+    "idle_animation_frames": 0,
+    "passed": true
+  },
+  {
+    "engine": "chromium",
+    "reduced_motion": true,
+    "intersection_observer": false,
+    "idle_animation_frames": 0,
+    "passed": true
+  }
+]
+Idle rendering, finite light tracking, reduced motion, touch and missing-observer fallback passed.

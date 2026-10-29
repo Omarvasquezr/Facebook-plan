@@ -1,0 +1,147 @@
+[
+  {
+    "width": 320,
+    "language": "it",
+    "theme": "light",
+    "passed": true
+  },
+  {
+    "width": 320,
+    "language": "it",
+    "theme": "dark",
+    "passed": true
+  },
+  {
+    "width": 320,
+    "language": "es",
+    "theme": "light",
+    "passed": true
+  },
+  {
+    "width": 320,
+    "language": "es",
+    "theme": "dark",
+    "passed": true
+  },
+  {
+    "width": 320,
+    "language": "en",
+    "theme": "light",
+    "passed": true
+  },
+  {
+    "width": 320,
+    "language": "en",
+    "theme": "dark",
+    "passed": true
+  },
+  {
+    "width": 390,
+    "language": "it",
+    "theme": "light",
+    "passed": true
+  },
+  {
+    "width": 390,
+    "language": "it",
+    "theme": "dark",
+    "passed": true
+  },
+  {
+    "width": 390,
+    "language": "es",
+    "theme": "light",
+    "passed": true
+  },
+  {
+    "width": 390,
+    "language": "es",
+    "theme": "dark",
+    "passed": true
+  },
+  {
+    "width": 390,
+    "language": "en",
+    "theme": "light",
+    "passed": true
+  },
+  {
+    "width": 390,
+    "language": "en",
+    "theme": "dark",
+    "passed": true
+  },
+  {
+    "width": 768,
+    "language": "it",
+    "theme": "light",
+    "passed": true
+  },
+  {
+    "width": 768,
+    "language": "it",
+    "theme": "dark",
+    "passed": true
+  },
+  {
+    "width": 768,
+    "language": "es",
+    "theme": "light",
+    "passed": true
+  },
+  {
+    "width": 768,
+    "language": "es",
+    "theme": "dark",
+    "passed": true
+  },
+  {
+    "width": 768,
+    "language": "en",
+    "theme": "light",
+    "passed": true
+  },
+  {
+    "width": 768,
+    "language": "en",
+    "theme": "dark",
+    "passed": true
+  },
+  {
+    "width": 1440,
+    "language": "it",
+    "theme": "light",
+    "passed": true
+  },
+  {
+    "width": 1440,
+    "language": "it",
+    "theme": "dark",
+    "passed": true
+  },
+  {
+    "width": 1440,
+    "language": "es",
+    "theme": "light",
+    "passed": true
+  },
+  {
+    "width": 1440,
+    "language": "es",
+    "theme": "dark",
+    "passed": true
+  },
+  {
+    "width": 1440,
+    "language": "en",
+    "theme": "light",
+    "passed": true
+  },
+  {
+    "width": 1440,
+    "language": "en",
+    "theme": "dark",
+    "passed": true
+  }
+]
+24 width/language/theme states passed; ordered four-area selection, native tools disclosure, uncropped portrait, translated UI/ARIA/alt, keyboard, modal scroll/close and focus restoration, touch, no-JS and zero observed JS errors passed.

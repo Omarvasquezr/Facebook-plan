@@ -31,12 +31,15 @@
 <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
 <meta name="robots" content="noindex, nofollow">
 <link rel="stylesheet" href="fonts/fonts.css">
+<link rel="preload" href="fonts/jost.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/cormorant-italic.woff2" as="font" type="font/woff2" crossorigin>
+<script src="theme-clock.js"></script>
 <script>
   // Aplicar preferencias antes de pintar para evitar un destello del tema contrario.
   (() => {
     let theme, language;
     try { theme = localStorage.getItem('ov-theme'); language = localStorage.getItem('ov-language'); } catch (_) {}
-    document.documentElement.dataset.theme = ['light', 'dark'].includes(theme) ? theme : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.dataset.theme = ['light', 'dark'].includes(theme) ? theme : (window.OVThemeClock?.getTheme() || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
     if (['it', 'es', 'en'].includes(language)) document.documentElement.lang = language;
   })();
   // Intro decorativa breve: una vez por sesión, sin bloquear la carga real.
@@ -230,6 +233,11 @@ main{position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:88px cla
 </style>
 <link rel="stylesheet" href="preferences.css">
 <link rel="stylesheet" href="intro.css">
+<link rel="stylesheet" href="assets/sky/solar.css">
+<link rel="stylesheet" href="sky.css">
+<link rel="stylesheet" href="expertise.css">
+<link rel="stylesheet" href="profile.css">
+<link rel="stylesheet" href="compatibility.css">
 </head>
 <body>
 <!-- Intro decorativa propia: luz de trabajo que busca y encuentra la firma. -->
@@ -262,6 +270,30 @@ main{position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:88px cla
 <div style="position:relative;min-height:100vh;font-family:'Jost',sans-serif;color:var(--ink);">
 
   <div class="stage-bg" aria-hidden="true"><div class="blob blob-a"></div><div class="blob blob-b"></div><div class="blob blob-c"></div></div>
+  <!-- sky:begin -->
+<div class="celestial-stage" aria-hidden="true">
+<svg class="celestial-map" id="celestial-map" viewBox="0 0 1200 1000" preserveAspectRatio="xMidYMin slice" data-sun-x="675.2768" data-sun-y="242.4545" xmlns="http://www.w3.org/2000/svg">
+<metadata>Star coordinates: XHIP via ofrohn/d3-celestial, J2000. Western Virgo line pattern adapted from that dataset. Copyright (c) 2015, Olaf Frohn
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</metadata>
+<g class="sky-stars" fill="currentColor"><circle cx="-40.72" cy="193.92" r="1.42" opacity="0.70"/><circle cx="110.52" cy="-303.19" r="1.13" opacity="0.60"/><circle cx="132.20" cy="-328.69" r="0.95" opacity="0.53"/><circle cx="136.34" cy="-324.06" r="1.09" opacity="0.58"/><circle cx="113.37" cy="-272.40" r="1.93" opacity="0.89"/><circle cx="519.09" cy="-515.41" r="1.51" opacity="0.74"/><circle cx="274.31" cy="-404.14" r="1.50" opacity="0.73"/><circle cx="604.96" cy="-516.09" r="1.34" opacity="0.68"/><circle cx="484.78" cy="-485.74" r="1.03" opacity="0.56"/><circle cx="675.86" cy="-513.51" r="1.21" opacity="0.62"/><circle cx="618.26" cy="-508.90" r="1.49" opacity="0.73"/><circle cx="363.17" cy="-432.78" r="1.15" opacity="0.60"/><circle cx="636.54" cy="-505.25" r="0.93" opacity="0.52"/><circle cx="629.50" cy="-500.66" r="1.48" opacity="0.73"/><circle cx="787.63" cy="-483.34" r="0.99" opacity="0.55"/><circle cx="725.41" cy="-487.81" r="1.39" opacity="0.69"/><circle cx="860.22" cy="-460.67" r="0.93" opacity="0.52"/><circle cx="207.86" cy="-298.34" r="0.88" opacity="0.50"/><circle cx="528.85" cy="-455.92" r="1.83" opacity="0.85"/><circle cx="780.44" cy="-465.64" r="0.95" opacity="0.53"/><circle cx="102.85" cy="-166.77" r="0.95" opacity="0.53"/><circle cx="169.65" cy="-245.42" r="1.44" opacity="0.71"/><circle cx="233.25" cy="-302.86" r="1.23" opacity="0.64"/><circle cx="692.83" cy="-434.41" r="0.87" opacity="0.50"/><circle cx="385.15" cy="-366.33" r="1.06" opacity="0.57"/><circle cx="957.94" cy="-373.68" r="1.13" opacity="0.60"/><circle cx="993.50" cy="-355.22" r="0.91" opacity="0.52"/><circle cx="824.54" cy="-406.96" r="1.42" opacity="0.70"/><circle cx="392.04" cy="-353.03" r="1.18" opacity="0.61"/><circle cx="704.98" cy="-406.30" r="0.93" opacity="0.52"/><circle cx="838.33" cy="-376.93" r="0.88" opacity="0.51"/><circle cx="463.74" cy="-350.94" r="1.43" opacity="0.71"/><circle cx="1086.26" cy="-276.33" r="1.09" opacity="0.58"/><circle cx="384.00" cy="-307.23" r="1.12" opacity="0.59"/><circle cx="811.21" cy="-365.02" r="2.34" opacity="0.95"/><circle cx="503.61" cy="-347.48" r="1.05" opacity="0.56"/><circle cx="974.77" cy="-311.35" r="1.00" opacity="0.55"/><circle cx="1149.99" cy="-210.12" r="1.16" opacity="0.61"/><circle cx="310.97" cy="-251.84" r="0.98" opacity="0.54"/><circle cx="888.67" cy="-331.52" r="0.90" opacity="0.51"/><circle cx="936.77" cy="-308.70" r="1.54" opacity="0.75"/><circle cx="925.69" cy="-306.38" r="1.01" opacity="0.55"/><circle cx="884.04" cy="-315.51" r="1.13" opacity="0.60"/><circle cx="909.10" cy="-298.55" r="1.46" opacity="0.72"/><circle cx="1011.88" cy="-245.27" r="1.22" opacity="0.63"/><circle cx="487.63" cy="-277.19" r="0.98" opacity="0.54"/><circle cx="438.32" cy="-257.60" r="1.00" opacity="0.55"/><circle cx="935.14" cy="-260.95" r="1.29" opacity="0.66"/><circle cx="389.33" cy="-227.85" r="0.93" opacity="0.52"/><circle cx="570.08" cy="-277.55" r="1.17" opacity="0.61"/><circle cx="1066.08" cy="-197.50" r="1.07" opacity="0.57"/><circle cx="359.12" cy="-197.73" r="1.52" opacity="0.74"/><circle cx="908.98" cy="-240.31" r="0.92" opacity="0.52"/><circle cx="603.78" cy="-258.05" r="1.84" opacity="0.86"/><circle cx="744.35" cy="-259.89" r="0.89" opacity="0.51"/><circle cx="928.63" cy="-225.54" r="0.89" opacity="0.51"/><circle cx="430.69" cy="-207.61" r="0.99" opacity="0.54"/><circle cx="1012.20" cy="-194.20" r="0.97" opacity="0.54"/><circle cx="399.23" cy="-194.46" r="1.64" opacity="0.78"/><circle cx="889.55" cy="-224.88" r="1.05" opacity="0.57"/><circle cx="1034.13" cy="-172.52" r="0.95" opacity="0.53"/><circle cx="1141.98" cy="-107.47" r="1.02" opacity="0.55"/><circle cx="1026.03" cy="-155.80" r="1.35" opacity="0.68"/><circle cx="883.04" cy="-191.02" r="1.19" opacity="0.62"/><circle cx="1089.12" cy="-116.97" r="1.48" opacity="0.72"/><circle cx="580.29" cy="-180.22" r="1.00" opacity="0.55"/><circle cx="1187.74" cy="-38.91" r="1.45" opacity="0.71"/><circle cx="699.38" cy="-171.13" r="0.89" opacity="0.51"/><circle cx="1239.73" cy="4.02" r="0.93" opacity="0.52"/><circle cx="159.04" cy="8.50" r="1.05" opacity="0.56"/><circle cx="977.46" cy="-106.77" r="0.88" opacity="0.50"/><circle cx="1128.02" cy="-48.01" r="0.98" opacity="0.54"/><circle cx="1075.01" cy="-71.92" r="0.93" opacity="0.52"/><circle cx="958.53" cy="-105.44" r="0.96" opacity="0.53"/><circle cx="511.53" cy="-113.00" r="0.89" opacity="0.51"/><circle cx="1141.73" cy="-34.28" r="1.43" opacity="0.71"/><circle cx="1068.63" cy="-65.54" r="0.91" opacity="0.51"/><circle cx="613.09" cy="-123.68" r="1.04" opacity="0.56"/><circle cx="1187.64" cy="5.62" r="0.91" opacity="0.52"/><circle cx="619.17" cy="-107.00" r="1.11" opacity="0.59"/><circle cx="269.77" cy="-12.27" r="1.11" opacity="0.59"/><circle cx="320.69" cy="-30.35" r="0.88" opacity="0.50"/><circle cx="1231.77" cy="41.87" r="0.87" opacity="0.50"/><circle cx="278.57" cy="-9.23" r="0.99" opacity="0.54"/><circle cx="1073.76" cy="-33.61" r="0.94" opacity="0.53"/><circle cx="1042.32" cy="-37.90" r="1.35" opacity="0.68"/><circle cx="1170.22" cy="17.93" r="1.02" opacity="0.56"/><circle cx="1197.20" cy="32.27" r="0.88" opacity="0.50"/><circle cx="1255.39" cy="69.10" r="1.50" opacity="0.73"/><circle cx="653.81" cy="-71.39" r="0.90" opacity="0.51"/><circle cx="1171.38" cy="26.87" r="1.35" opacity="0.68"/><circle cx="367.77" cy="-15.27" r="0.92" opacity="0.52"/><circle cx="388.16" cy="-17.03" r="1.10" opacity="0.59"/><circle cx="1135.63" cy="18.28" r="1.28" opacity="0.65"/><circle cx="747.95" cy="-46.18" r="1.41" opacity="0.70"/><circle cx="1014.22" cy="-6.54" r="0.98" opacity="0.54"/><circle cx="1150.38" cy="37.33" r="1.10" opacity="0.58"/><circle cx="162.82" cy="78.57" r="0.96" opacity="0.54"/><circle cx="252.58" cy="43.73" r="1.09" opacity="0.58"/><circle cx="686.35" cy="-21.33" r="0.90" opacity="0.51"/><circle cx="595.06" cy="-13.87" r="1.00" opacity="0.55"/><circle cx="1192.06" cy="72.90" r="0.95" opacity="0.53"/><circle cx="481.79" cy="8.55" r="1.15" opacity="0.60"/><circle cx="1212.26" cy="83.60" r="1.16" opacity="0.61"/><circle cx="199.28" cy="86.37" r="0.93" opacity="0.52"/><circle cx="465.07" cy="23.89" r="0.90" opacity="0.51"/><circle cx="1126.23" cy="65.92" r="1.00" opacity="0.55"/><circle cx="543.03" cy="41.88" r="1.01" opacity="0.55"/><circle cx="582.21" cy="40.74" r="1.58" opacity="0.76"/><circle cx="780.86" cy="41.06" r="0.98" opacity="0.54"/><circle cx="1248.04" cy="126.64" r="1.06" opacity="0.57"/><circle cx="1023.30" cy="71.58" r="0.91" opacity="0.52"/><circle cx="490.48" cy="64.80" r="1.02" opacity="0.56"/><circle cx="1178.15" cy="108.45" r="1.03" opacity="0.56"/><circle cx="333.41" cy="87.92" r="1.02" opacity="0.55"/><circle cx="519.89" cy="68.12" r="1.41" opacity="0.70"/><circle cx="345.69" cy="94.05" r="1.12" opacity="0.59"/><circle cx="1278.60" cy="147.08" r="0.87" opacity="0.50"/><circle cx="817.67" cy="73.29" r="0.92" opacity="0.52"/><circle cx="1156.21" cy="117.25" r="0.92" opacity="0.52"/><circle cx="1179.45" cy="127.74" r="1.06" opacity="0.57"/><circle cx="606.47" cy="87.49" r="0.91" opacity="0.52"/><circle cx="1070.92" cy="116.25" r="0.91" opacity="0.52"/><circle cx="1200.24" cy="145.34" r="1.21" opacity="0.63"/><circle cx="1079.94" cy="132.42" r="1.22" opacity="0.63"/><circle cx="812.73" cy="119.95" r="1.11" opacity="0.59"/><circle cx="408.08" cy="137.85" r="0.93" opacity="0.52"/><circle cx="1155.20" cy="151.49" r="0.93" opacity="0.52"/><circle cx="231.36" cy="165.39" r="1.32" opacity="0.67"/><circle cx="188.58" cy="171.61" r="1.46" opacity="0.72"/><circle cx="1155.51" cy="171.71" r="0.89" opacity="0.51"/><circle cx="326.88" cy="169.44" r="1.14" opacity="0.60"/><circle cx="518.94" cy="170.39" r="1.26" opacity="0.64"/><circle cx="559.72" cy="169.90" r="1.05" opacity="0.57"/><circle cx="430.97" cy="179.68" r="0.93" opacity="0.52"/><circle cx="418.46" cy="180.45" r="1.01" opacity="0.55"/><circle cx="801.57" cy="179.06" r="0.99" opacity="0.54"/><circle cx="1119.35" cy="187.21" r="0.90" opacity="0.51"/><circle cx="599.10" cy="188.39" r="0.87" opacity="0.50"/><circle cx="128.73" cy="201.26" r="0.92" opacity="0.52"/><circle cx="938.23" cy="205.93" r="0.99" opacity="0.55"/><circle cx="1187.55" cy="207.25" r="1.11" opacity="0.59"/><circle cx="1217.39" cy="217.24" r="0.97" opacity="0.54"/><circle cx="630.95" cy="231.88" r="0.86" opacity="0.50"/><circle cx="300.80" cy="223.38" r="0.95" opacity="0.53"/><circle cx="566.46" cy="237.25" r="1.37" opacity="0.69"/><circle cx="668.99" cy="241.87" r="0.98" opacity="0.54"/><circle cx="253.09" cy="231.24" r="1.30" opacity="0.66"/><circle cx="1090.14" cy="259.42" r="1.25" opacity="0.64"/><circle cx="864.40" cy="278.69" r="1.13" opacity="0.60"/><circle cx="1103.53" cy="262.89" r="0.88" opacity="0.50"/><circle cx="1154.92" cy="260.65" r="1.20" opacity="0.62"/><circle cx="224.56" cy="255.36" r="1.05" opacity="0.57"/><circle cx="823.52" cy="291.27" r="1.25" opacity="0.64"/><circle cx="687.39" cy="300.77" r="0.90" opacity="0.51"/><circle cx="1168.63" cy="266.48" r="0.98" opacity="0.54"/><circle cx="1190.68" cy="268.54" r="1.74" opacity="0.82"/><circle cx="1087.47" cy="290.30" r="0.89" opacity="0.51"/><circle cx="815.10" cy="319.48" r="1.16" opacity="0.61"/><circle cx="1143.10" cy="284.74" r="1.52" opacity="0.74"/><circle cx="1263.29" cy="255.53" r="0.91" opacity="0.52"/><circle cx="121.03" cy="252.50" r="0.91" opacity="0.52"/><circle cx="870.85" cy="325.66" r="1.23" opacity="0.64"/><circle cx="1239.91" cy="267.35" r="1.22" opacity="0.63"/><circle cx="1074.65" cy="307.72" r="0.91" opacity="0.52"/><circle cx="1078.38" cy="313.10" r="1.36" opacity="0.68"/><circle cx="692.37" cy="344.64" r="1.21" opacity="0.63"/><circle cx="1232.74" cy="279.15" r="1.13" opacity="0.60"/><circle cx="1165.56" cy="301.78" r="1.61" opacity="0.78"/><circle cx="226.90" cy="304.06" r="1.47" opacity="0.72"/><circle cx="651.60" cy="371.62" r="1.03" opacity="0.56"/><circle cx="367.63" cy="340.10" r="1.17" opacity="0.61"/><circle cx="588.86" cy="381.15" r="1.18" opacity="0.61"/><circle cx="1262.07" cy="283.47" r="0.98" opacity="0.54"/><circle cx="723.69" cy="401.90" r="0.77" opacity="0.46"/><circle cx="869.62" cy="412.42" r="1.14" opacity="0.60"/><circle cx="982.15" cy="398.78" r="1.21" opacity="0.62"/><circle cx="227.64" cy="343.12" r="1.35" opacity="0.68"/><circle cx="769.35" cy="431.80" r="1.69" opacity="0.80"/><circle cx="226.77" cy="344.51" r="0.87" opacity="0.50"/><circle cx="1005.65" cy="412.32" r="0.90" opacity="0.51"/><circle cx="679.89" cy="451.17" r="1.04" opacity="0.56"/><circle cx="1123.44" cy="390.14" r="1.33" opacity="0.67"/><circle cx="264.46" cy="390.63" r="1.45" opacity="0.71"/><circle cx="1027.29" cy="438.85" r="1.03" opacity="0.56"/><circle cx="1033.91" cy="437.06" r="1.01" opacity="0.55"/><circle cx="515.75" cy="474.57" r="1.23" opacity="0.63"/><circle cx="1075.35" cy="433.14" r="1.26" opacity="0.65"/><circle cx="1032.21" cy="452.50" r="0.92" opacity="0.52"/><circle cx="1055.10" cy="445.60" r="0.91" opacity="0.51"/><circle cx="657.44" cy="504.48" r="0.81" opacity="0.48"/><circle cx="1185.24" cy="394.75" r="1.79" opacity="0.84"/><circle cx="141.40" cy="349.90" r="0.96" opacity="0.53"/><circle cx="901.17" cy="499.61" r="1.07" opacity="0.57"/><circle cx="984.72" cy="481.41" r="1.39" opacity="0.69"/><circle cx="502.43" cy="512.51" r="1.96" opacity="0.91"/><circle cx="720.57" cy="535.05" r="0.85" opacity="0.49"/><circle cx="1070.06" cy="474.65" r="0.99" opacity="0.55"/><circle cx="400.86" cy="515.82" r="0.99" opacity="0.54"/><circle cx="334.52" cy="491.39" r="1.13" opacity="0.60"/><circle cx="1040.15" cy="514.13" r="1.32" opacity="0.67"/><circle cx="1199.32" cy="434.24" r="1.59" opacity="0.77"/><circle cx="1199.31" cy="434.29" r="1.95" opacity="0.90"/><circle cx="540.65" cy="569.81" r="0.93" opacity="0.52"/><circle cx="1087.20" cy="504.39" r="1.33" opacity="0.67"/><circle cx="1233.34" cy="411.90" r="1.09" opacity="0.58"/><circle cx="713.54" cy="589.54" r="0.91" opacity="0.51"/><circle cx="422.78" cy="547.46" r="1.32" opacity="0.67"/><circle cx="644.67" cy="593.45" r="0.94" opacity="0.53"/><circle cx="55.98" cy="324.71" r="1.39" opacity="0.69"/><circle cx="807.31" cy="600.22" r="1.21" opacity="0.62"/><circle cx="1054.59" cy="547.87" r="1.23" opacity="0.63"/><circle cx="1045.59" cy="553.01" r="1.10" opacity="0.59"/><circle cx="301.39" cy="527.61" r="1.01" opacity="0.55"/><circle cx="892.91" cy="612.07" r="1.07" opacity="0.57"/><circle cx="1091.25" cy="540.91" r="0.89" opacity="0.51"/><circle cx="1108.40" cy="542.64" r="0.90" opacity="0.51"/><circle cx="1137.82" cy="525.08" r="1.03" opacity="0.56"/><circle cx="352.67" cy="577.01" r="1.02" opacity="0.55"/><circle cx="742.87" cy="657.19" r="1.25" opacity="0.64"/><circle cx="1274.64" cy="416.83" r="1.18" opacity="0.61"/><circle cx="59.35" cy="357.48" r="1.14" opacity="0.60"/><circle cx="1038.75" cy="595.17" r="1.08" opacity="0.58"/><circle cx="998.25" cy="613.28" r="0.99" opacity="0.54"/><circle cx="1076.04" cy="578.87" r="1.04" opacity="0.56"/><circle cx="143.17" cy="453.42" r="1.06" opacity="0.57"/><circle cx="381.53" cy="612.90" r="0.96" opacity="0.53"/><circle cx="398.38" cy="633.07" r="1.35" opacity="0.68"/><circle cx="547.61" cy="678.07" r="0.92" opacity="0.52"/><circle cx="1047.93" cy="615.16" r="1.19" opacity="0.62"/><circle cx="793.23" cy="690.34" r="0.89" opacity="0.51"/><circle cx="924.01" cy="667.14" r="0.98" opacity="0.54"/><circle cx="940.26" cy="665.26" r="0.96" opacity="0.53"/><circle cx="396.91" cy="648.06" r="0.92" opacity="0.52"/><circle cx="582.87" cy="703.38" r="1.24" opacity="0.64"/><circle cx="495.48" cy="688.63" r="0.96" opacity="0.54"/><circle cx="678.20" cy="723.13" r="0.99" opacity="0.55"/><circle cx="599.20" cy="718.98" r="0.95" opacity="0.53"/><circle cx="980.65" cy="673.92" r="0.88" opacity="0.50"/><circle cx="1250.60" cy="492.23" r="1.19" opacity="0.62"/><circle cx="487.26" cy="706.89" r="0.91" opacity="0.52"/><circle cx="938.29" cy="700.40" r="0.91" opacity="0.51"/><circle cx="907.39" cy="713.64" r="1.17" opacity="0.61"/><circle cx="1030.20" cy="668.78" r="1.03" opacity="0.56"/><circle cx="872.02" cy="725.63" r="1.33" opacity="0.67"/><circle cx="843.38" cy="741.69" r="1.26" opacity="0.64"/><circle cx="852.40" cy="742.55" r="0.89" opacity="0.51"/><circle cx="840.03" cy="755.18" r="0.87" opacity="0.50"/><circle cx="673.78" cy="772.84" r="1.21" opacity="0.63"/><circle cx="683.12" cy="781.11" r="1.08" opacity="0.58"/><circle cx="197.21" cy="593.73" r="0.89" opacity="0.51"/><circle cx="905.67" cy="757.05" r="1.17" opacity="0.61"/><circle cx="436.44" cy="741.40" r="0.94" opacity="0.53"/><circle cx="86.85" cy="479.30" r="1.21" opacity="0.63"/><circle cx="916.18" cy="769.61" r="1.66" opacity="0.79"/><circle cx="407.21" cy="746.58" r="1.20" opacity="0.62"/><circle cx="607.33" cy="801.24" r="0.92" opacity="0.52"/><circle cx="936.92" cy="775.03" r="1.19" opacity="0.62"/><circle cx="742.42" cy="817.56" r="1.26" opacity="0.65"/><circle cx="301.73" cy="714.00" r="1.19" opacity="0.62"/><circle cx="235.81" cy="670.60" r="1.01" opacity="0.55"/><circle cx="1007.66" cy="772.24" r="1.33" opacity="0.67"/><circle cx="1048.69" cy="753.60" r="1.14" opacity="0.60"/><circle cx="1048.60" cy="754.51" r="0.99" opacity="0.54"/><circle cx="511.60" cy="837.86" r="1.09" opacity="0.58"/><circle cx="289.09" cy="744.56" r="0.89" opacity="0.51"/><circle cx="30.60" cy="461.99" r="1.09" opacity="0.58"/><circle cx="798.54" cy="877.21" r="1.29" opacity="0.66"/><circle cx="442.88" cy="851.75" r="1.20" opacity="0.62"/><circle cx="332.37" cy="801.79" r="1.11" opacity="0.59"/><circle cx="219.98" cy="723.34" r="1.10" opacity="0.58"/><circle cx="84.90" cy="604.46" r="1.20" opacity="0.62"/><circle cx="444.83" cy="894.68" r="1.39" opacity="0.69"/><circle cx="117.37" cy="669.68" r="0.92" opacity="0.52"/><circle cx="266.57" cy="827.27" r="1.03" opacity="0.56"/><circle cx="33.69" cy="569.02" r="0.94" opacity="0.53"/><circle cx="164.70" cy="762.31" r="0.91" opacity="0.51"/><circle cx="60.22" cy="626.31" r="1.35" opacity="0.68"/><circle cx="-41.38" cy="395.06" r="0.99" opacity="0.55"/><circle cx="-74.20" cy="445.65" r="1.12" opacity="0.59"/></g>
+<g class="virgo-lines" fill="none" stroke="currentColor">
+<path d="M630.95,231.88 L668.99,241.87 L687.39,300.77 L692.37,344.64 L723.69,401.90 L769.35,431.80 L720.57,535.05 L713.54,589.54" pathLength="1"/>
+<path d="M588.86,381.15 L651.60,371.62 L692.37,344.64" pathLength="1"/>
+<path d="M723.69,401.90 L679.89,451.17 L657.44,504.48 L644.67,593.45" pathLength="1"/>
+</g>
+<g class="virgo-stars" fill="currentColor"><circle cx="630.95" cy="231.88" r="2.35"/><circle cx="668.99" cy="241.87" r="2.35"/><circle cx="687.39" cy="300.77" r="2.35"/><circle cx="692.37" cy="344.64" r="2.35"/><circle cx="723.69" cy="401.9" r="2.35"/><circle cx="769.35" cy="431.8" r="2.35"/><circle cx="720.57" cy="535.05" r="2.35"/><circle cx="713.54" cy="589.54" r="2.35"/><circle cx="588.86" cy="381.15" r="2.35"/><circle cx="651.6" cy="371.62" r="2.35"/><circle cx="679.89" cy="451.17" r="2.35"/><circle cx="657.44" cy="504.48" r="2.35"/><circle cx="644.67" cy="593.45" r="2.35"/></g>
+</svg></div>
+<!-- sky:end -->
   <div class="spot" aria-hidden="true"></div>
   <div class="grain" aria-hidden="true"></div>
 
@@ -298,7 +330,7 @@ main{position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:88px cla
 
     <!-- nombre -->
     <section style="position:relative;">
-      <div class="eyebrow">Omar Vásquez</div>
+      <div class="eyebrow"><a id="profile-open" class="sky-secret" href="#about-omar" data-profile-open data-sky-trigger data-label="profileNameOpen" aria-label="Omar Vásquez — chi sono"><span class="profile-signature">Omar Vásquez</span><span class="profile-hint" aria-hidden="true"><svg class="profile-cursor" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="m5 3 10 8-5 1-3 5-2-14Z"/><path d="M13 2v3m3 1 2-1M3 1l-1 2"/></svg><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 15 15 5M5 5h10v10"/></svg></span></a></div>
       <h1 class="name" data-lit aria-label="Omar Vásquez">OMAR</h1>
       <div class="surname serif" aria-hidden="true">Vásquez</div>
       <div class="card glass claim" data-lit data-reveal>
@@ -345,6 +377,7 @@ main{position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:88px cla
       <div class="strip-head">
         <span style="font-weight:900;font-size:64px;line-height:.8;letter-spacing:-.06em;">3</span>
         <span style="font-size:16px;font-weight:600;">lingue</span>
+        <button class="marquee-control" type="button" data-marquee-pause aria-pressed="false" data-label="pauseLanguages" aria-label="Metti in pausa lo scorrimento delle lingue"><svg class="pause-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 5v10m6-10v10"/></svg><svg class="play-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m7 4 9 6-9 6V4Z" stroke-linejoin="round"/></svg></button>
       </div>
       <div class="strip-track">
         <div class="marquee marquee-langs">
@@ -391,7 +424,7 @@ main{position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:88px cla
         <div class="card glass step lift" data-lit data-reveal>
           <span class="yr" style="color:var(--orange);">2011</span>
           <h3 class="serif">Imparare il mestiere</h3>
-          <p style="color:var(--muted);">Tecnico audiovisivo a Caracas. Mi sono dedicato a imparare tutto sul campo: audio, illuminazione, visuali, allestimento. Un'ingegneria del suono fatta per pura pratica.</p>
+          <p style="color:var(--muted);">Tecnico audiovisivo a Caracas. Mi sono dedicato a imparare tutto sul campo: audio, illuminazione, visuali, allestimento. Ho imparato il suono attraverso la pratica.</p>
         </div>
         <div class="card glass step lift" data-lit data-reveal>
           <span class="yr" style="color:var(--orange);">2014</span>
@@ -416,12 +449,12 @@ main{position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:88px cla
         <div class="card dark step lift" data-lit data-reveal>
           <span class="yr" style="color:var(--sky);">2024</span>
           <h3 class="serif">Il salto</h3>
-          <p style="color:#C9D1DC;">Dalla produzione alla direzione: marketing, relazioni pubbliche, consulenza commerciale e creazione di esperienze, lanci ed eventi, questa volta da capo. Responsabile dei clienti di un'agenzia con mercati in sei paesi, fino alla chiusura ordinata delle attività.</p>
+          <p style="color:#C9D1DC;">Dalla produzione alla direzione: marketing, relazioni pubbliche, consulenza commerciale e creazione di esperienze, lanci ed eventi, questa volta alla guida. Responsabile dei clienti di un'agenzia con mercati in sei paesi, fino alla chiusura ordinata delle attività.</p>
         </div>
         <div class="card orange step lift" data-lit data-reveal>
           <span class="yr" style="color:var(--deep);">2025</span>
           <h3 class="serif">Italia, dal basso</h3>
-          <p style="color:var(--deep);">Lavapiatti e cameriere sul litorale romano, e l'italiano da imparare. Nel 2026 cameriere, pittura e carpenteria nella ristrutturazione di un chiosco sul mare, e poi barman.</p>
+          <p style="color:var(--deep);">Lavapiatti e cameriere sul litorale romano, e l'italiano da imparare. Nel 2026, servizio in sala, pittura e carpenteria durante la ristrutturazione di un chiosco sul mare, poi lavoro da barman.</p>
         </div>
       </div>
     </section>
@@ -486,16 +519,49 @@ main{position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:88px cla
       </div>
     </section>
 
-    <!-- herramientas -->
-    <section class="card glass strip" data-lit data-reveal>
+    <!-- áreas: una sola ficha desplegada a la vez -->
+    <section class="card glass strip expertise" id="expertise" data-lit data-reveal aria-labelledby="expertise-title">
       <div class="strip-head">
-        <h2 style="margin:0;font-weight:800;font-size:clamp(30px,5vw,44px);line-height:1;letter-spacing:-.04em;">Strumenti</h2>
+        <h2 class="expertise-title" id="expertise-title" data-ui="areasTitle">Competenze</h2>
+        <p class="expertise-hint" data-ui="areasHint">Esplora le aree</p>
       </div>
-      <div class="strip-track">
-        <div class="marquee marquee-tools">
-          <div class="seq seq-tools">
-            <span class="tool">vMix</span><span class="tool">OBS</span><span class="tool">Resolume</span><span class="tool">Novastar</span><span class="tool">Consolle audio</span><span class="tool">Illuminazione robotizzata</span><span class="tool">Schermi LED</span><span class="tool">Meta Ads</span><span class="tool">Google Ads</span><span class="tool">TikTok Ads</span><span class="tool">WordPress</span><span class="tool">Wix</span><span class="tool">Squarespace</span><span class="tool">Claude e strumenti di IA</span><span class="tool">Excel</span><span class="tool">Google Workspace</span><span class="tool">Windows</span><span class="tool">macOS</span><span class="tool">Linux</span>
-          </div>
+      <div class="area-nav" role="group" data-label="areasLabel" aria-label="Scegli un’area di lavoro">
+          <button type="button" class="area-button" id="choose-production" data-area="production" aria-expanded="false" aria-controls="area-production"><span class="area-label" data-ui="productionName">Produzione</span><span class="area-plus" aria-hidden="true">+</span></button>
+          <button type="button" class="area-button" id="choose-operations" data-area="operations" aria-expanded="false" aria-controls="area-operations"><span class="area-label" data-ui="operationsName">Operazioni</span><span class="area-plus" aria-hidden="true">+</span></button>
+          <button type="button" class="area-button" id="choose-business" data-area="business" aria-expanded="false" aria-controls="area-business"><span class="area-label" data-ui="businessName">Business</span><span class="area-plus" aria-hidden="true">+</span></button>
+          <button type="button" class="area-button" id="choose-technology" data-area="technology" aria-expanded="false" aria-controls="area-technology"><span class="area-label" data-ui="technologyName">Tecnologia</span><span class="area-plus" aria-hidden="true">+</span></button>
+      </div>
+      <p class="expertise-shared" data-ui="leadershipShared">Leadership operativa, coordinamento multidisciplinare e capacità decisionale sotto pressione.</p>
+      <div class="area-panels">
+        <div class="area-panel" id="area-production" data-area-panel="production">
+          <h3 class="area-title" data-ui="productionName">Produzione</h3>
+          <p class="area-summary serif" data-ui="productionSummary">Trasformo proposte in esperienze complete, dal montaggio all’operatività e allo smontaggio di installazioni temporanee.</p>
+          <ul class="area-points"><li data-ui="productionPoint1">Integrazione audiovisiva, sistemi LED e attivazioni di marca.</li><li data-ui="productionPoint2">Pianificazione delle risorse tecniche e delle esigenze elettriche.</li><li data-ui="productionPoint3">Fotografia, riprese con videocamere professionali e postproduzione audio.</li><li data-ui="productionPoint4">Applicazione degli standard di ospitalità di hotel a cinque stelle.</li></ul>
+          <details class="area-tools-disclosure"><summary data-ui="toolsLabel">Strumenti e risorse</summary><div class="area-tools"><div class="area-tool-group"><h4 data-ui="photoTools">Fotografia e grafica</h4><div class="area-chips"><span class="area-chip">Photoshop</span><span class="area-chip">Lightroom</span><span class="area-chip">Illustrator</span><span class="area-chip">Photopea</span></div></div><div class="area-tool-group"><h4 data-ui="videoAudioTools">Video e audio</h4><div class="area-chips"><span class="area-chip">Premiere Pro</span><span class="area-chip">After Effects</span><span class="area-chip">DaVinci Resolve</span><span class="area-chip">Adobe Audition</span></div></div><div class="area-tool-group"><h4 data-ui="avTools">Sistemi audiovisivi</h4><div class="area-chips"><span class="area-chip">vMix</span><span class="area-chip">OBS</span><span class="area-chip">Resolume</span><span class="area-chip">Novastar</span></div></div><div class="area-tool-group"><h4 data-ui="cadTools">Disegno tecnico</h4><div class="area-chips"><span class="area-chip">AutoCAD</span><span class="area-chip">SketchUp</span></div></div></div></details>
+        </div>
+        <div class="area-panel" id="area-operations" data-area-panel="operations">
+          <h3 class="area-title" data-ui="operationsName">Operazioni</h3>
+          <p class="area-summary serif" data-ui="operationsSummary">Organizzo le attività perché persone, materiali e servizi siano disponibili dove e quando servono.</p>
+          <ul class="area-points"><li data-ui="operationsPoint1">Trasporti, accessi e sequenze di consegna.</li><li data-ui="operationsPoint2">Selezione dei fornitori, acquisti e approvvigionamenti.</li><li data-ui="operationsPoint3">Preventivi, analisi dei costi e valutazione della fattibilità.</li><li data-ui="operationsPoint4">Gestione degli imprevisti e ripianificazione operativa.</li></ul>
+          <details class="area-tools-disclosure"><summary data-ui="toolsLabel">Strumenti e risorse</summary><div class="area-tools"><div class="area-chips"><span class="area-chip">Excel</span><span class="area-chip">Google Workspace</span><span class="area-chip">ONLYOFFICE</span><span class="area-chip">Apache OpenOffice</span></div></div></details>
+        </div>
+        <div class="area-panel" id="area-business" data-area-panel="business">
+          <h3 class="area-title" data-ui="businessName">Business</h3>
+          <p class="area-summary serif" data-ui="businessSummary">Traduco le esigenze del cliente in proposte concrete e opportunità di crescita commerciale.</p>
+          <ul class="area-points"><li data-ui="businessPoint1">Gestione dei clienti e relazione con gli interlocutori chiave.</li><li data-ui="businessPoint2">Presentazione delle proposte e negoziazione commerciale.</li><li data-ui="businessPoint3">Strategia digitale, SEO/SEM e analisi dei risultati.</li><li data-ui="businessPoint4">Formazione in commercio estero e pianificazione di import/export.</li></ul>
+          <details class="area-tools-disclosure"><summary data-ui="toolsLabel">Strumenti e risorse</summary><div class="area-tools"><div class="area-chips"><span class="area-chip">Meta Ads</span><span class="area-chip">Google Ads</span><span class="area-chip">TikTok Ads</span><span class="area-chip">Canva</span><span class="area-chip">Google Search Console</span><span class="area-chip">Google Tag Manager</span><span class="area-chip">Google Ads · MCC</span><span class="area-chip">Google Analytics 4</span><span class="area-chip">Looker Studio</span><span class="area-chip">Semrush</span></div><p data-ui="webTools">WordPress · Wix · Squarespace</p></div></details>
+        </div>
+        <div class="area-panel" id="area-technology" data-area-panel="technology">
+          <h3 class="area-title" data-ui="technologyName">Tecnologia</h3>
+          <p class="area-summary serif" data-ui="technologySummary">Risolvo problemi pratici e collego strumenti per facilitare il lavoro quotidiano.</p>
+          <ul class="area-points"><li data-ui="technologyPoint1">Automazione dei processi, bot e agenti di IA.</li><li data-ui="technologyPoint2">Amministrazione di sistemi, reti, VPN e manutenzione informatica.</li><li data-ui="technologyPoint3">Sviluppo web e di app con assistenza dell’IA.</li><li data-ui="technologyPoint4">Privacy, accessibilità e supporto mobile, anche per persone anziane.</li></ul>
+          <details class="area-tools-disclosure"><summary data-ui="toolsLabel">Strumenti e risorse</summary><div class="area-tools">
+
+            <div class="area-tool-group"><h4 data-ui="systemsTools">Sistemi operativi</h4><div class="area-chips"><span class="area-chip" data-ui="advancedWindows">Windows · avanzato</span><span class="area-chip" data-ui="advancedFedora">Fedora Linux · avanzato</span><span class="area-chip" data-ui="advancedMacOS">macOS · avanzato</span></div></div>
+            <div class="area-tool-group"><h4 data-ui="automationTools">Automazione e progetti web</h4><div class="area-chips"><span class="area-chip">n8n</span><span class="area-chip">GitHub</span><span class="area-chip" data-ui="aiTools">Claude e strumenti di IA</span><span class="area-chip">Google Flow</span></div></div>
+            <div class="area-tool-group"><h4 data-ui="networkTools">Infrastruttura e reti</h4><div class="area-chips"><span class="area-chip">Docker</span><span class="area-chip">Podman</span><span class="area-chip">WireGuard</span></div></div>
+            <div class="area-tool-group"><h4 data-ui="mobileTools">Dispositivi mobili</h4><div class="area-chips"><span class="area-chip">iOS</span><span class="area-chip">Android</span></div><p class="area-device-note" data-ui="mobileScope">Configurazione, diagnosi, riparazione e modifiche del sistema in iOS e Android.</p></div>
+          </div></details>
         </div>
       </div>
     </section>
@@ -507,14 +573,14 @@ main{position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:88px cla
         <div>
           <div lang="es" style="font-weight:700;font-size:clamp(22px,3vw,28px);line-height:1.15;letter-spacing:-.015em;">Licenciatura en Estudios Internacionales</div>
           <div class="serif" style="font-style:italic;font-weight:500;font-size:clamp(24px,3.2vw,30px);color:var(--orange-d);margin-top:4px;">Titolo universitario venezuelano in Studi Internazionali</div>
-          <div class="education-meta" style="margin-top:10px;font-size:15px;line-height:1.5;color:#3A4354;">Università Santa María, Caracas · Facoltà di Giurisprudenza · 2011–2016 (titolo 2018)</div>
+          <div class="education-meta" style="margin-top:10px;font-size:15px;line-height:1.5;color:#3A4354;">Universidad Santa María, Caracas · Facoltà di Giurisprudenza · 2011–2016 (titolo conseguito nel 2018)</div>
         </div>
       </div>
       <div style="flex:1 1 360px;display:flex;flex-direction:column;justify-content:space-between;gap:24px;">
         <p class="serif" style="margin:0;font-size:clamp(22px,2.8vw,28px);line-height:1.3;color:var(--ink);text-wrap:pretty;">Un percorso di cinque anni tra diritto, economia e relazioni internazionali. Mi ha lasciato il modo di lavorare che uso ogni giorno: analizzare una situazione prima di decidere, negoziare, muovermi tra mercati e culture diverse e scrivere in modo che si capisca.</p>
         <div style="display:flex;flex-wrap:wrap;gap:8px;">
-          <span style="padding:10px 16px;border-radius:999px;background:var(--ink);color:#fff;font-size:14px;font-weight:500;">Claude 101 — Anthropic Academy</span>
-          <span style="padding:10px 16px;border-radius:999px;background:var(--sky);font-size:14px;font-weight:500;">Digital Marketing — Udemy</span>
+          <span style="padding:10px 16px;border-radius:999px;background:var(--ink);color:var(--paper);font-size:14px;font-weight:500;">Claude 101 — Anthropic Academy</span>
+          <span style="padding:10px 16px;border-radius:999px;background:var(--sky);color:#141821;font-size:14px;font-weight:500;">Digital Marketing — Udemy</span>
         </div>
       </div>
     </section>
@@ -547,12 +613,30 @@ main{position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:88px cla
     <!-- cómo se hizo -->
     <section class="card glass credit" data-lit data-reveal>
       <h2>Come è nata questa pagina</h2>
-      <p class="serif">L'ho costruita insieme a Claude, l'intelligenza artificiale di Anthropic, in uno spazio di lavoro controllato. Le regole con cui ha lavorato l'IA, l'identità, le idee e ogni contenuto sono miei; la realizzazione l'abbiamo fatta insieme.</p>
+      <p class="serif">L'ho costruita con l'aiuto di strumenti di intelligenza artificiale, in uno spazio di lavoro controllato. Le regole con cui ha lavorato l'IA, l'identità, le idee e ogni contenuto sono miei; la realizzazione l'abbiamo fatta insieme.</p>
     </section>
 
+    <!-- Sección legible sin JavaScript; se convierte en un único diálogo. -->
+    <section id="about-omar" class="profile-card" aria-labelledby="profile-title">
+      <button class="profile-close" type="button" data-profile-close data-label="profileClose" aria-label="Chiudi la scheda personale" hidden><svg viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m4 4 12 12M16 4 4 16"/></svg></button>
+      <span class="profile-kicker" data-ui="profileKicker">Dietro il nome</span>
+      <h2 id="profile-title" class="serif">Omar Vásquez</h2>
+      <div class="profile-overview">
+      <img class="profile-portrait" src="assets/omar-vasquez-portrait.jpg" width="1737" height="3088" alt="Ritratto di Omar Vásquez" data-alt="profilePhotoAlt" loading="lazy" decoding="async">
+      <p class="profile-intro serif" data-ui="profileIntro">Mi piace capire come funzionano le cose e mettere insieme persone, idee e strumenti per farle accadere.</p>
+      </div>
+      <dl class="profile-facts">
+        <div><dt data-ui="profileLocationLabel">Dove vivo</dt><dd data-ui="profileLocation">Santa Marinella, Roma · Italia</dd></div>
+        <div><dt data-ui="profileInterestsLabel">Cosa mi muove</dt><dd data-ui="profileInterests">Tecnologia, creatività e relazioni umane.</dd></div>
+      </dl>
+      <p class="profile-values" data-ui="profileValues">La curiosità mi porta a imparare e a cambiare prospettiva. Il rispetto, l’ascolto e la riservatezza guidano il modo in cui lavoro con le persone. Mi interessa costruire esperienze curate e rapporti basati sulla fiducia.</p>
+    </section>
+    <div class="profile-footer"><a href="#about-omar" class="profile-footer-link" data-profile-open><span data-ui="profileFooter">Un po’ di più su di me</span><svg viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 15 15 5M5 5h10v10"/></svg></a></div>
+
     <section class="appearance-panel" aria-label="Aspetto" data-label="appearance">
-      <div><span class="label" data-ui="appearance">Aspetto</span><p class="serif" data-ui="lightYourWay">La luce, come piace a te.</p></div>
-      <div class="theme-control">
+      <div><span class="label" data-ui="appearance">Aspetto</span><p class="serif" data-ui="lightYourWay">La luce, come piace a te.</p>
+      </div>
+      <div class="theme-tools"><div class="theme-control">
         <span class="theme-caption" data-ui="day">Giorno</span>
         <button class="theme-switch" type="button" role="switch" aria-checked="false" aria-label="Modalità scura" data-label="darkMode" data-theme-toggle>
           <span class="switch-stars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
@@ -560,7 +644,7 @@ main{position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:88px cla
           <span class="toggle-orb" aria-hidden="true"><i></i><i></i><i></i></span>
         </button>
         <span class="theme-caption" data-ui="night">Notte</span>
-      </div>
+      </div><button class="theme-auto" type="button" data-theme-auto aria-pressed="true" data-label="autoThemeLabel" aria-label="Tema automatico secondo l’ora italiana, notte dalle 18 alle 6"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="M10 5v5l3 2" stroke-linecap="round"/></svg><span data-ui="autoTheme">Auto · Italia</span></button></div>
     </section>
     <p class="sr-only" id="preference-status" aria-live="polite" aria-atomic="true"></p>
     <noscript><p>Le preferenze interattive richiedono JavaScript. La pagina e i PDF in italiano restano disponibili.</p></noscript>
@@ -568,87 +652,10 @@ main{position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:88px cla
   </main>
 </div>
 
-<script>
-(() => {
-  const root = document.documentElement;
-  root.classList.add('js');
-  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const canHover = matchMedia('(hover: hover)').matches;
-
-  // Duplica cada secuencia del marquee para que el bucle sea continuo
-  document.querySelectorAll('.marquee').forEach(m => {
-    const clone = m.firstElementChild.cloneNode(true);
-    clone.setAttribute('aria-hidden', 'true');
-    m.appendChild(clone);
-  });
-
-  // Barra más opaca al hacer scroll
-  const bar = document.querySelector('.bar');
-  const onScrollBar = () => bar.classList.toggle('scrolled', scrollY > 40);
-  addEventListener('scroll', onScrollBar, { passive: true }); onScrollBar();
-
-  // ---------- El foco ----------
-  // Una sola fuente de luz: sigue al ratón; en táctil va a donde se toca y deriva sola.
-  const spot = document.querySelector('.spot');
-  const lit = Array.from(document.querySelectorAll('[data-lit]'));
-  const visible = new Set();
-  const vio = new IntersectionObserver(es => es.forEach(e => e.isIntersecting ? visible.add(e.target) : visible.delete(e.target)), { rootMargin: '200px' });
-  lit.forEach(el => vio.observe(el));
-
-  let tx = innerWidth * .72, ty = innerHeight * .28;   // objetivo
-  let lx = tx, ly = ty;                                   // posición suavizada
-  let lastInput = -1e9, raf = 0;
-
-  const paint = () => {
-    spot.style.setProperty('--lx', lx + 'px');
-    spot.style.setProperty('--ly', ly + 'px');
-    visible.forEach(el => {
-      const r = el.getBoundingClientRect();
-      const dx = Math.max(r.left - lx, 0, lx - r.right), dy = Math.max(r.top - ly, 0, ly - r.bottom);
-      const k = Math.max(0, 1 - Math.hypot(dx, dy) / 700);
-      const vx = (r.left + r.width / 2 - lx) / Math.max(r.width, 1), vy = (r.top + r.height / 2 - ly) / Math.max(r.height, 1);
-      const s = el.style;
-      s.setProperty('--x', (lx - r.left).toFixed(0) + 'px');
-      s.setProperty('--y', (ly - r.top).toFixed(0) + 'px');
-      s.setProperty('--k', k.toFixed(3));
-      s.setProperty('--sx', (Math.max(-1, Math.min(1, vx)) * 22 * k).toFixed(1) + 'px');
-      s.setProperty('--sy', (18 + Math.max(-1, Math.min(1, vy)) * 14 * k).toFixed(1) + 'px');
-    });
-  };
-
-  const tick = t => {
-    raf = 0;
-    // Deriva lenta cuando nadie mueve la luz (sobre todo en móvil)
-    if (!reduce && t - lastInput > 3500) {
-      const w = innerWidth, h = innerHeight, p = t / 1000;
-      tx = w * (.5 + .34 * Math.sin(p * .23)); ty = h * (.42 + .26 * Math.sin(p * .31 + 1));
-    }
-    const ease = reduce ? 1 : .09;
-    lx += (tx - lx) * ease; ly += (ty - ly) * ease;
-    paint();
-    if (!reduce || Math.abs(tx - lx) + Math.abs(ty - ly) > .5) raf = requestAnimationFrame(tick);
-  };
-  const wake = () => { if (!raf) raf = requestAnimationFrame(tick); };
-
-  addEventListener('pointermove', e => { if (e.pointerType === 'mouse') { tx = e.clientX; ty = e.clientY; lastInput = performance.now(); wake(); } }, { passive: true });
-  addEventListener('pointerdown', e => { tx = e.clientX; ty = e.clientY; lastInput = performance.now(); wake(); }, { passive: true });
-  addEventListener('scroll', () => { if (reduce) paint(); else wake(); }, { passive: true });
-  addEventListener('resize', wake);
-  if (!canHover) lastInput = -1e9;
-  wake();
-
-  // ---------- Aparición al hacer scroll ----------
-  if (reduce || !('IntersectionObserver' in window)) return;
-  const io = new IntersectionObserver(es => es.forEach(en => {
-    if (en.isIntersecting) { en.target.classList.remove('pending'); io.unobserve(en.target); }
-  }), { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('[data-reveal]').forEach(el => {
-    if (el.getBoundingClientRect().top < innerHeight) return;
-    el.classList.add('pending');
-    io.observe(el);
-  });
-})();
-</script>
+<script src="effects.js"></script>
 <script src="preferences.js"></script>
+<script src="sky.js"></script>
+<script src="expertise.js"></script>
+<script src="profile.js"></script>
 </body>
 </html>

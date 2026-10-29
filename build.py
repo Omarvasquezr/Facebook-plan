@@ -60,15 +60,33 @@ def main():
         shutil.copy(mail / name, web / name)
 
     src = (ROOT / "index.html").read_text()
+    # El original debe estar disponible como archivo: no se genera un sustituto.
+    portraits = [ROOT / "assets" / f"omar-vasquez-portrait.{ext}" for ext in ("webp", "jpg", "jpeg", "png")]
+    portrait = next((path for path in portraits if path.is_file()), None)
+    portrait_markup = ''
+    if portrait:
+        portrait_src = portrait.relative_to(ROOT).as_posix()
+        portrait_markup = (f'<img class="profile-portrait" src="{portrait_src}" width="1737" height="3088" '
+                           'alt="Ritratto di Omar Vásquez" data-alt="profilePhotoAlt" loading="lazy" decoding="async">')
+    src = re.sub(r'<!-- profile:portrait:start -->.*?<!-- profile:portrait:end -->',
+                 lambda _: portrait_markup, src, flags=re.S)
     (web / "index.html").write_text(src)
     shutil.copytree(ROOT / "fonts", web / "fonts")
-    for resource in ("preferences.css", "preferences.js", "intro.css", "intro.js",
+    for resource in ("preferences.css", "preferences.js", "theme-clock.js", "intro.css", "intro.js", "sky.css", "sky.js",
+                     "expertise.css", "expertise.js", "profile.css", "profile.js", "effects.js", "compatibility.css",
                      "favicon.svg", "favicon.ico", "favicon-32.png", "apple-touch-icon.png"):
         shutil.copy(ROOT / resource, web / resource)
     shutil.copytree(ROOT / "assets", web / "assets")
 
     # Adjunto: sin fuentes externas y sin el bloque de descarga (los PDF ya van en el correo)
     standalone = inline_fonts(src)
+    standalone = re.sub(r'<link rel="preload" href="fonts/[^\"]+"[^>]*>\n?', '', standalone)
+    standalone = standalone.replace('<script src="theme-clock.js"></script>',
+                                    '<script>' + (ROOT / "theme-clock.js").read_text() + '</script>')
+    if portrait:
+        mime = {".webp":"image/webp", ".jpg":"image/jpeg", ".jpeg":"image/jpeg", ".png":"image/png"}[portrait.suffix]
+        data = base64.b64encode(portrait.read_bytes()).decode()
+        standalone = standalone.replace(f'src="{portrait_src}"', f'src="data:{mime};base64,{data}"')
     standalone = standalone.replace('<link rel="stylesheet" href="preferences.css">',
                                     '<style>' + (ROOT / "preferences.css").read_text() + '</style>')
     standalone = standalone.replace('<script src="preferences.js"></script>',
@@ -77,6 +95,20 @@ def main():
                                     '<style>' + (ROOT / "intro.css").read_text() + '</style>')
     standalone = standalone.replace('<script src="intro.js"></script>',
                                     '<script>' + (ROOT / "intro.js").read_text() + '</script>')
+    for resource in ("sky.css", "assets/sky/solar.css"):
+        standalone = standalone.replace(f'<link rel="stylesheet" href="{resource}">',
+                                        '<style>' + (ROOT / resource).read_text() + '</style>')
+    standalone = standalone.replace('<script src="sky.js"></script>',
+                                    '<script>' + (ROOT / "sky.js").read_text() + '</script>')
+    for resource in ("expertise", "profile"):
+        standalone = standalone.replace(f'<link rel="stylesheet" href="{resource}.css">',
+                                        '<style>' + (ROOT / f"{resource}.css").read_text() + '</style>')
+        standalone = standalone.replace(f'<script src="{resource}.js"></script>',
+                                        '<script>' + (ROOT / f"{resource}.js").read_text() + '</script>')
+    standalone = standalone.replace('<link rel="stylesheet" href="compatibility.css">',
+                                    '<style>' + (ROOT / "compatibility.css").read_text() + '</style>')
+    standalone = standalone.replace('<script src="effects.js"></script>',
+                                    '<script>' + (ROOT / "effects.js").read_text() + '</script>')
     # Iconos embebidos también en el adjunto para mantenerlo autónomo.
     for resource, mime in (("favicon.svg", "image/svg+xml"), ("favicon.ico", "image/x-icon"),
                            ("favicon-32.png", "image/png"), ("apple-touch-icon.png", "image/png")):

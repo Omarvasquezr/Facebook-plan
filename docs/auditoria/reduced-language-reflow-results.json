@@ -1,0 +1,134 @@
+[
+  {
+    "width": 320,
+    "height": 568,
+    "language": "it",
+    "texts": [
+      "Spagnolomadrelingua",
+      "IngleseC2",
+      "Italianointermedio-avanzato"
+    ],
+    "passed": true
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "language": "es",
+    "texts": [
+      "Espa\u00f1olnativo",
+      "Ingl\u00e9sC2",
+      "Italianointermedio-avanzado"
+    ],
+    "passed": true
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "language": "en",
+    "texts": [
+      "Spanishnative",
+      "EnglishC2",
+      "Italianintermediate\u2013advanced"
+    ],
+    "passed": true
+  },
+  {
+    "width": 375,
+    "height": 812,
+    "language": "it",
+    "texts": [
+      "Spagnolomadrelingua",
+      "IngleseC2",
+      "Italianointermedio-avanzato"
+    ],
+    "passed": true
+  },
+  {
+    "width": 375,
+    "height": 812,
+    "language": "es",
+    "texts": [
+      "Espa\u00f1olnativo",
+      "Ingl\u00e9sC2",
+      "Italianointermedio-avanzado"
+    ],
+    "passed": true
+  },
+  {
+    "width": 375,
+    "height": 812,
+    "language": "en",
+    "texts": [
+      "Spanishnative",
+      "EnglishC2",
+      "Italianintermediate\u2013advanced"
+    ],
+    "passed": true
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "language": "it",
+    "texts": [
+      "Spagnolomadrelingua",
+      "IngleseC2",
+      "Italianointermedio-avanzato"
+    ],
+    "passed": true
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "language": "es",
+    "texts": [
+      "Espa\u00f1olnativo",
+      "Ingl\u00e9sC2",
+      "Italianointermedio-avanzado"
+    ],
+    "passed": true
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "language": "en",
+    "texts": [
+      "Spanishnative",
+      "EnglishC2",
+      "Italianintermediate\u2013advanced"
+    ],
+    "passed": true
+  },
+  {
+    "width": 812,
+    "height": 375,
+    "language": "it",
+    "texts": [
+      "Spagnolomadrelingua",
+      "IngleseC2",
+      "Italianointermedio-avanzato"
+    ],
+    "passed": true
+  },
+  {
+    "width": 812,
+    "height": 375,
+    "language": "es",
+    "texts": [
+      "Espa\u00f1olnativo",
+      "Ingl\u00e9sC2",
+      "Italianointermedio-avanzado"
+    ],
+    "passed": true
+  },
+  {
+    "width": 812,
+    "height": 375,
+    "language": "en",
+    "texts": [
+      "Spanishnative",
+      "EnglishC2",
+      "Italianintermediate\u2013advanced"
+    ],
+    "passed": true
+  }
+]

@@ -174,7 +174,7 @@
     "Learning the trade"
   ],
   [
-    "Tecnico audiovisivo a Caracas. Mi sono dedicato a imparare tutto sul campo: audio, illuminazione, visuali, allestimento. Un'ingegneria del suono fatta per pura pratica.",
+    "Tecnico audiovisivo a Caracas. Mi sono dedicato a imparare tutto sul campo: audio, illuminazione, visuali, allestimento. Ho imparato il suono attraverso la pratica.",
     "Técnico audiovisual en Caracas. Me dediqué a aprender sobre el terreno: audio, iluminación, visuales y montaje. Aprendizaje del sonido a través de la práctica.",
     "An audiovisual technician in Caracas. I focused on learning on the job: audio, lighting, visuals and setup. Learning sound through hands-on experience."
   ],
@@ -224,7 +224,7 @@
     "The next step"
   ],
   [
-    "Dalla produzione alla direzione: marketing, relazioni pubbliche, consulenza commerciale e creazione di esperienze, lanci ed eventi, questa volta da capo. Responsabile dei clienti di un'agenzia con mercati in sei paesi, fino alla chiusura ordinata delle attività.",
+    "Dalla produzione alla direzione: marketing, relazioni pubbliche, consulenza commerciale e creazione di esperienze, lanci ed eventi, questa volta alla guida. Responsabile dei clienti di un'agenzia con mercati in sei paesi, fino alla chiusura ordinata delle attività.",
     "De la producción a la dirección: marketing, relaciones públicas, asesoría comercial y creación de experiencias, lanzamientos y eventos, esta vez al frente. Responsable de los clientes de una agencia con mercados en seis países, hasta el cierre ordenado de sus actividades.",
     "From production to leadership: marketing, public relations, sales consulting and creating experiences, launches and events, this time in charge. Managing clients at an agency operating in six countries, through to its orderly closure."
   ],
@@ -234,7 +234,7 @@
     "Italy, starting again"
   ],
   [
-    "Lavapiatti e cameriere sul litorale romano, e l'italiano da imparare. Nel 2026 cameriere, pittura e carpenteria nella ristrutturazione di un chiosco sul mare, e poi barman.",
+    "Lavapiatti e cameriere sul litorale romano, e l'italiano da imparare. Nel 2026, servizio in sala, pittura e carpenteria durante la ristrutturazione di un chiosco sul mare, poi lavoro da barman.",
     "Lavaplatos y camarero en la costa romana, mientras aprendía italiano. En 2026, servicio de mesas, pintura y carpintería durante la reforma de un quiosco junto al mar, y después trabajo de barman.",
     "Washing dishes and waiting tables on the Roman coast, while learning Italian. In 2026, table service, painting and carpentry during the renovation of a seaside kiosk, followed by bartending."
   ],
@@ -251,7 +251,7 @@
   [
     "Cameriere, allestimento e barman",
     "Camarero, montaje y barman",
-    "Waiter, setup and bartender"
+    "Table service, venue setup and bartending"
   ],
   [
     "Pittura, carpenteria e allestimento durante la ristrutturazione del locale, poi servizio in sala e al banco.",
@@ -266,7 +266,7 @@
   [
     "Direttore clienti e team leader",
     "Director de cuentas y líder de equipo",
-    "Client director and team leader"
+    "Account director and team leader"
   ],
   [
     "Aguacate Comunicaciones (Cile, da remoto)",
@@ -281,7 +281,7 @@
   [
     "Portfolio di clienti di settori, lingue, paesi e dimensioni di mercato diversi: Panduit, Adagio Teas, FLY Racing, Nutrición en Balance, Astara, Taller Phantom, Ares Consulting, Darkone, FELS Latino e Bark in Style. Direzione e supervisione delle strategie di comunicazione interna ed esterna, marketing e relazioni pubbliche. Coordinamento dei team di lavoro dei diversi clienti e, insieme agli specialisti di ogni area, supervisione dei processi amministrativi e contabili nei paesi in cui operavamo: Cile, Perù, Argentina, Colombia, Spagna e Italia. Marchi accompagnati da zero fino a diventare attività redditizie. Chiusura ordinata dell'agenzia.",
     "Cartera de clientes de distintos sectores, idiomas, países y tamaños de mercado: Panduit, Adagio Teas, FLY Racing, Nutrición en Balance, Astara, Taller Phantom, Ares Consulting, Darkone, FELS Latino y Bark in Style. Dirección y supervisión de estrategias de comunicación interna y externa, marketing y relaciones públicas. Coordinación de los equipos de los distintos clientes y, junto a los especialistas de cada área, supervisión de procesos administrativos y contables en Chile, Perú, Argentina, Colombia, España e Italia. Acompañamiento de marcas desde cero hasta convertirse en negocios rentables. Cierre ordenado de la agencia.",
-    "A client portfolio spanning different sectors, languages, countries and market sizes: Panduit, Adagio Teas, FLY Racing, Nutrición en Balance, Astara, Taller Phantom, Ares Consulting, Darkone, FELS Latino and Bark in Style. Leading and overseeing internal and external communications, marketing and public relations strategies. Coordinating client teams and working with specialists to oversee administrative and accounting processes in Chile, Peru, Argentina, Colombia, Spain and Italy. Guiding brands from launch to profitable businesses. Managing the agency’s orderly closure."
+    "A client portfolio spanning different sectors, languages, countries and market sizes: Panduit, Adagio Teas, FLY Racing, Nutrición en Balance, Astara, Taller Phantom, Ares Consulting, Darkone, FELS Latino and Bark in Style. Leading and overseeing internal and external communications, marketing and public relations strategies. Coordinating client teams and working with specialists to oversee administrative and accounting processes in Chile, Peru, Argentina, Colombia, Spain and Italy. Guiding brands from launch to profitability. Managing the agency’s orderly closure."
   ],
   [
     "Coordinatore di montaggi e attivazioni — freelance",
@@ -354,31 +354,6 @@
     "Audiovisual technician and producer"
   ],
   [
-    "Strumenti",
-    "Herramientas",
-    "Tools"
-  ],
-  [
-    "Consolle audio",
-    "Consolas de audio",
-    "Audio consoles"
-  ],
-  [
-    "Illuminazione robotizzata",
-    "Iluminación robotizada",
-    "Moving-head lighting"
-  ],
-  [
-    "Schermi LED",
-    "Pantallas LED",
-    "LED screens"
-  ],
-  [
-    "Claude e strumenti di IA",
-    "Claude y herramientas de IA",
-    "Claude and AI tools"
-  ],
-  [
     "Formazione",
     "Formación",
     "Education"
@@ -389,7 +364,7 @@
     "Venezuelan university degree in International Studies"
   ],
   [
-    "Università Santa María, Caracas · Facoltà di Giurisprudenza · 2011–2016 (titolo 2018)",
+    "Universidad Santa María, Caracas · Facoltà di Giurisprudenza · 2011–2016 (titolo conseguito nel 2018)",
     "Universidad Santa María, Caracas · Facultad de Derecho · 2011–2016 (título expedido en 2018)",
     "Universidad Santa María, Caracas · Faculty of Law · 2011–2016 (degree issued in 2018)"
   ],
@@ -434,9 +409,9 @@
     "How this page came to life"
   ],
   [
-    "L'ho costruita insieme a Claude, l'intelligenza artificiale di Anthropic, in uno spazio di lavoro controllato. Le regole con cui ha lavorato l'IA, l'identità, le idee e ogni contenuto sono miei; la realizzazione l'abbiamo fatta insieme.",
-    "La construí junto a Claude, la inteligencia artificial de Anthropic, en un espacio de trabajo controlado. Las reglas de trabajo de la IA, la identidad, las ideas y el contenido son míos; la desarrollamos juntos.",
-    "I built it with Claude, Anthropic’s AI, in a controlled workspace. The rules for the AI, the identity, ideas and content are mine; we developed it together."
+    "L'ho costruita con l'aiuto di strumenti di intelligenza artificiale, in uno spazio di lavoro controllato. Le regole con cui ha lavorato l'IA, l'identità, le idee e ogni contenuto sono miei; la realizzazione l'abbiamo fatta insieme.",
+    "La construí con ayuda de herramientas de inteligencia artificial, en un entorno de trabajo controlado. Las reglas de trabajo de la IA, la identidad, las ideas y el contenido son míos; la desarrollamos juntos.",
+    "I built it with help from AI tools in a controlled workspace. The rules for the AI, the identity, ideas and content are mine; we developed it together."
   ],
   [
     "Autorizzo il trattamento dei dati personali ai sensi del D.Lgs. 196/2003 e del Regolamento UE 2016/679 (GDPR).",
@@ -524,6 +499,316 @@
     "Omar Vásquez. Portfolio e CV. Eventi, produzione e marketing, in blu e arancione.",
     "Omar Vásquez. Portfolio y CV. Eventos, producción y marketing, en azul y naranja.",
     "Omar Vásquez. Portfolio and CV. Events, production and marketing, in blue and orange."
+  ],
+  "areasTitle": [
+    "Competenze",
+    "Áreas de trabajo",
+    "Expertise"
+  ],
+  "areasHint": [
+    "Esplora le aree",
+    "Explora mis áreas",
+    "Explore my expertise"
+  ],
+  "areasLabel": [
+    "Scegli un’area di lavoro",
+    "Elige un área de trabajo",
+    "Choose an area of expertise"
+  ],
+  "productionName": [
+    "Produzione",
+    "Producción",
+    "Production"
+  ],
+  "operationsName": [
+    "Operazioni",
+    "Operaciones",
+    "Operations"
+  ],
+  "technologyName": [
+    "Tecnologia",
+    "Tecnología",
+    "Technology"
+  ],
+  "productionSummary": [
+    "Trasformo proposte in esperienze complete, dal montaggio all’operatività e allo smontaggio di installazioni temporanee.",
+    "Transformo propuestas en experiencias completas, del montaje a la operación y el desmontaje de instalaciones temporales.",
+    "I turn proposals into complete experiences, from setup through operation to the removal of temporary installations."
+  ],
+  "productionPoint1": [
+    "Integrazione audiovisiva, sistemi LED e attivazioni di marca.",
+    "Integración audiovisual, sistemas LED y activaciones de marca.",
+    "Audiovisual integration, LED systems and brand activations."
+  ],
+  "productionPoint2": [
+    "Pianificazione delle risorse tecniche e delle esigenze elettriche.",
+    "Planificación de recursos técnicos y necesidades eléctricas.",
+    "Planning technical resources and electrical requirements."
+  ],
+  "productionPoint3": [
+    "Fotografia, riprese con videocamere professionali e postproduzione audio.",
+    "Fotografía, manejo de cámaras de vídeo profesionales y posproducción de audio.",
+    "Photography, professional video camera operation and audio post-production."
+  ],
+  "operationsSummary": [
+    "Organizzo le attività perché persone, materiali e servizi siano disponibili dove e quando servono.",
+    "Organizo la operación para que personas, materiales y servicios estén disponibles donde y cuando hacen falta.",
+    "I organise operations so people, materials and services are available where and when they are needed."
+  ],
+  "operationsPoint1": [
+    "Trasporti, accessi e sequenze di consegna.",
+    "Transporte, accesos y secuencias de entrega.",
+    "Transport, site access and delivery sequences."
+  ],
+  "operationsPoint2": [
+    "Selezione dei fornitori, acquisti e approvvigionamenti.",
+    "Selección de proveedores, compras y suministros.",
+    "Supplier selection, purchasing and supplies."
+  ],
+  "operationsPoint3": [
+    "Preventivi, analisi dei costi e valutazione della fattibilità.",
+    "Presupuestos, análisis de costes y viabilidad.",
+    "Budgets, cost analysis and feasibility."
+  ],
+  "operationsTools": [
+    "Google Workspace · fogli di calcolo, documenti e presentazioni",
+    "Google Workspace · hojas de cálculo, documentos y presentaciones",
+    "Google Workspace · spreadsheets, documents and presentations"
+  ],
+  "technologySummary": [
+    "Risolvo problemi pratici e collego strumenti per facilitare il lavoro quotidiano.",
+    "Resuelvo problemas prácticos y conecto herramientas para facilitar el trabajo cotidiano.",
+    "I solve practical problems and connect tools to make everyday work easier."
+  ],
+  "technologyPoint1": [
+    "Automazione dei processi, bot e agenti di IA.",
+    "Automatización de procesos, bots y agentes de IA.",
+    "Process automation, bots and AI agents."
+  ],
+  "technologyPoint2": [
+    "Amministrazione di sistemi, reti, VPN e manutenzione informatica.",
+    "Administración de sistemas, redes, VPN y mantenimiento informático.",
+    "Systems administration, networking, VPNs and computer maintenance."
+  ],
+  "technologyPoint3": [
+    "Sviluppo web e di app con assistenza dell’IA.",
+    "Desarrollo web y de aplicaciones con asistencia de IA.",
+    "Web and app development with AI assistance."
+  ],
+  "productionTools": [
+    "Fotografia · videocamere professionali · editing audio",
+    "Fotografía · cámaras de vídeo profesionales · edición de audio",
+    "Photography · professional video cameras · audio editing"
+  ],
+  "webTools": [
+    "WordPress · Wix · Squarespace",
+    "WordPress · Wix · Squarespace",
+    "WordPress · Wix · Squarespace"
+  ],
+  "aiTools": [
+    "Claude e strumenti di IA",
+    "Claude y herramientas de IA",
+    "Claude and AI tools"
+  ],
+  "toolsLabel": [
+    "Strumenti e risorse",
+    "Herramientas y recursos",
+    "Tools & resources"
+  ],
+  "profileNameOpen": [
+    "Omar Vásquez — chi sono",
+    "Omar Vásquez — conóceme",
+    "Omar Vásquez — about me"
+  ],
+  "profileFooter": [
+    "Un po’ di più su di me",
+    "Un poco más sobre mí",
+    "A little more about me"
+  ],
+  "profileKicker": [
+    "Dietro il nome",
+    "Detrás del nombre",
+    "Behind the name"
+  ],
+  "profileIntro": [
+    "Mi piace capire come funzionano le cose e mettere insieme persone, idee e strumenti per farle accadere.",
+    "Me gusta entender cómo funcionan las cosas y reunir personas, ideas y herramientas para hacerlas realidad.",
+    "I like understanding how things work and bringing people, ideas and tools together to make them happen."
+  ],
+  "profileLocationLabel": [
+    "Dove vivo",
+    "Dónde vivo",
+    "Where I live"
+  ],
+  "profileLocation": [
+    "Santa Marinella, Roma · Italia",
+    "Santa Marinella, Roma · Italia",
+    "Santa Marinella, Rome · Italy"
+  ],
+  "profileInterestsLabel": [
+    "Cosa mi muove",
+    "Qué me mueve",
+    "What drives me"
+  ],
+  "profileInterests": [
+    "Tecnologia, creatività e relazioni umane.",
+    "Tecnología, creatividad y relaciones humanas.",
+    "Technology, creativity and human connections."
+  ],
+  "profileValues": [
+    "La curiosità mi porta a imparare e a cambiare prospettiva. Il rispetto, l’ascolto e la riservatezza guidano il modo in cui lavoro con le persone. Mi interessa costruire esperienze curate e rapporti basati sulla fiducia.",
+    "La curiosidad me lleva a aprender y a cambiar de perspectiva. El respeto, la escucha y la privacidad guían mi forma de trabajar con las personas. Me interesa crear experiencias cuidadas y relaciones en las que se pueda confiar.",
+    "Curiosity keeps me learning and looking at things from different perspectives. Respect, listening and privacy guide how I work with people. I care about thoughtful experiences and relationships built on trust."
+  ],
+  "profileClose": [
+    "Chiudi la scheda personale",
+    "Cerrar la ficha personal",
+    "Close personal profile"
+  ],
+  "systemsTools": [
+    "Sistemi operativi",
+    "Sistemas operativos",
+    "Operating systems"
+  ],
+  "advancedWindows": [
+    "Windows · avanzato",
+    "Windows · avanzado",
+    "Windows · advanced"
+  ],
+  "advancedFedora": [
+    "Fedora Linux · avanzato",
+    "Fedora Linux · avanzado",
+    "Fedora Linux · advanced"
+  ],
+  "advancedMacOS": [
+    "macOS · avanzato",
+    "macOS · avanzado",
+    "macOS · advanced"
+  ],
+  "mobileTools": [
+    "Dispositivi mobili",
+    "Dispositivos móviles",
+    "Mobile devices"
+  ],
+  "automationTools": [
+    "Automazione e progetti web",
+    "Automatización y proyectos web",
+    "Automation & web projects"
+  ],
+  "adobePhoto": [
+    "Adobe Creative Cloud · fotografia",
+    "Adobe Creative Cloud · fotografía",
+    "Adobe Creative Cloud · photography"
+  ],
+  "autocadTools": [
+    "AutoCAD · disegno tecnico",
+    "AutoCAD · dibujo técnico",
+    "AutoCAD · technical drawing"
+  ],
+  "profilePhotoAlt": [
+    "Ritratto di Omar Vásquez",
+    "Retrato de Omar Vásquez",
+    "Portrait of Omar Vásquez"
+  ],
+  "mobileScope": [
+    "Configurazione, diagnosi, riparazione e modifiche del sistema in iOS e Android.",
+    "Configuración, diagnóstico, reparación y modificaciones del sistema en iOS y Android.",
+    "iOS and Android configuration, diagnostics, repairs and system modifications."
+  ],
+  "autoTheme": [
+    "Auto · Italia",
+    "Auto · Italia",
+    "Auto · Italy"
+  ],
+  "autoThemeLabel": [
+    "Tema automatico secondo l’ora italiana, notte dalle 18 alle 6",
+    "Tema automático según la hora de Italia, noche de 18:00 a 06:00",
+    "Automatic theme using Italian time, night from 18:00 to 06:00"
+  ],
+  "autoThemeSelected": [
+    "Tema automatico attivo: notte dalle 18 alle 6, ora italiana.",
+    "Tema automático activado: noche de 18:00 a 06:00, hora de Italia.",
+    "Automatic theme on: night from 18:00 to 06:00, Italian time."
+  ],
+  "photoTools": [
+    "Fotografia e grafica",
+    "Fotografía y diseño",
+    "Photography & design"
+  ],
+  "videoAudioTools": [
+    "Video e audio",
+    "Vídeo y audio",
+    "Video & audio"
+  ],
+  "avTools": [
+    "Sistemi audiovisivi",
+    "Sistemas audiovisuales",
+    "Audiovisual systems"
+  ],
+  "cadTools": [
+    "Disegno tecnico",
+    "Dibujo técnico",
+    "Technical drawing"
+  ],
+  "networkTools": [
+    "Infrastruttura e reti",
+    "Infraestructura y redes",
+    "Infrastructure & networking"
+  ],
+  "businessName": [
+    "Business",
+    "Negocio",
+    "Business"
+  ],
+  "productionPoint4": [
+    "Applicazione degli standard di ospitalità di hotel a cinque stelle.",
+    "Aplicación de estándares de hospitalidad de cinco estrellas.",
+    "Working to five-star hospitality standards."
+  ],
+  "operationsPoint4": [
+    "Gestione degli imprevisti e ripianificazione operativa.",
+    "Gestión de contingencias y replanificación operativa.",
+    "Contingency management and operational replanning."
+  ],
+  "businessSummary": [
+    "Traduco le esigenze del cliente in proposte concrete e opportunità di crescita commerciale.",
+    "Traduzco las necesidades del cliente en propuestas viables y oportunidades de crecimiento comercial.",
+    "I translate client needs into viable proposals and opportunities for business growth."
+  ],
+  "businessPoint1": [
+    "Gestione dei clienti e relazione con gli interlocutori chiave.",
+    "Gestión de cuentas y relación con interlocutores clave.",
+    "Account management and relationships with key stakeholders."
+  ],
+  "businessPoint2": [
+    "Presentazione delle proposte e negoziazione commerciale.",
+    "Presentación de propuestas y negociación comercial.",
+    "Proposal presentation and commercial negotiation."
+  ],
+  "businessPoint3": [
+    "Strategia digitale, SEO/SEM e analisi dei risultati.",
+    "Estrategia digital, SEO/SEM y análisis de resultados.",
+    "Digital strategy, SEO/SEM and performance analysis."
+  ],
+  "businessPoint4": [
+    "Formazione in commercio estero e pianificazione di import/export.",
+    "Formación en comercio exterior y planificación de importación/exportación.",
+    "Training in international trade and import/export planning."
+  ],
+  "technologyPoint4": [
+    "Privacy, accessibilità e supporto mobile, anche per persone anziane.",
+    "Privacidad, accesibilidad y soporte móvil, también para personas mayores.",
+    "Privacy, accessibility and mobile support, including for older adults."
+  ],
+  "leadershipShared": [
+    "Leadership operativa, coordinamento multidisciplinare e capacità decisionale sotto pressione.",
+    "Liderazgo operativo, coordinación multidisciplinar y toma de decisiones bajo presión.",
+    "Operational leadership, multidisciplinary coordination and decision-making under pressure."
+  ],
+  "pauseLanguages": [
+    "Metti in pausa lo scorrimento delle lingue",
+    "Pausar el desplazamiento de los idiomas",
+    "Pause the scrolling languages"
   ]
 };
   const root = document.documentElement;
@@ -543,7 +828,7 @@
   const panel = document.getElementById('language-panel');
   const picker = document.querySelector('.language-picker');
   const options = [...panel.querySelectorAll('[data-language]')];
-  const systemTheme = matchMedia('(prefers-color-scheme: dark)');
+  const automaticTheme = () => window.OVThemeClock?.getTheme() || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   let language = languages.includes(stored('ov-language')) ? stored('ov-language') : 'it';
   let explicitTheme = ['light','dark'].includes(stored('ov-theme')) ? stored('ov-theme') : null;
   const text = key => ui[key][languages.indexOf(language)];
@@ -557,6 +842,7 @@
     });
     document.querySelectorAll('[data-ui]').forEach(el => { el.textContent = text(el.dataset.ui); });
     document.querySelectorAll('[data-label]').forEach(el => { el.setAttribute('aria-label', text(el.dataset.label)); });
+    document.querySelectorAll('[data-alt]').forEach(el => { el.setAttribute('alt', text(el.dataset.alt)); });
     options.forEach(el => el.setAttribute('aria-pressed', String(el.dataset.language === language)));
     document.querySelector('meta[name="description"]').content = text('description');
     document.querySelector('meta[property="og:description"]').content = text('ogDescription');
@@ -570,7 +856,9 @@
   function applyTheme(next, announce = false) {
     const dark = next === 'dark';
     root.dataset.theme = dark ? 'dark' : 'light';
+    root.dataset.themeMode = explicitTheme ? 'manual' : 'auto';
     document.querySelectorAll('[data-theme-toggle]').forEach(button => button.setAttribute('aria-checked', String(dark)));
+    document.querySelectorAll('[data-theme-auto]').forEach(button => button.setAttribute('aria-pressed', String(!explicitTheme)));
     document.querySelector('meta[name="theme-color"]').content = dark ? '#080F20' : '#F2F4F7';
     if (announce) status.textContent = text(dark ? 'darkSelected' : 'lightSelected');
   }
@@ -607,15 +895,21 @@
     remember('ov-theme', explicitTheme);
     applyTheme(explicitTheme, true);
   }));
-  systemTheme.addEventListener('change', event => { if (!explicitTheme) applyTheme(event.matches ? 'dark' : 'light'); });
+  document.querySelectorAll('[data-theme-auto]').forEach(button => button.addEventListener('click', () => {
+    explicitTheme = null;
+    try { localStorage.removeItem('ov-theme'); } catch (_) { /* La modalità automatica resta valida nella scheda. */ }
+    applyTheme(automaticTheme());
+    status.textContent = text('autoThemeSelected');
+  }));
   addEventListener('storage', event => {
     if (event.key === 'ov-language' || event.key === null) applyLanguage(stored('ov-language'));
     if (event.key === 'ov-theme' || event.key === null) {
       const value = stored('ov-theme');
       explicitTheme = ['light','dark'].includes(value) ? value : null;
-      applyTheme(explicitTheme || (systemTheme.matches ? 'dark' : 'light'));
+      applyTheme(explicitTheme || automaticTheme());
     }
   });
   applyLanguage(language);
-  applyTheme(explicitTheme || (systemTheme.matches ? 'dark' : 'light'));
+  applyTheme(explicitTheme || automaticTheme());
+  window.OVThemeClock?.watch(next => { if (!explicitTheme && root.dataset.theme !== next) applyTheme(next); });
 })();

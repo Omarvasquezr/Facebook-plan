@@ -11,13 +11,15 @@ python3 -m http.server 4174 --bind 127.0.0.1 --directory dist/web
 
 La única carpeta de publicación es `dist/web`. `--keep-pdfs` reutiliza los PDF originales y prepara la web sin regenerarlos. No publica nada. Para revisar en esta máquina, hacer solicitudes locales al servidor; no asumir que sus procesos sobreviven al reinicio del entorno.
 
+`vercel.json` publica la carpeta ya generada `dist/web`, sin instalar dependencias ni ejecutar un build remoto. Antes de subir cambios de código o de imágenes, preparar `python3 build.py --keep-pdfs` e incluir también los archivos generados. La documentación, comprobadores y herramientas permanecen fuera de la raíz pública. Se conserva `noindex,nofollow` por elección de Omar.
+
 `dist/allegati/Omar-Vasquez-CV.html` es una vista autónoma: incluye fuentes, CSS y JavaScript, y se puede abrir sin conexión. Como en el generador original, omite la sección de descargas. Los dos PDF conservados también están en esa carpeta.
 
 ## Preferencias
 
 - Planeta de la barra: italiano, español e inglés. Traducción local de textos, metadatos y etiquetas accesibles, sin cambiar fechas o nombres propios.
 - Italiano inicial; elección recordada en `localStorage` (`ov-language`). El atributo `lang` acompaña la elección.
-- Interruptor sol/luna al pie y acceso en la barra, sincronizados. Inicialmente sigue al sistema; después recuerda la elección (`ov-theme`). Se adapta a cambios del sistema mientras no haya elección manual.
+- Interruptor sol/luna al pie y acceso en la barra, sincronizados. Inicialmente sigue el horario de Italia (`Europe/Rome`): noche de 18:00 a 05:59 y día de 06:00 a 17:59, con cambio de horario de verano/invierno. Una elección manual se recuerda en `ov-theme`; «Auto · Italia» la borra y vuelve al horario.
 - Las preferencias se sincronizan entre pestañas. Si el navegador bloquea el almacenamiento, los controles siguen funcionando en la pestaña actual.
 - Respeta movimiento reducido. Selector operable con Tab, Enter/Espacio, flechas, Inicio/Fin y Escape; también se cierra al salir o pulsar fuera.
 - Los PDF existentes están en italiano y se identifican así en los tres idiomas. No se han generado documentos traducidos.
@@ -35,7 +37,7 @@ python3 checks/preferences_smoke.py http://127.0.0.1:4174/dist/web/
 python3 checks/preferences_smoke.py http://127.0.0.1:4174/
 ```
 
-La comprobación cubre 18 combinaciones de idioma/tema/ancho (320, 390 y 1440 px), traducciones, geometría, teclado, persistencia, preferencia del sistema, almacenamiento bloqueado y recursos descargables. No sustituye la revisión visual.
+La comprobación cubre 18 combinaciones de idioma/tema/ancho (320, 390 y 1440 px), traducciones, geometría, teclado, persistencia, horario italiano, elección manual y almacenamiento bloqueado y recursos descargables. No sustituye la revisión visual.
 
 ## PDF y publicación
 
@@ -69,3 +71,57 @@ Comprobación adicional de entrada, iconos y metadatos (mismo argumento de URL b
 ```sh
 python3 checks/branding_smoke.py http://127.0.0.1:4174/dist/web/
 ```
+
+## Revisión de luz y cristal
+
+La rama `review/hero-light-glass` conserva el diseño y añade una propuesta local de halo nocturno y cristal para el lema. El recuadro deja libre el apellido completo, incluidos sus descendentes. Se mantienen los idiomas y los archivos PDF originales. Las decisiones, referencias oficiales consultadas, límites de la investigación y propuesta para el retrato/UGC están en `docs/REVISION-VISUAL.md`.
+
+Preparar con `python3 build.py --keep-pdfs` y revisar `dist/web` como antes. Estos ajustes no están publicados; no se añadió la foto de casting ni vídeos.
+
+## Cielo personal y Virgo
+
+La rama `review/birth-sky-glass` añade puntos calculados de un catálogo real, trazado interactivo de Virgo y halo situado a partir de la posición solar de referencia. El público recibe solo el gráfico; el archivo natal permanece fuera del proyecto. Los detalles, procedencia BSD, aproximaciones y regeneración están en `docs/CIELO.md`.
+
+El recuadro vuelve a un solapamiento moderado con cristal más transparente (6 px de blur); las preferencias de transparencia reducida conservan superficies sólidas y más espacio. El trazado es un detalle oculto: se revela por proximidad y al pasar o enfocar el nombre pequeño **Omar Vásquez** del encabezado. Según la preferencia más reciente de Omar, pulsar ese nombre o usar Enter abre la ficha personal. No hay botón Virgo visible ni nota al pie. No hay animación de estrellas ni servicios astronómicos cargados desde el navegador.
+
+Preparar con `python3 build.py --keep-pdfs`. Validar con `python3 checks/sky_smoke.py URL_LOCAL` y el comprobador existente de preferencias. No hay cambios publicados en GitHub/Vercel.
+
+## Áreas de trabajo y ficha personal
+
+`Competenze` sustituye la lista de programas por cuatro áreas: Producción, Operaciones, Negocio y Tecnología. Cada botón abre un único panel con un resumen, cuatro capacidades y herramientas de apoyo; volver a pulsarlo o usar Escape lo cierra. Las flechas e Inicio/Fin recorren los botones. En móvil la fila se desplaza manualmente; los controles no se mueven solos.
+
+`expertise.css/js` gestionan las áreas. Los textos nuevos están en `ui` de `preferences.js`, en italiano, español e inglés. Los programas se conservan en un desplegable nativo «Herramientas y recursos» dentro de cada área; la lectura inicial no repite la lista de software. El liderazgo operativo, la coordinación multidisciplinar y las decisiones bajo presión se expresan una sola vez en una línea compartida, visible al abrir un área. Sin JavaScript se muestran las cuatro áreas completas y se ocultan los controles inactivos.
+
+`profile.css/js` convierten la sección `#about-omar` en un único diálogo nativo. Se abre desde el nombre pequeño «Omar Vásquez», con pista de clic y flecha subrayada, o el acceso al pie; Escape, el cierre visible y el fondo exterior permiten cerrarlo y devolver el foco al acceso original. La firma tipográfica mantiene su tamaño y posición. El nombre pequeño conserva la revelación de Virgo por hover/foco. Sin JavaScript los enlaces llevan a la misma sección al pie.
+
+La ficha contiene residencia, intereses y valores expresados por Omar. El retrato original del ZIP de Omar está en `assets/omar-vasquez-portrait.jpg`, sin retoques ni sustitución generada. El build lo añade a la ficha y lo incrusta en el HTML autónomo, con texto alternativo traducido. Para reemplazarlo, conservar ese nombre o usar `.webp`, `.jpeg` o `.png`; el bloque marcado `profile:portrait:start/end` se normaliza durante el build. Si falta el archivo, el build omite la imagen. No se publican fecha de nacimiento o coordenadas. Las nuevas interacciones y sus recursos están incluidos también en el HTML autónomo.
+
+Después del build, comprobar con `python3 checks/expertise_profile_smoke.py URL_LOCAL`, además de las pruebas de preferencias y cielo cuando corresponda. La revisión local no publica la web ni actualiza GitHub.
+
+Las herramientas confirmadas más recientes se distribuyen por contexto: Canva y productos Google de publicidad/SEO/medición en marketing; Adobe Creative Cloud para fotografía, AutoCAD para dibujo técnico, fotografía/cámaras y edición profesional de audio en producción; Google Workspace y ofimática en operaciones; Windows, Fedora Linux y macOS avanzados, Google Flow, automatización y trabajo con iOS/Android en tecnología. La experiencia móvil incluye configuración, diagnóstico, reparación, modificaciones, privacidad, accesibilidad para mayores y desarrollo de aplicaciones asistido por IA. Los programas sugeridos para refrescar la memoria no se incorporan como experiencia sin confirmación.
+
+## Horario italiano y estrellas diurnas
+
+`theme-clock.js` se carga antes del primer pintado y resuelve el tema con la zona IANA `Europe/Rome`, sin ubicación del visitante ni peticiones externas. Sin elección manual, actualiza al llegar las 18:00/06:00 y al volver a la pestaña. El interruptor conserva una elección manual; «Auto · Italia» restablece el horario y se sincroniza con las demás pestañas. Si el navegador carece de datos IANA, el respaldo es el tema del sistema. No añade cookies.
+
+En modo día, los puntos reales del catálogo permanecen visibles en azul gris y se iluminan en blanco cerca del cursor, con un borde azul definido. La máscara sigue la misma transformación SVG y se oculta al salir. La capa es decorativa, no captura clics y no altera las estrellas nocturnas ni el color de Virgo.
+
+Validar el horario con `python3 checks/theme_clock_smoke.py URL_LOCAL`, además de preferencias, áreas/ficha y cielo. Los nuevos grupos de herramientas incluyen las aplicaciones confirmadas; REAPER, Ahrefs, Tailscale y Revit no se incorporaron.
+
+## Pulido de competencias y retrato
+
+La organización más reciente sigue los bloques elegidos por Omar: Producción (integración audiovisual, recursos técnicos, medios y hospitalidad), Operaciones (logística, proveedores, costes y contingencias), Negocio (clientes, negociación, marketing y formación en comercio exterior) y Tecnología (automatización, sistemas, desarrollo asistido por IA y soporte accesible). El comercio exterior se presenta como formación, sin atribuir operaciones realizadas. Las herramientas confirmadas se conservan dentro de desplegables.
+
+El retrato usa sus proporciones originales9:16, altura automática y `object-fit:contain`: se ve completo, sin cortar la cabeza ni deformarlo. En escritorio se sitúa junto a la presentación; en móvil aparece centrado sobre ella. Se conserva el archivo original y el cierre accesible de la ficha.
+
+## Candidata final: compatibilidad y auditoría
+
+La revisión completa está en [docs/AUDITORIA-FINAL.md](docs/AUDITORIA-FINAL.md), con resultados en `docs/auditoria/` y una pasada manual breve en [docs/REVISION-DISPOSITIVOS.md](docs/REVISION-DISPOSITIVOS.md). La preferencia explícita de Omar es conservar `noindex,nofollow`. No se publica al ejecutar el build.
+
+`effects.js` sustituye el antiguo bloque de efectos inline: la luz se detiene al asentarse, suspende trabajo en segundo plano y conserva un respaldo sin IntersectionObserver. La franja de idiomas permite pausar/reanudar por teclado o tacto y se detiene fuera de pantalla o con movimiento reducido.
+
+`compatibility.css` debe cargarse al final: aplica zonas seguras, altura visible/vh para la ficha, contacto de 44 px, respaldo de filtros y menor coste de superficies en móvil. `profile.js` bloquea/restaura el desplazamiento de fondo y adapta el alto de la ficha al viewport visible. La foto original se carga al abrir la ficha; se precargan Jost y Cormorant italic sin duplicación. El HTML autónomo integra los nuevos recursos y elimina las precargas de archivos externos.
+
+Comprobadores nuevos: `checks/browser_matrix.py`, `checks/accessibility_smoke.py`, `checks/effects_smoke.py` y `checks/performance_probe.py`. Cubren tamaños representativos y comportamientos; la emulación no acredita dispositivos físicos ni Safari/Instagram. Los motores WebKit/Firefox no estuvieron disponibles por bloqueo 403 de su descarga. La web no incorpora las herramientas de desarrollo ni bibliotecas de auditoría.
+
+Laboratorio local Lighthouse 13.6: rendimiento 96 en móvil / 99 en escritorio, buenas prácticas 100 en ambos; carga inicial 282.470 bytes sin la foto ni los PDF. No son métricas de visitantes ni del alojamiento Vercel. Consultar el informe para condiciones, límites y resultados completos.

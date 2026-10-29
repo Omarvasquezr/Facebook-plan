@@ -1,0 +1,113 @@
+{
+  "combinations": [
+    {
+      "width": 320,
+      "language": "it",
+      "theme": "light",
+      "passed": true
+    },
+    {
+      "width": 320,
+      "language": "it",
+      "theme": "dark",
+      "passed": true
+    },
+    {
+      "width": 320,
+      "language": "es",
+      "theme": "light",
+      "passed": true
+    },
+    {
+      "width": 320,
+      "language": "es",
+      "theme": "dark",
+      "passed": true
+    },
+    {
+      "width": 320,
+      "language": "en",
+      "theme": "light",
+      "passed": true
+    },
+    {
+      "width": 320,
+      "language": "en",
+      "theme": "dark",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "language": "it",
+      "theme": "light",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "language": "it",
+      "theme": "dark",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "language": "es",
+      "theme": "light",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "language": "es",
+      "theme": "dark",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "language": "en",
+      "theme": "light",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "language": "en",
+      "theme": "dark",
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "language": "it",
+      "theme": "light",
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "language": "it",
+      "theme": "dark",
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "language": "es",
+      "theme": "light",
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "language": "es",
+      "theme": "dark",
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "language": "en",
+      "theme": "light",
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "language": "en",
+      "theme": "dark",
+      "passed": true
+    }
+  ]
+}
+18 combinations passed; keyboard, persistence, Italian schedule, manual/automatic mode synchronization, blocked storage and assets passed.

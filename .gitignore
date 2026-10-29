@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+node_modules/
+.vercel/
+.vercel-link/
+.env
+.env.*
+!.env.example
+private/

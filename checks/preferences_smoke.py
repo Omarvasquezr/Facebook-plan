@@ -13,6 +13,8 @@ async def main():
   for width in [320,390,1440]:
    ctx=await b.new_context(viewport={'width':width,'height':900},color_scheme='light',reduced_motion='reduce')
    page=await ctx.new_page();errors=[]
+   # Pin Italy's noon so the automatic schedule is deterministic in this suite.
+   await page.clock.install(time='2026-10-29T11:00:00Z')
    page.on('pageerror',lambda e:errors.append(str(e)))
    await page.goto(BASE,wait_until='networkidle')
    assert await page.locator('html').get_attribute('lang')=='it'
@@ -61,27 +63,51 @@ async def main():
     assert r.status==200,(name,r.status)
    assert not errors,errors
    await ctx.close()
-  # System preference: default follows it, manual choice overrides later changes.
-  ctx=await b.new_context(color_scheme='dark',reduced_motion='reduce')
-  page=await ctx.new_page();await page.goto(BASE,wait_until='networkidle')
-  assert await page.locator('html').get_attribute('data-theme')=='dark'
-  await page.emulate_media(color_scheme='light')
-  await page.wait_for_function("document.documentElement.dataset.theme==='light'")
+  # The Italian schedule ignores the visitor's zone and OS preference.
+  ctx=await b.new_context(color_scheme='dark',timezone_id='America/Los_Angeles',reduced_motion='reduce')
+  page=await ctx.new_page();await page.clock.install(time='2026-10-29T11:00:00Z')
+  await page.goto(BASE,wait_until='networkidle')
   assert await page.locator('html').get_attribute('data-theme')=='light'
+  assert await page.locator('[data-theme-auto]').get_attribute('aria-pressed')=='true'
+  await page.emulate_media(color_scheme='light')
+  assert await page.locator('html').get_attribute('data-theme')=='light'
+  # A manual choice remains authoritative after the Italian clock reaches night.
   await page.locator('.compact-theme').click()
-  await page.emulate_media(color_scheme='dark');await page.emulate_media(color_scheme='light')
-  await page.wait_for_timeout(100)
   assert await page.locator('html').get_attribute('data-theme')=='dark'
+  assert await page.locator('[data-theme-auto]').get_attribute('aria-pressed')=='false'
+  await page.clock.fast_forward(7*60*60*1000)
+  await page.locator('.compact-theme').click()
+  assert await page.locator('html').get_attribute('data-theme')=='light'
+  await page.emulate_media(color_scheme='dark')
+  assert await page.locator('html').get_attribute('data-theme')=='light'
+  await page.locator('[data-theme-auto]').click()
+  assert await page.locator('html').get_attribute('data-theme')=='dark'
+  assert await page.locator('[data-theme-auto]').get_attribute('aria-pressed')=='true'
+  assert await page.evaluate("localStorage.getItem('ov-theme')") is None
+  # The manual/automatic mode itself synchronizes between open tabs.
+  other=await ctx.new_page();await other.clock.install(time='2026-10-29T18:00:00Z')
+  await other.goto(BASE,wait_until='networkidle')
+  await other.locator('.compact-theme').click()
+  await page.wait_for_function("document.documentElement.dataset.theme==='light'")
+  assert await page.locator('[data-theme-auto]').get_attribute('aria-pressed')=='false'
+  await other.locator('[data-theme-auto]').click()
+  await page.wait_for_function("document.documentElement.dataset.theme==='dark'")
+  assert await page.locator('[data-theme-auto]').get_attribute('aria-pressed')=='true'
   # Storage unavailable must not disable translation or switches.
   await ctx.close()
   ctx=await b.new_context(reduced_motion='reduce')
-  await ctx.add_init_script("Storage.prototype.getItem=function(){throw Error('blocked')};Storage.prototype.setItem=function(){throw Error('blocked')}")
-  page=await ctx.new_page();await page.goto(BASE,wait_until='networkidle')
+  await ctx.add_init_script("Storage.prototype.getItem=function(){throw Error('blocked')};Storage.prototype.setItem=function(){throw Error('blocked')};Storage.prototype.removeItem=function(){throw Error('blocked')}")
+  page=await ctx.new_page();await page.clock.install(time='2026-10-29T11:00:00Z')
+  await page.goto(BASE,wait_until='networkidle')
   await page.locator('#language-toggle').click();await page.locator('[data-language="en"]').click()
   assert await page.locator('html').get_attribute('lang')=='en'
   await page.locator('.theme-switch').click()
   assert await page.locator('html').get_attribute('data-theme')=='dark'
+  assert await page.locator('[data-theme-auto]').get_attribute('aria-pressed')=='false'
+  await page.locator('[data-theme-auto]').click()
+  assert await page.locator('html').get_attribute('data-theme')=='light'
+  assert await page.locator('[data-theme-auto]').get_attribute('aria-pressed')=='true'
   await ctx.close();await b.close()
  print(json.dumps({'combinations':results},indent=2))
- print(f'{len(results)} combinations passed; keyboard, persistence, system preference, blocked storage and assets passed.')
+ print(f'{len(results)} combinations passed; keyboard, persistence, Italian schedule, manual/automatic mode synchronization, blocked storage and assets passed.')
 asyncio.run(main())

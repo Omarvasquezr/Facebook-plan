@@ -1,0 +1,28 @@
+{
+  "available_engine": {
+    "name": "Chromium",
+    "version": "154.0.8037.57",
+    "executable": "/usr/bin/chromium",
+    "host": "Debian GNU/Linux13"
+  },
+  "unavailable": [
+    "Safari/macOS",
+    "Safari/iOS",
+    "Instagram native in-app browser",
+    "Brave browser binary",
+    "Playwright WebKit",
+    "Playwright Firefox"
+  ],
+  "installation_attempt": {
+    "tool": "python3 -m playwright install webkit firefox",
+    "target": "/workspace/tooling/pw-browsers",
+    "result": "WebKit download rejected before Firefox step",
+    "status": 403,
+    "message": "Domain forbidden",
+    "hosts": [
+      "cdn.playwright.dev",
+      "playwright.download.prss.microsoft.com"
+    ]
+  },
+  "limits": "Viewport, touch and device-pixel-ratio emulation cannot certify a physical phone, historic browser release, app chrome, notch handling or native PDF/email handoff."
+}

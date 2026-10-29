@@ -1,0 +1,4 @@
+# Optional offline asset generation only; no browser dependencies.
+astropy==7.1.0
+numpy==2.2.6
+astropy-iers-data==0.2026.10.19.0.52.1

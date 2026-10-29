@@ -1,0 +1,27 @@
+/* Static astronomical points: no twinkle, autoplay, canvas loop or external API. */
+.celestial-stage { position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden; color:#41617C; opacity:1; }
+.celestial-map { display:block; width:100%; height:100%; overflow:hidden; }
+.sky-stars { opacity:.72; }
+/* White glints follow the cursor over the same catalogued stars in daylight. */
+.sky-stars-hover { display:none; pointer-events:none; }
+:root:not([data-theme="dark"]) .sky-stars-hover[data-active="true"] { display:block; }
+.sky-stars-hover circle { fill:#FFF; opacity:1; stroke:#42637F; stroke-opacity:.9; stroke-width:2.2; paint-order:stroke fill; vector-effect:non-scaling-stroke; }
+.virgo-lines { color:#A34B1A; opacity:0; transition:opacity .25s; }
+.virgo-lines path { stroke-width:1.25; stroke-linecap:round; stroke-linejoin:round; vector-effect:non-scaling-stroke; stroke-dasharray:1; stroke-dashoffset:1; transition:stroke-dashoffset .7s ease; }
+.virgo-stars { color:#A34B1A; opacity:0; transition:opacity .25s; }
+[data-virgo-visible="true"] .virgo-lines { opacity:.315; }
+[data-virgo-visible="true"] .virgo-lines path { stroke-dashoffset:0; }
+[data-virgo-visible="true"] .virgo-stars { opacity:.315; }
+[data-theme="dark"] .celestial-stage { color:#D3E7F9; opacity:.77; }
+[data-theme="dark"] .sky-stars { opacity:.8; }
+[data-theme="dark"][data-virgo-visible="true"] .virgo-lines,[data-theme="dark"][data-virgo-visible="true"] .virgo-stars { opacity:.9; }
+[data-theme="dark"] .virgo-lines,[data-theme="dark"] .virgo-stars { color:#A8D1F0; }
+/* The primary ambient light follows the calculated Sun projected in this chart. */
+.stage-bg .blob { display:none; }
+.stage-bg { background:radial-gradient(ellipse 62vmax 58vmax at var(--solar-x,50%) var(--solar-y,25%),rgba(168,209,240,.68),rgba(168,209,240,0) 68%),radial-gradient(ellipse 44vmax 48vmax at var(--solar-x,50%) var(--solar-y,25%),rgba(248,183,132,.2),rgba(248,183,132,0) 70%); }
+[data-theme="dark"] .stage-bg { background:radial-gradient(ellipse 62vmax 58vmax at var(--solar-x,50%) var(--solar-y,25%),rgba(168,209,240,.12),rgba(168,209,240,0) 68%),radial-gradient(ellipse 44vmax 48vmax at var(--solar-x,50%) var(--solar-y,25%),rgba(240,154,98,.05),rgba(240,154,98,0) 70%); }
+/* The small signature previews Virgo and links to the single personal sheet. */
+.sky-secret { position:relative; z-index:4; display:flex; align-items:center; gap:10px; width:fit-content; padding:0; margin:0; border:0; border-radius:4px; background:transparent; color:inherit; font:inherit; letter-spacing:inherit; text-transform:inherit; text-decoration:none; cursor:pointer; }
+.sky-secret::after { content:""; position:absolute; inset:-13px -6px; }
+@media (prefers-reduced-motion:reduce) { .virgo-lines,.virgo-lines path,.virgo-stars { transition:none; } }
+@media (forced-colors:active) { .celestial-stage { display:none; } }

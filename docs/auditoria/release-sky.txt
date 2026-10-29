@@ -1,0 +1,43 @@
+[
+  {
+    "width": 320,
+    "theme": "light",
+    "passed": true
+  },
+  {
+    "width": 320,
+    "theme": "dark",
+    "passed": true
+  },
+  {
+    "width": 390,
+    "theme": "light",
+    "passed": true
+  },
+  {
+    "width": 390,
+    "theme": "dark",
+    "passed": true
+  },
+  {
+    "width": 768,
+    "theme": "light",
+    "passed": true
+  },
+  {
+    "width": 768,
+    "theme": "dark",
+    "passed": true
+  },
+  {
+    "width": 1440,
+    "theme": "light",
+    "passed": true
+  },
+  {
+    "width": 1440,
+    "theme": "dark",
+    "passed": true
+  }
+]
+8 width/theme states, projection/light agreement, 13 unclipped Virgo vertices, keyboard/touch/hover, signature dialog access and focus restoration, reduced motion, no-JS and zero observed JS errors: passed.

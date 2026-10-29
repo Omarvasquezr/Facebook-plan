@@ -1,0 +1,1 @@
+12 reduced-motion states passed: all three original languages and levels fit the strip and horizontal viewport at320/375/390/812px in IT/ES/EN; animation disabled.

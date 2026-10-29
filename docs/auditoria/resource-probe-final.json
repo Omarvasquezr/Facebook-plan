@@ -1,0 +1,180 @@
+{
+  "scope": "Chromium mobile-size resource probe against a local static HTTP server; not Instagram/Safari hardware or field CWV",
+  "origin": "http://127.0.0.1:4195/",
+  "browser": "154.0.8037.57",
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "deviceScaleFactor": 3,
+    "touch": true
+  },
+  "navigation": {
+    "transferBytes": 74954,
+    "encodedBodyBytes": 74654,
+    "decodedBodyBytes": 74654
+  },
+  "initial": {
+    "requests": 20,
+    "resourceEncodedBodyBytes": 207816,
+    "resourceTransferBytes": 213816,
+    "totalEncodedBodyBytes": 282470,
+    "criticalFontPreloads": [
+      "http://127.0.0.1:4195/fonts/jost.woff2",
+      "http://127.0.0.1:4195/fonts/cormorant-italic.woff2"
+    ],
+    "portraitRequested": false,
+    "pdfRequested": false,
+    "externalRequests": [],
+    "resources": [
+      {
+        "url": "http://127.0.0.1:4195/fonts/fonts.css",
+        "initiator": "link",
+        "transferBytes": 798,
+        "encodedBodyBytes": 498,
+        "decodedBodyBytes": 498
+      },
+      {
+        "url": "http://127.0.0.1:4195/fonts/jost.woff2",
+        "initiator": "link",
+        "transferBytes": 26876,
+        "encodedBodyBytes": 26576,
+        "decodedBodyBytes": 26576
+      },
+      {
+        "url": "http://127.0.0.1:4195/theme-clock.js",
+        "initiator": "script",
+        "transferBytes": 2185,
+        "encodedBodyBytes": 1885,
+        "decodedBodyBytes": 1885
+      },
+      {
+        "url": "http://127.0.0.1:4195/fonts/cormorant-italic.woff2",
+        "initiator": "link",
+        "transferBytes": 39560,
+        "encodedBodyBytes": 39260,
+        "decodedBodyBytes": 39260
+      },
+      {
+        "url": "http://127.0.0.1:4195/preferences.css",
+        "initiator": "link",
+        "transferBytes": 12343,
+        "encodedBodyBytes": 12043,
+        "decodedBodyBytes": 12043
+      },
+      {
+        "url": "http://127.0.0.1:4195/intro.css",
+        "initiator": "link",
+        "transferBytes": 2410,
+        "encodedBodyBytes": 2110,
+        "decodedBodyBytes": 2110
+      },
+      {
+        "url": "http://127.0.0.1:4195/assets/sky/solar.css",
+        "initiator": "link",
+        "transferBytes": 350,
+        "encodedBodyBytes": 50,
+        "decodedBodyBytes": 50
+      },
+      {
+        "url": "http://127.0.0.1:4195/compatibility.css",
+        "initiator": "link",
+        "transferBytes": 3606,
+        "encodedBodyBytes": 3306,
+        "decodedBodyBytes": 3306
+      },
+      {
+        "url": "http://127.0.0.1:4195/expertise.css",
+        "initiator": "link",
+        "transferBytes": 7636,
+        "encodedBodyBytes": 7336,
+        "decodedBodyBytes": 7336
+      },
+      {
+        "url": "http://127.0.0.1:4195/sky.css",
+        "initiator": "link",
+        "transferBytes": 3177,
+        "encodedBodyBytes": 2877,
+        "decodedBodyBytes": 2877
+      },
+      {
+        "url": "http://127.0.0.1:4195/profile.css",
+        "initiator": "link",
+        "transferBytes": 5886,
+        "encodedBodyBytes": 5586,
+        "decodedBodyBytes": 5586
+      },
+      {
+        "url": "http://127.0.0.1:4195/intro.js",
+        "initiator": "script",
+        "transferBytes": 1746,
+        "encodedBodyBytes": 1446,
+        "decodedBodyBytes": 1446
+      },
+      {
+        "url": "http://127.0.0.1:4195/effects.js",
+        "initiator": "script",
+        "transferBytes": 8230,
+        "encodedBodyBytes": 7930,
+        "decodedBodyBytes": 7930
+      },
+      {
+        "url": "http://127.0.0.1:4195/preferences.js",
+        "initiator": "script",
+        "transferBytes": 39252,
+        "encodedBodyBytes": 38952,
+        "decodedBodyBytes": 38952
+      },
+      {
+        "url": "http://127.0.0.1:4195/sky.js",
+        "initiator": "script",
+        "transferBytes": 5794,
+        "encodedBodyBytes": 5494,
+        "decodedBodyBytes": 5494
+      },
+      {
+        "url": "http://127.0.0.1:4195/profile.js",
+        "initiator": "script",
+        "transferBytes": 3092,
+        "encodedBodyBytes": 2792,
+        "decodedBodyBytes": 2792
+      },
+      {
+        "url": "http://127.0.0.1:4195/expertise.js",
+        "initiator": "script",
+        "transferBytes": 3250,
+        "encodedBodyBytes": 2950,
+        "decodedBodyBytes": 2950
+      },
+      {
+        "url": "http://127.0.0.1:4195/fonts/cormorant.woff2",
+        "initiator": "css",
+        "transferBytes": 37940,
+        "encodedBodyBytes": 37640,
+        "decodedBodyBytes": 37640
+      },
+      {
+        "url": "http://127.0.0.1:4195/favicon.svg",
+        "initiator": "other",
+        "transferBytes": 2596,
+        "encodedBodyBytes": 2296,
+        "decodedBodyBytes": 2296
+      },
+      {
+        "url": "http://127.0.0.1:4195/favicon.ico",
+        "initiator": "other",
+        "transferBytes": 7089,
+        "encodedBodyBytes": 6789,
+        "decodedBodyBytes": 6789
+      }
+    ]
+  },
+  "portraitAfterOpening": [
+    {
+      "url": "http://127.0.0.1:4195/assets/omar-vasquez-portrait.jpg",
+      "transferBytes": 926054,
+      "encodedBodyBytes": 925754,
+      "decodedBodyBytes": 925754
+    }
+  ],
+  "observedJavaScriptErrors": []
+}

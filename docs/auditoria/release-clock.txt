@@ -1,0 +1,2 @@
+39 schedule cases passed across three visitor timezones; live boundary, focus correction, cleanup and unavailable-Intl fallback passed.
+Served portfolio follows Italy time across18:00/06:00, preserves manual choice and returns to Auto on demand.

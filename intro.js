@@ -9,20 +9,25 @@
     root.classList.remove('intro-pending');
     return;
   }
-  const listeners = new AbortController();
+  const cleanup = [];
+  const on = (target, type, listener) => {
+    target.addEventListener(type, listener);
+    cleanup.push(() => target.removeEventListener(type, listener));
+  };
   let timeout;
   const finish = () => {
     clearTimeout(timeout);
-    listeners.abort();
+    cleanup.forEach(remove => remove());
     intro.remove();
     root.classList.remove('intro-pending');
   };
-  const options = { signal:listeners.signal };
-  intro.addEventListener('animationend', event => { if (event.target === intro && event.animationName === 'intro-exit') finish(); }, options);
-  document.addEventListener('keydown', finish, options);
-  document.addEventListener('pointerdown', finish, options);
-  addEventListener('pageshow', event => { if (event.persisted) finish(); }, options);
-  reduce.addEventListener('change', event => { if (event.matches) finish(); }, options);
+  on(intro, 'animationend', event => { if (event.target === intro && event.animationName === 'intro-exit') finish(); });
+  on(document, 'keydown', finish);
+  on(document, 'pointerdown', finish);
+  on(window, 'pageshow', event => { if (event.persisted) finish(); });
+  const motionChanged = event => { if (event.matches) finish(); };
+  if (reduce.addEventListener) on(reduce, 'change', motionChanged);
+  else if (reduce.addListener) { reduce.addListener(motionChanged); cleanup.push(() => reduce.removeListener(motionChanged)); }
   // Fallback anche con foglio CSS mancante o animazioni disabilitate dal browser.
   timeout = setTimeout(finish, 2400);
 })();

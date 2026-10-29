@@ -1,0 +1,1 @@
+812x375 light/dark: whole portrait fits modal on first opening at its natural9:16ratio; no crop; close remains reachable at top and after inner scroll.

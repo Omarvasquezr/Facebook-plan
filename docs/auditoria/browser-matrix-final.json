@@ -1,0 +1,505 @@
+{
+  "base": "http://127.0.0.1:4195/",
+  "scope": "Real browser engines with emulated viewport/input; no physical phones or Instagram app tested.",
+  "browser_storage": null,
+  "engines": [
+    {
+      "engine": "chromium",
+      "available": true,
+      "version": "154.0.8037.57",
+      "physical_devices": false,
+      "profiles": [
+        {
+          "profile": "compact-phone",
+          "width": 320,
+          "height": 740,
+          "touch": true,
+          "pixel_ratio": 2,
+          "states": [
+            [
+              "it",
+              "light"
+            ],
+            [
+              "it",
+              "dark"
+            ],
+            [
+              "es",
+              "light"
+            ],
+            [
+              "es",
+              "dark"
+            ],
+            [
+              "en",
+              "light"
+            ],
+            [
+              "en",
+              "dark"
+            ]
+          ],
+          "passed": true
+        },
+        {
+          "profile": "android-standard",
+          "width": 360,
+          "height": 800,
+          "touch": true,
+          "pixel_ratio": 3,
+          "states": [
+            [
+              "it",
+              "light"
+            ],
+            [
+              "it",
+              "dark"
+            ],
+            [
+              "es",
+              "light"
+            ],
+            [
+              "es",
+              "dark"
+            ],
+            [
+              "en",
+              "light"
+            ],
+            [
+              "en",
+              "dark"
+            ]
+          ],
+          "passed": true
+        },
+        {
+          "profile": "compact-height-phone",
+          "width": 375,
+          "height": 667,
+          "touch": true,
+          "pixel_ratio": 2,
+          "states": [
+            [
+              "it",
+              "light"
+            ],
+            [
+              "it",
+              "dark"
+            ],
+            [
+              "es",
+              "light"
+            ],
+            [
+              "es",
+              "dark"
+            ],
+            [
+              "en",
+              "light"
+            ],
+            [
+              "en",
+              "dark"
+            ]
+          ],
+          "passed": true
+        },
+        {
+          "profile": "iphone-xs-size",
+          "width": 375,
+          "height": 812,
+          "touch": true,
+          "pixel_ratio": 3,
+          "states": [
+            [
+              "it",
+              "light"
+            ],
+            [
+              "it",
+              "dark"
+            ],
+            [
+              "es",
+              "light"
+            ],
+            [
+              "es",
+              "dark"
+            ],
+            [
+              "en",
+              "light"
+            ],
+            [
+              "en",
+              "dark"
+            ]
+          ],
+          "passed": true
+        },
+        {
+          "profile": "iphone-standard",
+          "width": 390,
+          "height": 844,
+          "touch": true,
+          "pixel_ratio": 3,
+          "states": [
+            [
+              "it",
+              "light"
+            ],
+            [
+              "it",
+              "dark"
+            ],
+            [
+              "es",
+              "light"
+            ],
+            [
+              "es",
+              "dark"
+            ],
+            [
+              "en",
+              "light"
+            ],
+            [
+              "en",
+              "dark"
+            ]
+          ],
+          "passed": true
+        },
+        {
+          "profile": "iphone-new-standard",
+          "width": 393,
+          "height": 852,
+          "touch": true,
+          "pixel_ratio": 3,
+          "states": [
+            [
+              "it",
+              "light"
+            ],
+            [
+              "it",
+              "dark"
+            ],
+            [
+              "es",
+              "light"
+            ],
+            [
+              "es",
+              "dark"
+            ],
+            [
+              "en",
+              "light"
+            ],
+            [
+              "en",
+              "dark"
+            ]
+          ],
+          "passed": true
+        },
+        {
+          "profile": "android-large",
+          "width": 412,
+          "height": 915,
+          "touch": true,
+          "pixel_ratio": 3,
+          "states": [
+            [
+              "it",
+              "light"
+            ],
+            [
+              "it",
+              "dark"
+            ],
+            [
+              "es",
+              "light"
+            ],
+            [
+              "es",
+              "dark"
+            ],
+            [
+              "en",
+              "light"
+            ],
+            [
+              "en",
+              "dark"
+            ]
+          ],
+          "passed": true
+        },
+        {
+          "profile": "iphone-large",
+          "width": 430,
+          "height": 932,
+          "touch": true,
+          "pixel_ratio": 3,
+          "states": [
+            [
+              "it",
+              "light"
+            ],
+            [
+              "it",
+              "dark"
+            ],
+            [
+              "es",
+              "light"
+            ],
+            [
+              "es",
+              "dark"
+            ],
+            [
+              "en",
+              "light"
+            ],
+            [
+              "en",
+              "dark"
+            ]
+          ],
+          "passed": true
+        },
+        {
+          "profile": "tablet",
+          "width": 768,
+          "height": 1024,
+          "touch": true,
+          "pixel_ratio": 2,
+          "states": [
+            [
+              "it",
+              "light"
+            ],
+            [
+              "it",
+              "dark"
+            ],
+            [
+              "es",
+              "light"
+            ],
+            [
+              "es",
+              "dark"
+            ],
+            [
+              "en",
+              "light"
+            ],
+            [
+              "en",
+              "dark"
+            ]
+          ],
+          "passed": true
+        },
+        {
+          "profile": "tablet-wide",
+          "width": 820,
+          "height": 1180,
+          "touch": true,
+          "pixel_ratio": 2,
+          "states": [
+            [
+              "it",
+              "light"
+            ],
+            [
+              "it",
+              "dark"
+            ],
+            [
+              "es",
+              "light"
+            ],
+            [
+              "es",
+              "dark"
+            ],
+            [
+              "en",
+              "light"
+            ],
+            [
+              "en",
+              "dark"
+            ]
+          ],
+          "passed": true
+        },
+        {
+          "profile": "laptop",
+          "width": 1366,
+          "height": 768,
+          "touch": false,
+          "pixel_ratio": 1,
+          "states": [
+            [
+              "it",
+              "light"
+            ],
+            [
+              "it",
+              "dark"
+            ],
+            [
+              "es",
+              "light"
+            ],
+            [
+              "es",
+              "dark"
+            ],
+            [
+              "en",
+              "light"
+            ],
+            [
+              "en",
+              "dark"
+            ]
+          ],
+          "passed": true
+        },
+        {
+          "profile": "laptop-retina-logical",
+          "width": 1440,
+          "height": 900,
+          "touch": false,
+          "pixel_ratio": 2,
+          "states": [
+            [
+              "it",
+              "light"
+            ],
+            [
+              "it",
+              "dark"
+            ],
+            [
+              "es",
+              "light"
+            ],
+            [
+              "es",
+              "dark"
+            ],
+            [
+              "en",
+              "light"
+            ],
+            [
+              "en",
+              "dark"
+            ]
+          ],
+          "passed": true
+        },
+        {
+          "profile": "desktop",
+          "width": 1920,
+          "height": 1080,
+          "touch": false,
+          "pixel_ratio": 1,
+          "states": [
+            [
+              "it",
+              "light"
+            ],
+            [
+              "it",
+              "dark"
+            ],
+            [
+              "es",
+              "light"
+            ],
+            [
+              "es",
+              "dark"
+            ],
+            [
+              "en",
+              "light"
+            ],
+            [
+              "en",
+              "dark"
+            ]
+          ],
+          "passed": true
+        },
+        {
+          "profile": "large-desktop",
+          "width": 2560,
+          "height": 1440,
+          "touch": false,
+          "pixel_ratio": 1,
+          "states": [
+            [
+              "it",
+              "light"
+            ],
+            [
+              "it",
+              "dark"
+            ],
+            [
+              "es",
+              "light"
+            ],
+            [
+              "es",
+              "dark"
+            ],
+            [
+              "en",
+              "light"
+            ],
+            [
+              "en",
+              "dark"
+            ]
+          ],
+          "passed": true
+        }
+      ],
+      "fallbacks": [
+        "no native dialog / no IntersectionObserver",
+        "no JavaScript"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "available": false,
+      "reason": "engine binary is not installed"
+    },
+    {
+      "engine": "firefox",
+      "available": false,
+      "reason": "engine binary is not installed"
+    }
+  ]
+}

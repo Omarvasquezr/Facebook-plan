@@ -1,0 +1,48 @@
+[
+  {
+    "theme": "light",
+    "viewport": "812x375",
+    "passed": true,
+    "portrait": {
+      "width": 112,
+      "height": 199.109375,
+      "top": 123,
+      "bottom": 322.109375,
+      "left": 111,
+      "right": 223,
+      "naturalRatio": 0.5625,
+      "ratio": 0.5625049046535353,
+      "fit": "contain",
+      "modal": {
+        "top": 16,
+        "bottom": 359,
+        "left": 86,
+        "right": 726
+      },
+      "scrollTop": 0
+    }
+  },
+  {
+    "theme": "dark",
+    "viewport": "812x375",
+    "passed": true,
+    "portrait": {
+      "width": 112,
+      "height": 199.109375,
+      "top": 123,
+      "bottom": 322.109375,
+      "left": 111,
+      "right": 223,
+      "naturalRatio": 0.5625,
+      "ratio": 0.5625049046535353,
+      "fit": "contain",
+      "modal": {
+        "top": 16,
+        "bottom": 359,
+        "left": 86,
+        "right": 726
+      },
+      "scrollTop": 0
+    }
+  }
+]

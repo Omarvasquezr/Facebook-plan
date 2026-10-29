@@ -1,0 +1,7 @@
+320px: bounded intro, once/session, replay, Escape, no JS errors
+1440px: bounded intro, once/session, replay, Escape, no JS errors
+Reduced motion: intro skipped
+No JavaScript: content visible, intro hidden
+Intro JS unavailable: CSS hides overlay
+Intro CSS unavailable: bounded JS cleanup
+Raw metadata, HTTPS canonical/image, MIME/dimensions, SVG/PNG/ICO icons: pass

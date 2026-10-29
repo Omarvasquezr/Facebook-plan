@@ -1,0 +1,48 @@
+/* Fallbacks e spazi sicuri per Safari/WKWebView e dispositivi mobili. */
+html { -webkit-text-size-adjust:100%; text-size-adjust:100%; }
+html,body { overflow-x:hidden; }
+@supports (overflow:clip) { html,body { overflow-x:clip; } }
+html { scroll-padding-top:100px; }
+button,a,summary { touch-action:manipulation; }
+.bar { top:calc(12px + env(safe-area-inset-top,0px)); max-width:calc(100% - 24px - env(safe-area-inset-left,0px) - env(safe-area-inset-right,0px)); }
+main { padding-top:calc(88px + env(safe-area-inset-top,0px)); padding-bottom:calc(24px + env(safe-area-inset-bottom,0px)); padding-left:max(clamp(14px,3vw,32px),env(safe-area-inset-left,0px)); padding-right:max(clamp(14px,3vw,32px),env(safe-area-inset-right,0px)); }
+.profile-dialog { max-height:calc(100vh - 32px); max-height:calc(var(--profile-viewport-height,100dvh) - 32px); }
+.profile-dialog .profile-card { max-height:calc(100vh - 34px); max-height:calc(var(--profile-viewport-height,100dvh) - 34px); -webkit-overflow-scrolling:touch; }
+.profile-is-open body { position:fixed; top:var(--profile-scroll-top,0px); left:0; right:0; width:100%; }
+.contact .mail,.contact .phone { display:inline-flex; align-items:center; min-height:44px; }
+.area-button,.area-tools-disclosure>summary,[data-profile-open] { scroll-margin-top:110px; }
+.marquee-control { display:grid; place-items:center; flex-shrink:0; width:44px; height:44px; padding:10px; border:1px solid rgba(30,74,110,.25); border-radius:50%; background:transparent; color:#1E4A6E; cursor:pointer; }
+.marquee-control svg { width:20px; height:20px; }
+.marquee-control .play-icon { display:none; }
+.marquee-control[aria-pressed="true"] .pause-icon { display:none; }
+.marquee-control[aria-pressed="true"] .play-icon { display:block; }
+.strip:focus-within .marquee { animation-play-state:paused; }
+@media (prefers-reduced-motion:reduce) {
+  .marquee { min-width:0; max-width:100%; }
+  .seq { flex:1 1 100%; width:100%; min-width:0; }
+  .lang { max-width:100%; white-space:normal; flex-wrap:wrap; }
+}
+@media (max-width:420px) {
+  .profile-dialog { max-height:calc(100vh - 24px); max-height:calc(var(--profile-viewport-height,100dvh) - 24px); }
+  .profile-dialog .profile-card { max-height:calc(100vh - 26px); max-height:calc(var(--profile-viewport-height,100dvh) - 26px); }
+}
+@media (max-height:480px) and (min-width:600px) {
+  .profile-card { padding:24px; }
+  .profile-kicker { margin-bottom:10px; }
+  .profile-card h2 { margin-bottom:16px; font-size:40px; }
+  .profile-overview { grid-template-columns:112px minmax(0,1fr); gap:24px; }
+  .profile-intro { font-size:22px; }
+}
+/* Il testo resta leggibile anche se il WebView non supporta i filtri. */
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))) {
+  .bar,.bar.scrolled { background:#F2F4F7; }
+  [data-theme="dark"] .bar,[data-theme="dark"] .bar.scrolled { background:#121D33; }
+  .glass { background:#EAF0F6; }
+}
+/* Il cristallo resta nel titolo; le altre superfici mobili evitano blur estesi. */
+@media (hover:none) and (pointer:coarse) {
+  .glass:not(.claim) { background:rgba(245,248,252,.86); backdrop-filter:none; -webkit-backdrop-filter:none; }
+  [data-theme="dark"] .glass:not(.claim) { background:rgba(18,29,51,.94)!important; }
+  .grain { display:none; }
+  .contact .beam { animation:none; }
+}
