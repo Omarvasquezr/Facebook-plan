@@ -1,0 +1,227 @@
+{
+  "result": "passed",
+  "before_after": [
+    {
+      "language": "it",
+      "hero": "Faccio funzionare le cose: squadre, conti, clienti.",
+      "panelHidden": true,
+      "version": "published_before_fix"
+    },
+    {
+      "language": "es",
+      "hero": "Hago que las cosas funcionen: equipos, cuentas, clientes.",
+      "panelHidden": true,
+      "version": "fixed"
+    }
+  ],
+  "suite": {
+    "combinations": [
+      {
+        "width": 320,
+        "language": "it",
+        "theme": "light",
+        "passed": true
+      },
+      {
+        "width": 320,
+        "language": "it",
+        "theme": "dark",
+        "passed": true
+      },
+      {
+        "width": 320,
+        "language": "es",
+        "theme": "light",
+        "passed": true
+      },
+      {
+        "width": 320,
+        "language": "es",
+        "theme": "dark",
+        "passed": true
+      },
+      {
+        "width": 320,
+        "language": "en",
+        "theme": "light",
+        "passed": true
+      },
+      {
+        "width": 320,
+        "language": "en",
+        "theme": "dark",
+        "passed": true
+      },
+      {
+        "width": 390,
+        "language": "it",
+        "theme": "light",
+        "passed": true
+      },
+      {
+        "width": 390,
+        "language": "it",
+        "theme": "dark",
+        "passed": true
+      },
+      {
+        "width": 390,
+        "language": "es",
+        "theme": "light",
+        "passed": true
+      },
+      {
+        "width": 390,
+        "language": "es",
+        "theme": "dark",
+        "passed": true
+      },
+      {
+        "width": 390,
+        "language": "en",
+        "theme": "light",
+        "passed": true
+      },
+      {
+        "width": 390,
+        "language": "en",
+        "theme": "dark",
+        "passed": true
+      },
+      {
+        "width": 1440,
+        "language": "it",
+        "theme": "light",
+        "passed": true
+      },
+      {
+        "width": 1440,
+        "language": "it",
+        "theme": "dark",
+        "passed": true
+      },
+      {
+        "width": 1440,
+        "language": "es",
+        "theme": "light",
+        "passed": true
+      },
+      {
+        "width": 1440,
+        "language": "es",
+        "theme": "dark",
+        "passed": true
+      },
+      {
+        "width": 1440,
+        "language": "en",
+        "theme": "light",
+        "passed": true
+      },
+      {
+        "width": 1440,
+        "language": "en",
+        "theme": "dark",
+        "passed": true
+      }
+    ],
+    "selection_regressions": [
+      {
+        "width": 1440,
+        "touch": false,
+        "blur_before_click": false,
+        "language": "es",
+        "passed": true
+      },
+      {
+        "width": 1440,
+        "touch": false,
+        "blur_before_click": false,
+        "language": "en",
+        "passed": true
+      },
+      {
+        "width": 1440,
+        "touch": false,
+        "blur_before_click": false,
+        "language": "it",
+        "passed": true
+      },
+      {
+        "width": 1440,
+        "touch": false,
+        "blur_before_click": true,
+        "language": "es",
+        "passed": true
+      },
+      {
+        "width": 1440,
+        "touch": false,
+        "blur_before_click": true,
+        "language": "en",
+        "passed": true
+      },
+      {
+        "width": 1440,
+        "touch": false,
+        "blur_before_click": true,
+        "language": "it",
+        "passed": true
+      },
+      {
+        "width": 390,
+        "touch": true,
+        "blur_before_click": false,
+        "language": "es",
+        "passed": true
+      },
+      {
+        "width": 390,
+        "touch": true,
+        "blur_before_click": false,
+        "language": "en",
+        "passed": true
+      },
+      {
+        "width": 390,
+        "touch": true,
+        "blur_before_click": false,
+        "language": "it",
+        "passed": true
+      },
+      {
+        "width": 390,
+        "touch": true,
+        "blur_before_click": true,
+        "language": "es",
+        "passed": true
+      },
+      {
+        "width": 390,
+        "touch": true,
+        "blur_before_click": true,
+        "language": "en",
+        "passed": true
+      },
+      {
+        "width": 390,
+        "touch": true,
+        "blur_before_click": true,
+        "language": "it",
+        "passed": true
+      }
+    ]
+  },
+  "verification": {
+    "existing_language_theme_combinations": 18,
+    "native_and_nonfocusing_selections": 12,
+    "all_content_translations": 83,
+    "all_ui_accessible_labels_image_alts_and_metadata": true,
+    "keyboard_tab_out_outside_click_escape": true,
+    "blocked_storage_persistence_italian_schedule_sync": true,
+    "browser": "Chromium on Linux; touch and nonfocusing button sequence emulated, not physical Safari",
+    "browser_version": "Chromium 154.0.8037.57 built on Debian GNU/Linux 13 (trixie)",
+    "standalone_touch_all_three_languages": true,
+    "original_pdfs_and_portrait_unchanged": true
+  }
+}

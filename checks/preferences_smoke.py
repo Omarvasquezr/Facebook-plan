@@ -6,6 +6,83 @@ ROOT=Path(__file__).resolve().parents[1]
 BASE=(sys.argv[1] if len(sys.argv)>1 else 'http://127.0.0.1:4174/dist/web/').rstrip('/')+'/'
 source=(ROOT/'preferences.js').read_text()
 translations=json.loads(re.search(r'const content = (\[.*?\]);\n  const ui',source,re.S).group(1))
+ui=json.loads(re.search(r'const ui = (\{.*?\});\n\s*const root',source,re.S).group(1))
+
+async def check_language(page, language, label):
+ index=('it','es','en').index(language)
+ assert await page.locator('html').get_attribute('lang')==language,label
+ # Check actual page copy, not just the root language or selected check mark.
+ texts=await page.evaluate('''() => {const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);const a=[];while(w.nextNode()){if(!w.currentNode.parentElement.closest('script,style,noscript,[data-language]'))a.push(w.currentNode.nodeValue.trim())}return a}''')
+ for row in translations:
+  assert row[index] in texts,(label,'missing translation',row[index])
+  if row[index]!=row[0]: assert row[0] not in texts,(label,'Italian leak',row[0])
+ # This includes hidden expertise panels, tool disclosures and the personal
+ # sheet moved into a dialog, plus navigation, image and control labels.
+ for attribute,target in [('data-ui',None),('data-label','aria-label'),('data-alt','alt')]:
+  values=await page.locator(f'[{attribute}]').evaluate_all(
+   '(elements, args) => elements.map(el => [el.getAttribute(args.attribute), args.target ? el.getAttribute(args.target) : el.textContent])',
+   {'attribute':attribute,'target':target})
+  for key,value in values:
+   assert value==ui[key][index],(label,key,value,ui[key][index])
+ for selector,key in [('meta[name="description"]','description'),('meta[property="og:description"]','ogDescription'),('meta[name="twitter:description"]','ogDescription'),('meta[property="og:image:alt"]','shareImageAlt'),('meta[name="twitter:image:alt"]','shareImageAlt')]:
+  assert await page.locator(selector).get_attribute('content')==ui[key][index],(label,selector)
+ assert await page.locator('meta[property="og:locale"]').get_attribute('content')=={'it':'it_IT','es':'es_ES','en':'en_GB'}[language],label
+
+async def check_selection_sequences(browser):
+ results=[]
+ for touch,width in [(False,1440),(True,390)]:
+  ctx=await browser.new_context(viewport={'width':width,'height':900},has_touch=touch,is_mobile=touch,reduced_motion='reduce')
+  page=await ctx.new_page();errors=[]
+  page.on('pageerror',lambda error:errors.append(str(error)))
+  await page.clock.install(time='2026-10-29T11:00:00Z')
+  await page.goto(BASE,wait_until='networkidle')
+  for nonfocusing in [False,True]:
+   for language in ['es','en','it']:
+    label=(width,'touch' if touch else 'mouse','blur-before-click' if nonfocusing else 'native',language)
+    trigger=page.locator('#language-toggle')
+    if touch: await trigger.tap()
+    else: await trigger.click()
+    option=page.locator(f'[data-language="{language}"]')
+    assert await page.locator('#language-panel').is_visible(),label
+    if nonfocusing:
+     # Some browsers blur the current option without focusing the tapped or
+     # clicked button. This null-relatedTarget focusout must not hide the
+     # option between mousedown and click and silently cancel selection.
+     await option.evaluate('''el => {
+      window.__languageNullBlur = false;
+      el.closest('.language-picker').addEventListener('focusout', event => {
+       window.__languageNullBlur = event.relatedTarget === null;
+      }, {once:true});
+      el.addEventListener('mousedown', event => {
+       event.preventDefault();
+       document.activeElement.blur();
+      }, {once:true});
+     }''')
+     await option.click()
+     assert await page.evaluate('window.__languageNullBlur'),(label,'null-relatedTarget sequence was not exercised')
+    elif touch: await option.tap()
+    else: await option.click()
+    await check_language(page,language,label)
+    assert await page.locator('#language-panel').is_hidden(),label
+    assert await page.evaluate('document.activeElement.id')=='language-toggle',label
+    results.append({'width':width,'touch':touch,'blur_before_click':nonfocusing,'language':language,'passed':True})
+  # Keeping a null blur harmless must preserve deliberate dismissal by Tab,
+  # an outside click, and Escape, including focus restoration for Escape.
+  await page.locator('#language-toggle').click()
+  await page.keyboard.press('End');await page.keyboard.press('Tab')
+  assert await page.locator('#language-panel').is_hidden(),(width,'Tab out must close')
+  assert not await page.evaluate("document.querySelector('.language-picker').contains(document.activeElement)"),(width,'Tab stayed in picker')
+  await page.locator('#language-toggle').click()
+  if touch: await page.touchscreen.tap(4,880)
+  else: await page.mouse.click(4,880)
+  assert await page.locator('#language-panel').is_hidden(),(width,'outside click must close')
+  await page.locator('#language-toggle').click();await page.keyboard.press('Escape')
+  assert await page.locator('#language-panel').is_hidden(),(width,'Escape must close')
+  assert await page.evaluate('document.activeElement.id')=='language-toggle',(width,'Escape must restore focus')
+  assert not errors,(width,errors)
+  await ctx.close()
+ return results
+
 async def main():
  results=[]
  async with async_playwright() as p:
@@ -28,11 +105,7 @@ async def main():
     assert await page.locator('html').get_attribute('lang')==language
     assert await page.locator('#language-panel').is_hidden()
     assert await page.evaluate('document.activeElement.id')=='language-toggle'
-    # Every content translation must be applied, including the duplicated marquees.
-    texts=await page.evaluate('''() => {const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);const a=[];while(w.nextNode()){if(!w.currentNode.parentElement.closest('script,style,noscript,[data-language]'))a.push(w.currentNode.nodeValue.trim())}return a}''')
-    for row in translations:
-     assert row[index] in texts,(width,language,'missing translation',row[index])
-     if row[index]!=row[0]: assert row[0] not in texts,(width,language,'Italian leak',row[0])
+    await check_language(page,language,(width,language))
     for theme in ['light','dark']:
      if await page.locator('html').get_attribute('data-theme')!=theme:
       await page.locator('.compact-theme').click()
@@ -107,7 +180,9 @@ async def main():
   await page.locator('[data-theme-auto]').click()
   assert await page.locator('html').get_attribute('data-theme')=='light'
   assert await page.locator('[data-theme-auto]').get_attribute('aria-pressed')=='true'
-  await ctx.close();await b.close()
- print(json.dumps({'combinations':results},indent=2))
- print(f'{len(results)} combinations passed; keyboard, persistence, Italian schedule, manual/automatic mode synchronization, blocked storage and assets passed.')
+  await ctx.close()
+  selection_results=await check_selection_sequences(b)
+  await b.close()
+ print(json.dumps({'combinations':results,'selection_regressions':selection_results},indent=2))
+ print(f'{len(results)} combinations and {len(selection_results)} native/nonfocusing selection regressions passed; full translations, labels, metadata, keyboard dismissal, persistence, Italian schedule, manual/automatic mode synchronization, blocked storage and assets passed.')
 asyncio.run(main())

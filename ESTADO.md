@@ -1,5 +1,13 @@
 # Estado
 
+## Corrección del selector de idiomas
+
+- Omar confirma que la versión publicada funciona y solicita corregir la selección de idiomas en otros dispositivos.
+- Reproducido un cierre prematuro del menú: al perder el foco con destino nulo antes del clic en otra opción, el panel desaparecía y la selección no se registraba.
+- El cierre por teclado sigue el nuevo foco fuera del selector, conservando selección por clic/tacto, Escape y clic exterior. Las traducciones locales, la persistencia y los PDF italianos se conservan.
+- Pasan 18 combinaciones de idioma/tema/ancho y 12 selecciones con ratón, toque o pérdida de foco previa al clic, incluidos los 83 textos y todos los controles, textos alternativos y metadatos. La misma secuencia falla con el script anterior y funciona con la corrección. Resultado en `docs/auditoria/language-picker-fix-results.json`.
+- Entregables regenerados con `--keep-pdfs`; el HTML autónomo también cambia entre los tres idiomas por toque. PDF y foto original intactos. Pruebas en Chromium con entorno móvil y secuencia de pérdida de foco emulados; no se atribuyen pruebas a Safari o Instagram nativos. La comprobación remota en Vercel sigue bloqueada por el proxy del entorno.
+
 ## Publicación autorizada
 
 - Omar revisó la candidata final y autorizó publicarla.

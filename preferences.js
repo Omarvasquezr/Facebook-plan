@@ -889,7 +889,10 @@
     }
   });
   document.addEventListener('click', event => { if (!picker.contains(event.target)) closeLanguages(); });
-  picker.addEventListener('focusout', event => { if (!picker.contains(event.relatedTarget)) closeLanguages(); });
+  // Safari e alcuni browser touch possono sfocare il pulsante prima del clic,
+  // senza indicare una destinazione. Attendere un vero nuovo focus evita di
+  // nascondere l'opzione mentre il visitatore la sta selezionando.
+  document.addEventListener('focusin', event => { if (!picker.contains(event.target)) closeLanguages(); });
   document.querySelectorAll('[data-theme-toggle]').forEach(button => button.addEventListener('click', () => {
     explicitTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
     remember('ov-theme', explicitTheme);

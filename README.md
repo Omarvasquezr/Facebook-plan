@@ -21,7 +21,7 @@ La única carpeta de publicación es `dist/web`. `--keep-pdfs` reutiliza los PDF
 - Italiano inicial; elección recordada en `localStorage` (`ov-language`). El atributo `lang` acompaña la elección.
 - Interruptor sol/luna al pie y acceso en la barra, sincronizados. Inicialmente sigue el horario de Italia (`Europe/Rome`): noche de 18:00 a 05:59 y día de 06:00 a 17:59, con cambio de horario de verano/invierno. Una elección manual se recuerda en `ov-theme`; «Auto · Italia» la borra y vuelve al horario.
 - Las preferencias se sincronizan entre pestañas. Si el navegador bloquea el almacenamiento, los controles siguen funcionando en la pestaña actual.
-- Respeta movimiento reducido. Selector operable con Tab, Enter/Espacio, flechas, Inicio/Fin y Escape; también se cierra al salir o pulsar fuera.
+- Respeta movimiento reducido. Selector operable con Tab, Enter/Espacio, flechas, Inicio/Fin y Escape; se cierra al recibir otro elemento el foco o pulsar fuera. Una pérdida de foco sin destino no cancela la selección táctil o con ratón.
 - Los PDF existentes están en italiano y se identifican así en los tres idiomas. No se han generado documentos traducidos.
 
 `preferences.js` centraliza las traducciones: las filas de `content` siguen el orden italiano, español, inglés; `ui` contiene los textos de controles. Si cambia un texto italiano en HTML, actualizar su entrada. `preferences.css` contiene los controles, los estados y el tema nocturno. El script temprano del HTML aplica el tema guardado antes del primer pintado.
@@ -37,7 +37,7 @@ python3 checks/preferences_smoke.py http://127.0.0.1:4174/dist/web/
 python3 checks/preferences_smoke.py http://127.0.0.1:4174/
 ```
 
-La comprobación cubre 18 combinaciones de idioma/tema/ancho (320, 390 y 1440 px), traducciones, geometría, teclado, persistencia, horario italiano, elección manual y almacenamiento bloqueado y recursos descargables. No sustituye la revisión visual.
+La comprobación cubre 18 combinaciones de idioma/tema/ancho (320, 390 y 1440 px), traducciones, geometría, teclado, persistencia, horario italiano, elección manual, almacenamiento bloqueado y recursos descargables. Incluye selección táctil y el caso en que el navegador desenfoca un botón sin asignar el foco al siguiente antes del clic. No sustituye la revisión en navegadores nativos.
 
 ## PDF y publicación
 
