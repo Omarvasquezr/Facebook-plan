@@ -506,9 +506,9 @@
     "Expertise"
   ],
   "areasHint": [
-    "Esplora le aree",
-    "Explora mis áreas",
-    "Explore my expertise"
+    "Scegli un’area per vedere i dettagli",
+    "Elige un área para ver los detalles",
+    "Choose an area to see the details"
   ],
   "areasLabel": [
     "Scegli un’area di lavoro",
@@ -721,9 +721,9 @@
     "Auto · Italy"
   ],
   "autoThemeLabel": [
-    "Tema automatico secondo l’ora italiana, notte dalle 18 alle 6",
-    "Tema automático según la hora de Italia, noche de 18:00 a 06:00",
-    "Automatic theme using Italian time, night from 18:00 to 06:00"
+    "Auto · Italia: tema automatico secondo l’ora italiana, notte dalle 18 alle 6",
+    "Auto · Italia: tema automático según la hora de Italia, noche de 18:00 a 06:00",
+    "Auto · Italy: automatic theme using Italian time, night from 18:00 to 06:00"
   ],
   "autoThemeSelected": [
     "Tema automatico attivo: notte dalle 18 alle 6, ora italiana.",
@@ -804,11 +804,6 @@
     "Leadership operativa, coordinamento multidisciplinare e capacità decisionale sotto pressione.",
     "Liderazgo operativo, coordinación multidisciplinar y toma de decisiones bajo presión.",
     "Operational leadership, multidisciplinary coordination and decision-making under pressure."
-  ],
-  "pauseLanguages": [
-    "Metti in pausa lo scorrimento delle lingue",
-    "Pausar el desplazamiento de los idiomas",
-    "Pause the scrolling languages"
   ]
 };
   const root = document.documentElement;

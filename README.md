@@ -88,7 +88,7 @@ Preparar con `python3 build.py --keep-pdfs`. Validar con `python3 checks/sky_smo
 
 ## Áreas de trabajo y ficha personal
 
-`Competenze` sustituye la lista de programas por cuatro áreas: Producción, Operaciones, Negocio y Tecnología. Cada botón abre un único panel con un resumen, cuatro capacidades y herramientas de apoyo; volver a pulsarlo o usar Escape lo cierra. Las flechas e Inicio/Fin recorren los botones. En móvil la fila se desplaza manualmente; los controles no se mueven solos.
+`Competenze` sustituye la lista de programas por cuatro áreas: Producción, Operaciones, Negocio y Tecnología. Cada botón abre un único panel con un resumen, cuatro capacidades y herramientas de apoyo; volver a pulsarlo o usar Escape lo cierra. Las flechas e Inicio/Fin recorren los botones. En móvil los cuatro botones están visibles en una cuadrícula 2×2; los controles no se mueven solos. Una indicación breve y un chevrón que gira al abrir hacen explícito el desplegable.
 
 `expertise.css/js` gestionan las áreas. Los textos nuevos están en `ui` de `preferences.js`, en italiano, español e inglés. Los programas se conservan en un desplegable nativo «Herramientas y recursos» dentro de cada área; la lectura inicial no repite la lista de software. El liderazgo operativo, la coordinación multidisciplinar y las decisiones bajo presión se expresan una sola vez en una línea compartida, visible al abrir un área. Sin JavaScript se muestran las cuatro áreas completas y se ocultan los controles inactivos.
 
@@ -118,10 +118,14 @@ El retrato usa sus proporciones originales9:16, altura automática y `object-fit
 
 La revisión completa está en [docs/AUDITORIA-FINAL.md](docs/AUDITORIA-FINAL.md), con resultados en `docs/auditoria/` y una pasada manual breve en [docs/REVISION-DISPOSITIVOS.md](docs/REVISION-DISPOSITIVOS.md). La preferencia explícita de Omar es conservar `noindex,nofollow`. No se publica al ejecutar el build.
 
-`effects.js` sustituye el antiguo bloque de efectos inline: la luz se detiene al asentarse, suspende trabajo en segundo plano y conserva un respaldo sin IntersectionObserver. La franja de idiomas permite pausar/reanudar por teclado o tacto y se detiene fuera de pantalla o con movimiento reducido.
+`effects.js` sustituye el antiguo bloque de efectos inline: la luz se detiene al asentarse, suspende trabajo en segundo plano y conserva un respaldo sin IntersectionObserver. Por la preferencia más reciente de Omar, la franja de idiomas conserva el giro continuo y no tiene botón de pausa. Al pasar el puntero baja al 6 % de velocidad, conservando la posición mediante Web Animations; vuelve a la velocidad original al salir. Se suspende fuera de pantalla y en segundo plano. Con movimiento reducido, sin JavaScript o sin la API necesaria se muestran los tres idiomas estáticos y completos.
 
 `compatibility.css` debe cargarse al final: aplica zonas seguras, altura visible/vh para la ficha, contacto de 44 px, respaldo de filtros y menor coste de superficies en móvil. `profile.js` bloquea/restaura el desplazamiento de fondo y adapta el alto de la ficha al viewport visible. La foto original se carga al abrir la ficha; se precargan Jost y Cormorant italic sin duplicación. El HTML autónomo integra los nuevos recursos y elimina las precargas de archivos externos.
 
 Comprobadores nuevos: `checks/browser_matrix.py`, `checks/accessibility_smoke.py`, `checks/effects_smoke.py` y `checks/performance_probe.py`. Cubren tamaños representativos y comportamientos; la emulación no acredita dispositivos físicos ni Safari/Instagram. Los motores WebKit/Firefox no estuvieron disponibles por bloqueo 403 de su descarga. La web no incorpora las herramientas de desarrollo ni bibliotecas de auditoría.
 
 Laboratorio local Lighthouse 13.6: rendimiento 96 en móvil / 99 en escritorio, buenas prácticas 100 en ambos; carga inicial 282.470 bytes sin la foto ni los PDF. No son métricas de visitantes ni del alojamiento Vercel. Consultar el informe para condiciones, límites y resultados completos.
+
+## Ajustes de interacción del 30 de octubre de 2026
+
+Las áreas tienen una pista traducida, cheurones y bordes algo más visibles; en móvil se muestran las cuatro opciones. El nombre accesible de «Auto · Italia» incluye el texto visible. El detalle de implementación, las comprobaciones actuales y el límite de accesibilidad del giro continuo sin control están en [docs/UX-AREAS-IDIOMAS.md](docs/UX-AREAS-IDIOMAS.md).

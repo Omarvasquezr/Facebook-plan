@@ -2,6 +2,8 @@
 
 29 de octubre de 2026. Candidata local preparada para revisión y despliegue. No se hizo push ni se publicó en Vercel.
 
+> Actualización del 30 de octubre: este informe conserva la auditoría de la candidata anterior. La decisión posterior de quitar el botón de pausa, mantener el giro y ralentizarlo con hover, junto con la revisión actual de áreas, se documenta en [UX-AREAS-IDIOMAS.md](UX-AREAS-IDIOMAS.md). Las comprobaciones y el comportamiento de pausa descritos abajo son históricos.
+
 ## Resultado
 
 La versión conserva la identidad, el cristal, el cielo personal y la fotografía original. Pasan las comprobaciones funcionales y de presentación en los tamaños representativos revisados. La validación automatizada se hizo en **Chromium 154.0.8037.57 sobre Linux**, con tamaños, tacto y densidades de píxel emulados. No equivale a ejecutar Safari, Brave o Instagram en dispositivos físicos.

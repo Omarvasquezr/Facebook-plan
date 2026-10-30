@@ -1,5 +1,15 @@
 # Estado
 
+## Revisión actual: áreas e idiomas, 30 de octubre de 2026
+
+- Base recuperada de GitHub: `48521ec838216ac6a6f753a5f6fc59d1ca8a945d`; el checkout anterior no existe en este entorno. Se reconstruyen los ajustes pendientes.
+- Áreas: pista traducida, chevrón desplegable, borde algo más visible y cuadrícula móvil 2×2. Ajustado el espacio para que las etiquetas españolas no se solapen con los cheurones a 320 px.
+- Decisión final de Omar: conservar el giro de idiomas, quitar el botón y reducir la velocidad al 6 % con hover. Se conserva la posición al cambiar de velocidad; sin JS/API o con movimiento reducido se leen los tres idiomas estáticos.
+- Auto · Italia incluye su texto visible en la etiqueta accesible.
+- Pasan 18 combinaciones/12 selecciones de preferencias, 24 estados de áreas/ficha, cuatro modos de efectos más dos respaldos, 10 estados axe, seis tamaños de teclado y 12 estados de reflujo estático. Motor real de esta revisión: Chromium 156.0.8078.47, sin pruebas nativas de Safari/Instagram/dispositivos físicos.
+- Build con `--keep-pdfs`, PDF y fotografía idénticos a la base y `noindex,nofollow` conservado. Detalle y límite WCAG del giro continuo sin control en `docs/UX-AREAS-IDIOMAS.md`.
+- Publicación autorizada en `main`; Vercel sirve únicamente `dist/web`. El envío a GitHub y la coincidencia de la versión pública se comprueban por separado del build. La URL pública vuelve a responder HTTP 200 desde este entorno.
+
 ## Corrección del selector de idiomas
 
 - Omar confirma que la versión publicada funciona y solicita corregir la selección de idiomas en otros dispositivos.

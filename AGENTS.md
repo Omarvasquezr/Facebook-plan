@@ -52,7 +52,7 @@
 ## Compatibilidad final y medición
 
 - Conservar `compatibility.css` al final y `effects.js` en web/exportación autónoma. No reintroducir el bucle de luz continuo; respetar reposo, pestaña oculta y movimiento reducido.
-- Conservar pausa/reanudación accesible de la franja de idiomas, contacto de 44 px y bloqueo/restauración del fondo al abrir/cerrar la ficha. La foto se carga de forma diferida sin modificar sus bytes o proporciones.
+- Por petición expresa posterior de Omar: conservar el giro de idiomas sin botón de pausa y ralentizarlo mucho al pasar el puntero, sin saltos. Con movimiento reducido o sin JavaScript mostrar los tres idiomas completos y estáticos. Mantener contacto de 44 px y bloqueo/restauración del fondo al abrir/cerrar la ficha. La foto se carga de forma diferida sin modificar sus bytes o proporciones.
 - La decisión expresa de Omar es `noindex,nofollow`; no habilitar indexación en una optimización.
 - Para auditorías usar los comprobadores y documentar el motor real, versión y tamaños. Una UA o tamaño de iPhone emulado no equivale a Safari o Instagram real. No afirmar certificación WCAG, FPS de dispositivos ni Core Web Vitals de visitantes a partir de pruebas locales.
 - Los informes de desarrollo se guardan en docs/auditoria, fuera de dist/web. Mantener los límites y la pasada nativa pendiente descritos en docs/AUDITORIA-FINAL.md.

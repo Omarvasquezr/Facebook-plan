@@ -11,12 +11,11 @@ main { padding-top:calc(88px + env(safe-area-inset-top,0px)); padding-bottom:cal
 .profile-is-open body { position:fixed; top:var(--profile-scroll-top,0px); left:0; right:0; width:100%; }
 .contact .mail,.contact .phone { display:inline-flex; align-items:center; min-height:44px; }
 .area-button,.area-tools-disclosure>summary,[data-profile-open] { scroll-margin-top:110px; }
-.marquee-control { display:grid; place-items:center; flex-shrink:0; width:44px; height:44px; padding:10px; border:1px solid rgba(30,74,110,.25); border-radius:50%; background:transparent; color:#1E4A6E; cursor:pointer; }
-.marquee-control svg { width:20px; height:20px; }
-.marquee-control .play-icon { display:none; }
-.marquee-control[aria-pressed="true"] .pause-icon { display:none; }
-.marquee-control[aria-pressed="true"] .play-icon { display:block; }
-.strip:focus-within .marquee { animation-play-state:paused; }
+/* Senza JS o Web Animations le tre lingue restano tutte leggibili. */
+.marquee-langs:not(.marquee-ready) { animation:none; width:100%; }
+.language-strip:not(.motion-ready) .strip-track { mask-image:none; -webkit-mask-image:none; padding:14px 24px; }
+.language-strip:not(.motion-ready) .seq-langs { flex:1 1 100%; min-width:0; flex-wrap:wrap; gap:16px 24px; padding:0; }
+.language-strip:not(.motion-ready) .lang { max-width:100%; white-space:normal; flex-wrap:wrap; }
 @media (prefers-reduced-motion:reduce) {
   .marquee { min-width:0; max-width:100%; }
   .seq { flex:1 1 100%; width:100%; min-width:0; }

@@ -23,7 +23,7 @@
   gap:12px;
   min-height:52px;
   padding:12px 14px;
-  border:1px solid rgba(30,74,110,.2);
+  border:1px solid rgba(30,74,110,.4);
   border-radius:18px;
   background:rgba(255,255,255,.3);
   color:var(--ink);
@@ -46,7 +46,7 @@
   transition:transform .2s;
 }
 .expertise .area-button[aria-expanded="true"] { background:var(--sky); color:#141821; border-color:rgba(30,74,110,.35); }
-.expertise .area-button[aria-expanded="true"] .area-plus { transform:rotate(45deg); }
+.expertise .area-button[aria-expanded="true"] .area-plus { transform:rotate(180deg); }
 .expertise .area-button:focus-visible { outline:3px solid var(--focus); outline-offset:3px; }
 .expertise .expertise-hint {
   margin:0;
@@ -95,7 +95,7 @@
 .expertise:not(.expertise-ready) .area-nav,
 .expertise:not(.expertise-ready) .expertise-hint { display:none; }
 [data-theme="dark"] .expertise .area-nav { scrollbar-color:rgba(168,209,240,.4) transparent; }
-[data-theme="dark"] .expertise .area-button { background:rgba(168,209,240,.06); border-color:rgba(168,209,240,.22); }
+[data-theme="dark"] .expertise .area-button { background:rgba(168,209,240,.06); border-color:rgba(168,209,240,.4); }
 [data-theme="dark"] .expertise .area-button[aria-expanded="true"] { background:#A8D1F0; color:#080F20; border-color:#A8D1F0; }
 [data-theme="dark"] .expertise .area-panel { border-color:rgba(168,209,240,.2); background:linear-gradient(130deg,rgba(168,209,240,.045),rgba(18,29,51,.1)); }
 [data-theme="dark"] .expertise .expertise-shared,[data-theme="dark"] .expertise .area-tools-disclosure { border-color:rgba(168,209,240,.2); }
@@ -109,8 +109,9 @@
 @media (max-width:700px) {
   .expertise .strip-head { flex:1 0 100%; gap:4px; padding:16px 20px 0; }
   .expertise .expertise-title { font-size:28px; }
-  .expertise .area-nav { padding:10px 20px 14px; }
-  .expertise .area-button { flex-basis:184px; padding:10px 12px; }
+  .expertise .area-nav { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); flex-basis:100%; overflow:visible; padding:10px 20px 14px; }
+  .expertise .area-button { min-width:0; gap:6px; padding:10px; }
+  .expertise .area-plus,.expertise .area-plus svg { width:16px; height:16px; }
   .expertise .area-label { font-size:14px; }
   .expertise .expertise-hint { max-width:none; font-size:12px; }
 }

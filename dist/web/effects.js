@@ -9,50 +9,49 @@
   let reduce = motion.matches;
   const hasObserver = typeof IntersectionObserver !== 'undefined';
 
-  // Le copie sono solo decorative; i contenuti originali restano leggibili.
-  const marquees = [...document.querySelectorAll('.marquee')];
-  marquees.forEach(marquee => {
-    if (!marquee.firstElementChild || marquee.querySelector('[data-marquee-copy]')) return;
-    const clone = marquee.firstElementChild.cloneNode(true);
-    clone.setAttribute('aria-hidden', 'true');
-    clone.setAttribute('inert', '');
-    clone.setAttribute('data-marquee-copy', '');
-    marquee.append(clone);
-  });
-  const marqueeState = new Map(marquees.map(marquee => [marquee, {
-    strip:marquee.closest('.strip'), userPaused:false, focused:false
-  }]));
-  const visibleMarquees = new Set(hasObserver ? [] : marquees);
-  const updateMarquees = () => marquees.forEach(marquee => {
-    const state = marqueeState.get(marquee);
-    if (reduce || document.hidden || !visibleMarquees.has(marquee) || state.userPaused || state.focused) marquee.style.animationPlayState = 'paused';
-    else marquee.style.removeProperty('animation-play-state');
-  });
-  marqueeState.forEach((state, marquee) => {
-    const button = state.strip && state.strip.querySelector('[data-marquee-pause]');
-    if (button) {
-      button.disabled = false;
-      button.setAttribute('aria-pressed', 'false');
-      button.addEventListener('click', () => {
-        state.userPaused = !state.userPaused;
-        button.setAttribute('aria-pressed', String(state.userPaused));
-        updateMarquees();
-      });
+  // Il browser mantiene il giro; il passaggio del puntatore lo rallenta al 6%
+  // senza cambiare durata o posizione. Nessun ciclo JS per l'animazione.
+  const marqueeStates = new Map();
+  document.querySelectorAll('.marquee-langs').forEach(marquee => {
+    const strip = marquee.closest('.language-strip');
+    if (!strip || !marquee.firstElementChild || typeof marquee.getAnimations !== 'function' ||
+        typeof Animation === 'undefined' || typeof Animation.prototype.updatePlaybackRate !== 'function') return;
+    if (!marquee.querySelector('[data-marquee-copy]')) {
+      const clone = marquee.firstElementChild.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      clone.setAttribute('inert', '');
+      clone.setAttribute('data-marquee-copy', '');
+      marquee.append(clone);
     }
-    if (state.strip) {
-      state.strip.addEventListener('focusin', () => { state.focused = true; updateMarquees(); });
-      state.strip.addEventListener('focusout', event => {
-        state.focused = Boolean(event.relatedTarget && state.strip.contains(event.relatedTarget));
-        updateMarquees();
-      });
-    }
+    marqueeStates.set(marquee, { strip, hovered:false, visible:!hasObserver });
+    strip.classList.add('motion-ready');
+    marquee.classList.add('marquee-ready');
   });
-  if (hasObserver) {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => entry.isIntersecting ? visibleMarquees.add(entry.target) : visibleMarquees.delete(entry.target));
+  let pageSuspended = false;
+  const updateMarquees = () => marqueeStates.forEach((state, marquee) => {
+    marquee.style.animationPlayState = reduce || document.hidden || pageSuspended || !state.visible ? 'paused' : 'running';
+    const rate = state.hovered ? .06 : 1;
+    marquee.getAnimations().forEach(animation => {
+      if (animation.animationName === 'marquee' && animation.playbackRate !== rate) animation.updatePlaybackRate(rate);
+    });
+  });
+  marqueeStates.forEach((state) => {
+    state.strip.addEventListener('pointerenter', event => {
+      if (event.pointerType !== 'mouse' && event.pointerType !== 'pen') return;
+      state.hovered = true;
       updateMarquees();
     });
-    marquees.forEach(marquee => observer.observe(marquee));
+    state.strip.addEventListener('pointerleave', () => {
+      state.hovered = false;
+      updateMarquees();
+    });
+  });
+  if (hasObserver && marqueeStates.size) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => { marqueeStates.get(entry.target).visible = entry.isIntersecting; });
+      updateMarquees();
+    });
+    marqueeStates.forEach((state, marquee) => observer.observe(marquee));
   }
   updateMarquees();
 
@@ -149,8 +148,8 @@
     else refresh();
     updateMarquees();
   });
-  addEventListener('pagehide', () => { stop(); marquees.forEach(marquee => { marquee.style.animationPlayState = 'paused'; }); });
-  addEventListener('pageshow', refresh);
+  addEventListener('pagehide', () => { pageSuspended = true; stop(); updateMarquees(); });
+  addEventListener('pageshow', () => { pageSuspended = false; refresh(); });
   addEventListener('focus', refresh);
 
   // Reveal once; unavailable observers or reduced motion always show content.

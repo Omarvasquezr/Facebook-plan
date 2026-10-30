@@ -1,0 +1,3676 @@
+{
+  "axe": [
+    {
+      "state": "it-light-main",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "impact": "critical",
+          "targets": [
+            [
+              "#profile-open"
+            ],
+            [
+              ".profile-footer-link"
+            ]
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            [
+              ".availability > span:nth-child(2)"
+            ],
+            [
+              ".profile-signature"
+            ],
+            [
+              "h1"
+            ],
+            [
+              ".surname"
+            ],
+            [
+              ".claim > .serif"
+            ],
+            [
+              ".claim > .serif > em"
+            ],
+            [
+              ".idea-main > p:nth-child(3)"
+            ],
+            [
+              ".idea-main > .serif"
+            ],
+            [
+              ".idea-side > .label"
+            ],
+            [
+              ".idea-side > .serif"
+            ],
+            [
+              ".idea-side > .serif > em"
+            ],
+            [
+              ".stat.glass.lift > .big-num"
+            ],
+            [
+              ".stat.glass.lift > div:nth-child(2) > span:nth-child(1)"
+            ],
+            [
+              ".stat.glass.lift > div:nth-child(2) > .serif"
+            ],
+            [
+              "div:nth-child(2) > .big-num"
+            ],
+            [
+              ".lift-rot > div:nth-child(2) > div:nth-child(2)"
+            ],
+            [
+              ".lift-rot > .serif"
+            ],
+            [
+              ".lift-rot > .serif > em"
+            ],
+            [
+              ".stat.dark.lift > .big-num"
+            ],
+            [
+              ".stat.dark.lift > div:nth-child(2)"
+            ],
+            [
+              ".stat.dark.lift > div:nth-child(2) > .serif"
+            ],
+            [
+              ".strip-head > span:nth-child(1)"
+            ],
+            [
+              ".strip-head > span:nth-child(2)"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(1) > b"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(1) > i"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(2) > b"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(2) > i"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(3) > b"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(3) > i"
+            ],
+            [
+              ".cap.glass.lift > .n"
+            ],
+            [
+              ".cap.glass.lift > h3"
+            ],
+            [
+              ".cap.glass.lift > p"
+            ],
+            [
+              ".cap.dark.lift > .n"
+            ],
+            [
+              ".cap.dark.lift > h3"
+            ],
+            [
+              ".cap.dark.lift > p"
+            ],
+            [
+              ".cap.orange.lift > .n"
+            ],
+            [
+              ".cap.orange.lift > h3"
+            ],
+            [
+              ".cap.orange.lift > p"
+            ],
+            [
+              ".sky.cap.lift > .n"
+            ],
+            [
+              ".sky.cap.lift > h3"
+            ],
+            [
+              ".sky.cap.lift > p"
+            ],
+            [
+              ".step.glass.lift:nth-child(1) > .yr"
+            ],
+            [
+              ".step.glass.lift:nth-child(1) > h3"
+            ],
+            [
+              ".step.glass.lift:nth-child(1) > p"
+            ],
+            [
+              ".step.glass.lift:nth-child(2) > .yr"
+            ],
+            [
+              ".step.glass.lift:nth-child(2) > h3"
+            ],
+            [
+              ".step.glass.lift:nth-child(2) > p"
+            ],
+            [
+              ".sky.step.lift > .yr"
+            ],
+            [
+              ".sky.step.lift > h3"
+            ],
+            [
+              ".sky.step.lift > p"
+            ],
+            [
+              ".orange.step.lift:nth-child(4) > .yr"
+            ],
+            [
+              ".orange.step.lift:nth-child(4) > h3"
+            ],
+            [
+              ".orange.step.lift:nth-child(4) > p"
+            ],
+            [
+              ".step.glass.lift:nth-child(5) > .yr"
+            ],
+            [
+              ".step.glass.lift:nth-child(5) > h3"
+            ],
+            [
+              ".step.glass.lift:nth-child(5) > p"
+            ],
+            [
+              ".dark.step.lift > .yr"
+            ],
+            [
+              ".dark.step.lift > h3"
+            ],
+            [
+              ".dark.step.lift > p"
+            ],
+            [
+              ".orange.step.lift:nth-child(7) > .yr"
+            ],
+            [
+              ".orange.step.lift:nth-child(7) > h3"
+            ],
+            [
+              ".orange.step.lift:nth-child(7) > p"
+            ],
+            [
+              ".xp > div[data-reveal=\"\"] > .h2"
+            ],
+            [
+              ".xp > div[data-reveal=\"\"] > .serif"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(2) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(2) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(2) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > .row-date"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .kpi"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > .row-date"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .kpi"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(7) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(7) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(7) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > .row-date"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > div:nth-child(2) > .kpi"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(9) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(9) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(9) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(10) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(10) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(10) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(11) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(11) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(11) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(12) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(12) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(12) > div:nth-child(2) > .row-org"
+            ],
+            [
+              "#expertise-title"
+            ],
+            [
+              ".expertise-hint"
+            ],
+            [
+              ".area-label[data-ui=\"productionName\"]"
+            ],
+            [
+              ".area-label[data-ui=\"operationsName\"]"
+            ],
+            [
+              ".area-label[data-ui=\"businessName\"]"
+            ],
+            [
+              ".area-label[data-ui=\"technologyName\"]"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(1) > .h2"
+            ],
+            [
+              "div[lang=\"es\"]"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(1) > div > .serif"
+            ],
+            [
+              ".education-meta"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(2) > .serif"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(2) > div > span:nth-child(1)"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(2) > div > span:nth-child(2)"
+            ],
+            [
+              ".contact > .label"
+            ],
+            [
+              ".mail"
+            ],
+            [
+              ".phone"
+            ],
+            [
+              ".contact > div:nth-child(5)"
+            ],
+            [
+              ".dl > .serif"
+            ],
+            [
+              "a[href$=\"Omar-Vasquez-CV.pdf\"]"
+            ],
+            [
+              "a[href$=\"Omar-Vasquez-CV.pdf\"] > span"
+            ],
+            [
+              "a[href=\"Omar-Vasquez-CV-telefono.pdf\"]"
+            ],
+            [
+              "a[href=\"Omar-Vasquez-CV-telefono.pdf\"] > span"
+            ],
+            [
+              "small"
+            ],
+            [
+              ".credit > h2"
+            ],
+            [
+              ".credit > .serif"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "state": "it-dark-main",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "impact": "critical",
+          "targets": [
+            [
+              "#profile-open"
+            ],
+            [
+              ".profile-footer-link"
+            ]
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            [
+              ".availability > span:nth-child(2)"
+            ],
+            [
+              ".profile-signature"
+            ],
+            [
+              "h1"
+            ],
+            [
+              ".surname"
+            ],
+            [
+              ".claim > .serif"
+            ],
+            [
+              ".claim > .serif > em"
+            ],
+            [
+              ".idea-main > p:nth-child(3)"
+            ],
+            [
+              ".idea-main > .serif"
+            ],
+            [
+              ".idea-side > .label"
+            ],
+            [
+              ".idea-side > .serif"
+            ],
+            [
+              ".idea-side > .serif > em"
+            ],
+            [
+              ".stat.glass.lift > .big-num"
+            ],
+            [
+              ".stat.glass.lift > div:nth-child(2) > span:nth-child(1)"
+            ],
+            [
+              ".stat.glass.lift > div:nth-child(2) > .serif"
+            ],
+            [
+              "div:nth-child(2) > .big-num"
+            ],
+            [
+              ".lift-rot > div:nth-child(2) > div:nth-child(2)"
+            ],
+            [
+              ".lift-rot > .serif"
+            ],
+            [
+              ".lift-rot > .serif > em"
+            ],
+            [
+              ".stat.dark.lift > .big-num"
+            ],
+            [
+              ".stat.dark.lift > div:nth-child(2)"
+            ],
+            [
+              ".stat.dark.lift > div:nth-child(2) > .serif"
+            ],
+            [
+              ".strip-head > span:nth-child(1)"
+            ],
+            [
+              ".strip-head > span:nth-child(2)"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(1) > b"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(1) > i"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(2) > b"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(2) > i"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(3) > b"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(3) > i"
+            ],
+            [
+              ".cap.glass.lift > .n"
+            ],
+            [
+              ".cap.glass.lift > h3"
+            ],
+            [
+              ".cap.glass.lift > p"
+            ],
+            [
+              ".cap.dark.lift > .n"
+            ],
+            [
+              ".cap.dark.lift > h3"
+            ],
+            [
+              ".cap.dark.lift > p"
+            ],
+            [
+              ".cap.orange.lift > .n"
+            ],
+            [
+              ".cap.orange.lift > h3"
+            ],
+            [
+              ".cap.orange.lift > p"
+            ],
+            [
+              ".sky.cap.lift > .n"
+            ],
+            [
+              ".sky.cap.lift > h3"
+            ],
+            [
+              ".sky.cap.lift > p"
+            ],
+            [
+              ".step.glass.lift:nth-child(1) > .yr"
+            ],
+            [
+              ".step.glass.lift:nth-child(1) > h3"
+            ],
+            [
+              ".step.glass.lift:nth-child(1) > p"
+            ],
+            [
+              ".step.glass.lift:nth-child(2) > .yr"
+            ],
+            [
+              ".step.glass.lift:nth-child(2) > h3"
+            ],
+            [
+              ".step.glass.lift:nth-child(2) > p"
+            ],
+            [
+              ".sky.step.lift > .yr"
+            ],
+            [
+              ".sky.step.lift > h3"
+            ],
+            [
+              ".sky.step.lift > p"
+            ],
+            [
+              ".orange.step.lift:nth-child(4) > .yr"
+            ],
+            [
+              ".orange.step.lift:nth-child(4) > h3"
+            ],
+            [
+              ".orange.step.lift:nth-child(4) > p"
+            ],
+            [
+              ".step.glass.lift:nth-child(5) > .yr"
+            ],
+            [
+              ".step.glass.lift:nth-child(5) > h3"
+            ],
+            [
+              ".step.glass.lift:nth-child(5) > p"
+            ],
+            [
+              ".dark.step.lift > .yr"
+            ],
+            [
+              ".dark.step.lift > h3"
+            ],
+            [
+              ".dark.step.lift > p"
+            ],
+            [
+              ".orange.step.lift:nth-child(7) > .yr"
+            ],
+            [
+              ".orange.step.lift:nth-child(7) > h3"
+            ],
+            [
+              ".orange.step.lift:nth-child(7) > p"
+            ],
+            [
+              ".xp > div[data-reveal=\"\"] > .h2"
+            ],
+            [
+              ".xp > div[data-reveal=\"\"] > .serif"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(2) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(2) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(2) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > .row-date"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .kpi"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > .row-date"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .kpi"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(7) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(7) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(7) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > .row-date"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > div:nth-child(2) > .kpi"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(9) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(9) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(9) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(10) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(10) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(10) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(11) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(11) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(11) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(12) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(12) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(12) > div:nth-child(2) > .row-org"
+            ],
+            [
+              "#expertise-title"
+            ],
+            [
+              ".expertise-hint"
+            ],
+            [
+              ".area-label[data-ui=\"productionName\"]"
+            ],
+            [
+              ".area-label[data-ui=\"operationsName\"]"
+            ],
+            [
+              ".area-label[data-ui=\"businessName\"]"
+            ],
+            [
+              ".area-label[data-ui=\"technologyName\"]"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(1) > .h2"
+            ],
+            [
+              "div[lang=\"es\"]"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(1) > div > .serif"
+            ],
+            [
+              ".education-meta"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(2) > .serif"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(2) > div > span:nth-child(1)"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(2) > div > span:nth-child(2)"
+            ],
+            [
+              ".contact > .label"
+            ],
+            [
+              ".mail"
+            ],
+            [
+              ".phone"
+            ],
+            [
+              ".contact > div:nth-child(5)"
+            ],
+            [
+              ".dl > .serif"
+            ],
+            [
+              "a[href$=\"Omar-Vasquez-CV.pdf\"]"
+            ],
+            [
+              "a[href$=\"Omar-Vasquez-CV.pdf\"] > span"
+            ],
+            [
+              "a[href=\"Omar-Vasquez-CV-telefono.pdf\"]"
+            ],
+            [
+              "a[href=\"Omar-Vasquez-CV-telefono.pdf\"] > span"
+            ],
+            [
+              "small"
+            ],
+            [
+              ".credit > h2"
+            ],
+            [
+              ".credit > .serif"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "state": "es-light-main",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "impact": "critical",
+          "targets": [
+            [
+              "#profile-open"
+            ],
+            [
+              ".profile-footer-link"
+            ]
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            [
+              ".availability > span:nth-child(2)"
+            ],
+            [
+              ".profile-signature"
+            ],
+            [
+              "h1"
+            ],
+            [
+              ".surname"
+            ],
+            [
+              ".claim > .serif"
+            ],
+            [
+              ".claim > .serif > em"
+            ],
+            [
+              ".idea-main > p:nth-child(3)"
+            ],
+            [
+              ".idea-main > .serif"
+            ],
+            [
+              ".idea-side > .label"
+            ],
+            [
+              ".idea-side > .serif"
+            ],
+            [
+              ".idea-side > .serif > em"
+            ],
+            [
+              ".stat.glass.lift > .big-num"
+            ],
+            [
+              ".stat.glass.lift > div:nth-child(2) > span:nth-child(1)"
+            ],
+            [
+              ".stat.glass.lift > div:nth-child(2) > .serif"
+            ],
+            [
+              "div:nth-child(2) > .big-num"
+            ],
+            [
+              ".lift-rot > div:nth-child(2) > div:nth-child(2)"
+            ],
+            [
+              ".lift-rot > .serif"
+            ],
+            [
+              ".lift-rot > .serif > em"
+            ],
+            [
+              ".stat.dark.lift > .big-num"
+            ],
+            [
+              ".stat.dark.lift > div:nth-child(2)"
+            ],
+            [
+              ".stat.dark.lift > div:nth-child(2) > .serif"
+            ],
+            [
+              ".strip-head > span:nth-child(1)"
+            ],
+            [
+              ".strip-head > span:nth-child(2)"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(1) > b"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(1) > i"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(2) > b"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(2) > i"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(3) > b"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(3) > i"
+            ],
+            [
+              ".cap.glass.lift > .n"
+            ],
+            [
+              ".cap.glass.lift > h3"
+            ],
+            [
+              ".cap.glass.lift > p"
+            ],
+            [
+              ".cap.dark.lift > .n"
+            ],
+            [
+              ".cap.dark.lift > h3"
+            ],
+            [
+              ".cap.dark.lift > p"
+            ],
+            [
+              ".cap.orange.lift > .n"
+            ],
+            [
+              ".cap.orange.lift > h3"
+            ],
+            [
+              ".cap.orange.lift > p"
+            ],
+            [
+              ".sky.cap.lift > .n"
+            ],
+            [
+              ".sky.cap.lift > h3"
+            ],
+            [
+              ".sky.cap.lift > p"
+            ],
+            [
+              ".step.glass.lift:nth-child(1) > .yr"
+            ],
+            [
+              ".step.glass.lift:nth-child(1) > h3"
+            ],
+            [
+              ".step.glass.lift:nth-child(1) > p"
+            ],
+            [
+              ".step.glass.lift:nth-child(2) > .yr"
+            ],
+            [
+              ".step.glass.lift:nth-child(2) > h3"
+            ],
+            [
+              ".step.glass.lift:nth-child(2) > p"
+            ],
+            [
+              ".sky.step.lift > .yr"
+            ],
+            [
+              ".sky.step.lift > h3"
+            ],
+            [
+              ".sky.step.lift > p"
+            ],
+            [
+              ".orange.step.lift:nth-child(4) > .yr"
+            ],
+            [
+              ".orange.step.lift:nth-child(4) > h3"
+            ],
+            [
+              ".orange.step.lift:nth-child(4) > p"
+            ],
+            [
+              ".step.glass.lift:nth-child(5) > .yr"
+            ],
+            [
+              ".step.glass.lift:nth-child(5) > h3"
+            ],
+            [
+              ".step.glass.lift:nth-child(5) > p"
+            ],
+            [
+              ".dark.step.lift > .yr"
+            ],
+            [
+              ".dark.step.lift > h3"
+            ],
+            [
+              ".dark.step.lift > p"
+            ],
+            [
+              ".orange.step.lift:nth-child(7) > .yr"
+            ],
+            [
+              ".orange.step.lift:nth-child(7) > h3"
+            ],
+            [
+              ".orange.step.lift:nth-child(7) > p"
+            ],
+            [
+              ".xp > div[data-reveal=\"\"] > .h2"
+            ],
+            [
+              ".xp > div[data-reveal=\"\"] > .serif"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(2) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(2) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(2) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > .row-date"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .kpi"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > .row-date"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .kpi"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(7) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(7) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(7) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > .row-date"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > div:nth-child(2) > .kpi"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(9) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(9) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(9) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(10) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(10) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(10) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(11) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(11) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(11) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(12) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(12) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(12) > div:nth-child(2) > .row-org"
+            ],
+            [
+              "#expertise-title"
+            ],
+            [
+              ".expertise-hint"
+            ],
+            [
+              ".area-label[data-ui=\"productionName\"]"
+            ],
+            [
+              ".area-label[data-ui=\"operationsName\"]"
+            ],
+            [
+              ".area-label[data-ui=\"businessName\"]"
+            ],
+            [
+              ".area-label[data-ui=\"technologyName\"]"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(1) > .h2"
+            ],
+            [
+              "div[lang=\"es\"]"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(1) > div > .serif"
+            ],
+            [
+              ".education-meta"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(2) > .serif"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(2) > div > span:nth-child(1)"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(2) > div > span:nth-child(2)"
+            ],
+            [
+              ".contact > .label"
+            ],
+            [
+              ".mail"
+            ],
+            [
+              ".phone"
+            ],
+            [
+              ".contact > div:nth-child(5)"
+            ],
+            [
+              ".dl > .serif"
+            ],
+            [
+              "a[href$=\"Omar-Vasquez-CV.pdf\"]"
+            ],
+            [
+              "a[href$=\"Omar-Vasquez-CV.pdf\"] > span"
+            ],
+            [
+              "a[href=\"Omar-Vasquez-CV-telefono.pdf\"]"
+            ],
+            [
+              "a[href=\"Omar-Vasquez-CV-telefono.pdf\"] > span"
+            ],
+            [
+              "small"
+            ],
+            [
+              ".credit > h2"
+            ],
+            [
+              ".credit > .serif"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "state": "es-light-tools",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "impact": "critical",
+          "targets": [
+            [
+              "#profile-open"
+            ],
+            [
+              ".profile-footer-link"
+            ]
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            [
+              ".availability > span:nth-child(2)"
+            ],
+            [
+              "h1"
+            ],
+            [
+              ".claim > .serif"
+            ],
+            [
+              ".claim > .serif > em"
+            ],
+            [
+              ".idea-main > p:nth-child(3)"
+            ],
+            [
+              ".idea-main > .serif"
+            ],
+            [
+              ".idea-side > .label"
+            ],
+            [
+              ".idea-side > .serif"
+            ],
+            [
+              ".idea-side > .serif > em"
+            ],
+            [
+              ".stat.glass.lift > .big-num"
+            ],
+            [
+              ".stat.glass.lift > div:nth-child(2) > span:nth-child(1)"
+            ],
+            [
+              ".stat.glass.lift > div:nth-child(2) > .serif"
+            ],
+            [
+              "div:nth-child(2) > .big-num"
+            ],
+            [
+              ".lift-rot > div:nth-child(2) > div:nth-child(2)"
+            ],
+            [
+              ".lift-rot > .serif"
+            ],
+            [
+              ".lift-rot > .serif > em"
+            ],
+            [
+              ".stat.dark.lift > .big-num"
+            ],
+            [
+              ".stat.dark.lift > div:nth-child(2)"
+            ],
+            [
+              ".stat.dark.lift > div:nth-child(2) > .serif"
+            ],
+            [
+              ".strip-head > span:nth-child(1)"
+            ],
+            [
+              ".strip-head > span:nth-child(2)"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(1) > b"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(1) > i"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(2) > b"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(2) > i"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(3) > b"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(3) > i"
+            ],
+            [
+              ".cap.glass.lift > .n"
+            ],
+            [
+              ".cap.glass.lift > h3"
+            ],
+            [
+              ".cap.glass.lift > p"
+            ],
+            [
+              ".cap.dark.lift > .n"
+            ],
+            [
+              ".cap.dark.lift > h3"
+            ],
+            [
+              ".cap.dark.lift > p"
+            ],
+            [
+              ".cap.orange.lift > .n"
+            ],
+            [
+              ".cap.orange.lift > h3"
+            ],
+            [
+              ".cap.orange.lift > p"
+            ],
+            [
+              ".sky.cap.lift > .n"
+            ],
+            [
+              ".sky.cap.lift > h3"
+            ],
+            [
+              ".sky.cap.lift > p"
+            ],
+            [
+              ".step.glass.lift:nth-child(1) > .yr"
+            ],
+            [
+              ".step.glass.lift:nth-child(1) > h3"
+            ],
+            [
+              ".step.glass.lift:nth-child(1) > p"
+            ],
+            [
+              ".step.glass.lift:nth-child(2) > .yr"
+            ],
+            [
+              ".step.glass.lift:nth-child(2) > h3"
+            ],
+            [
+              ".step.glass.lift:nth-child(2) > p"
+            ],
+            [
+              ".sky.step.lift > .yr"
+            ],
+            [
+              ".sky.step.lift > h3"
+            ],
+            [
+              ".sky.step.lift > p"
+            ],
+            [
+              ".orange.step.lift:nth-child(4) > .yr"
+            ],
+            [
+              ".orange.step.lift:nth-child(4) > h3"
+            ],
+            [
+              ".orange.step.lift:nth-child(4) > p"
+            ],
+            [
+              ".step.glass.lift:nth-child(5) > .yr"
+            ],
+            [
+              ".step.glass.lift:nth-child(5) > h3"
+            ],
+            [
+              ".step.glass.lift:nth-child(5) > p"
+            ],
+            [
+              ".dark.step.lift > .yr"
+            ],
+            [
+              ".dark.step.lift > h3"
+            ],
+            [
+              ".dark.step.lift > p"
+            ],
+            [
+              ".orange.step.lift:nth-child(7) > .yr"
+            ],
+            [
+              ".orange.step.lift:nth-child(7) > h3"
+            ],
+            [
+              ".orange.step.lift:nth-child(7) > p"
+            ],
+            [
+              ".xp > div[data-reveal=\"\"] > .h2"
+            ],
+            [
+              ".xp > div[data-reveal=\"\"] > .serif"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(2) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(2) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(2) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > .row-date"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .kpi"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > .row-date"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .kpi"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(7) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(7) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(7) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > .row-date"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > div:nth-child(2) > .kpi"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(9) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(9) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(9) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(10) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(10) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(10) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(11) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(11) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(11) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(12) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(12) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(12) > div:nth-child(2) > .row-org"
+            ],
+            [
+              "#expertise-title"
+            ],
+            [
+              ".expertise-hint"
+            ],
+            [
+              ".area-label[data-ui=\"productionName\"]"
+            ],
+            [
+              ".area-label[data-ui=\"operationsName\"]"
+            ],
+            [
+              ".area-label[data-ui=\"businessName\"]"
+            ],
+            [
+              ".area-label[data-ui=\"technologyName\"]"
+            ],
+            [
+              ".expertise-shared"
+            ],
+            [
+              ".area-title[data-ui=\"businessName\"]"
+            ],
+            [
+              "p[data-ui=\"businessSummary\"]"
+            ],
+            [
+              "li[data-ui=\"businessPoint1\"]"
+            ],
+            [
+              "li[data-ui=\"businessPoint2\"]"
+            ],
+            [
+              "li[data-ui=\"businessPoint3\"]"
+            ],
+            [
+              "li[data-ui=\"businessPoint4\"]"
+            ],
+            [
+              "details[open=\"\"] > summary"
+            ],
+            [
+              "details[open=\"\"] > .area-tools > .area-chips > .area-chip:nth-child(1)"
+            ],
+            [
+              "details[open=\"\"] > .area-tools > .area-chips > .area-chip:nth-child(2)"
+            ],
+            [
+              "details[open=\"\"] > .area-tools > .area-chips > .area-chip:nth-child(3)"
+            ],
+            [
+              "details[open=\"\"] > .area-tools > .area-chips > .area-chip:nth-child(4)"
+            ],
+            [
+              ".area-chip:nth-child(5)"
+            ],
+            [
+              ".area-chip:nth-child(6)"
+            ],
+            [
+              ".area-chip:nth-child(7)"
+            ],
+            [
+              ".area-chip:nth-child(8)"
+            ],
+            [
+              ".area-chip:nth-child(9)"
+            ],
+            [
+              ".area-chip:nth-child(10)"
+            ],
+            [
+              "p[data-ui=\"webTools\"]"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(1) > .h2"
+            ],
+            [
+              "div[lang=\"es\"]"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(1) > div > .serif"
+            ],
+            [
+              ".education-meta"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(2) > .serif"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(2) > div > span:nth-child(1)"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(2) > div > span:nth-child(2)"
+            ],
+            [
+              ".contact > .label"
+            ],
+            [
+              ".mail"
+            ],
+            [
+              ".phone"
+            ],
+            [
+              ".contact > div:nth-child(5)"
+            ],
+            [
+              ".dl > .serif"
+            ],
+            [
+              "a[href$=\"Omar-Vasquez-CV.pdf\"]"
+            ],
+            [
+              "a[href$=\"Omar-Vasquez-CV.pdf\"] > span"
+            ],
+            [
+              "a[href=\"Omar-Vasquez-CV-telefono.pdf\"]"
+            ],
+            [
+              "a[href=\"Omar-Vasquez-CV-telefono.pdf\"] > span"
+            ],
+            [
+              "small"
+            ],
+            [
+              ".credit > h2"
+            ],
+            [
+              ".credit > .serif"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "state": "es-light-dialog",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "state": "es-dark-main",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "impact": "critical",
+          "targets": [
+            [
+              "#profile-open"
+            ],
+            [
+              ".profile-footer-link"
+            ]
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            [
+              ".availability > span:nth-child(2)"
+            ],
+            [
+              ".profile-signature"
+            ],
+            [
+              "h1"
+            ],
+            [
+              ".surname"
+            ],
+            [
+              ".claim > .serif"
+            ],
+            [
+              ".claim > .serif > em"
+            ],
+            [
+              ".idea-main > p:nth-child(3)"
+            ],
+            [
+              ".idea-main > .serif"
+            ],
+            [
+              ".idea-side > .label"
+            ],
+            [
+              ".idea-side > .serif"
+            ],
+            [
+              ".idea-side > .serif > em"
+            ],
+            [
+              ".stat.glass.lift > .big-num"
+            ],
+            [
+              ".stat.glass.lift > div:nth-child(2) > span:nth-child(1)"
+            ],
+            [
+              ".stat.glass.lift > div:nth-child(2) > .serif"
+            ],
+            [
+              "div:nth-child(2) > .big-num"
+            ],
+            [
+              ".lift-rot > div:nth-child(2) > div:nth-child(2)"
+            ],
+            [
+              ".lift-rot > .serif"
+            ],
+            [
+              ".lift-rot > .serif > em"
+            ],
+            [
+              ".stat.dark.lift > .big-num"
+            ],
+            [
+              ".stat.dark.lift > div:nth-child(2)"
+            ],
+            [
+              ".stat.dark.lift > div:nth-child(2) > .serif"
+            ],
+            [
+              ".strip-head > span:nth-child(1)"
+            ],
+            [
+              ".strip-head > span:nth-child(2)"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(1) > b"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(1) > i"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(2) > b"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(2) > i"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(3) > b"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(3) > i"
+            ],
+            [
+              ".cap.glass.lift > .n"
+            ],
+            [
+              ".cap.glass.lift > h3"
+            ],
+            [
+              ".cap.glass.lift > p"
+            ],
+            [
+              ".cap.dark.lift > .n"
+            ],
+            [
+              ".cap.dark.lift > h3"
+            ],
+            [
+              ".cap.dark.lift > p"
+            ],
+            [
+              ".cap.orange.lift > .n"
+            ],
+            [
+              ".cap.orange.lift > h3"
+            ],
+            [
+              ".cap.orange.lift > p"
+            ],
+            [
+              ".sky.cap.lift > .n"
+            ],
+            [
+              ".sky.cap.lift > h3"
+            ],
+            [
+              ".sky.cap.lift > p"
+            ],
+            [
+              ".step.glass.lift:nth-child(1) > .yr"
+            ],
+            [
+              ".step.glass.lift:nth-child(1) > h3"
+            ],
+            [
+              ".step.glass.lift:nth-child(1) > p"
+            ],
+            [
+              ".step.glass.lift:nth-child(2) > .yr"
+            ],
+            [
+              ".step.glass.lift:nth-child(2) > h3"
+            ],
+            [
+              ".step.glass.lift:nth-child(2) > p"
+            ],
+            [
+              ".sky.step.lift > .yr"
+            ],
+            [
+              ".sky.step.lift > h3"
+            ],
+            [
+              ".sky.step.lift > p"
+            ],
+            [
+              ".orange.step.lift:nth-child(4) > .yr"
+            ],
+            [
+              ".orange.step.lift:nth-child(4) > h3"
+            ],
+            [
+              ".orange.step.lift:nth-child(4) > p"
+            ],
+            [
+              ".step.glass.lift:nth-child(5) > .yr"
+            ],
+            [
+              ".step.glass.lift:nth-child(5) > h3"
+            ],
+            [
+              ".step.glass.lift:nth-child(5) > p"
+            ],
+            [
+              ".dark.step.lift > .yr"
+            ],
+            [
+              ".dark.step.lift > h3"
+            ],
+            [
+              ".dark.step.lift > p"
+            ],
+            [
+              ".orange.step.lift:nth-child(7) > .yr"
+            ],
+            [
+              ".orange.step.lift:nth-child(7) > h3"
+            ],
+            [
+              ".orange.step.lift:nth-child(7) > p"
+            ],
+            [
+              ".xp > div[data-reveal=\"\"] > .h2"
+            ],
+            [
+              ".xp > div[data-reveal=\"\"] > .serif"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(2) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(2) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(2) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > .row-date"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .kpi"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > .row-date"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .kpi"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(7) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(7) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(7) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > .row-date"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > div:nth-child(2) > .kpi"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(9) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(9) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(9) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(10) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(10) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(10) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(11) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(11) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(11) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(12) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(12) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(12) > div:nth-child(2) > .row-org"
+            ],
+            [
+              "#expertise-title"
+            ],
+            [
+              ".expertise-hint"
+            ],
+            [
+              ".area-label[data-ui=\"productionName\"]"
+            ],
+            [
+              ".area-label[data-ui=\"operationsName\"]"
+            ],
+            [
+              ".area-label[data-ui=\"businessName\"]"
+            ],
+            [
+              ".area-label[data-ui=\"technologyName\"]"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(1) > .h2"
+            ],
+            [
+              "div[lang=\"es\"]"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(1) > div > .serif"
+            ],
+            [
+              ".education-meta"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(2) > .serif"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(2) > div > span:nth-child(1)"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(2) > div > span:nth-child(2)"
+            ],
+            [
+              ".contact > .label"
+            ],
+            [
+              ".mail"
+            ],
+            [
+              ".phone"
+            ],
+            [
+              ".contact > div:nth-child(5)"
+            ],
+            [
+              ".dl > .serif"
+            ],
+            [
+              "a[href$=\"Omar-Vasquez-CV.pdf\"]"
+            ],
+            [
+              "a[href$=\"Omar-Vasquez-CV.pdf\"] > span"
+            ],
+            [
+              "a[href=\"Omar-Vasquez-CV-telefono.pdf\"]"
+            ],
+            [
+              "a[href=\"Omar-Vasquez-CV-telefono.pdf\"] > span"
+            ],
+            [
+              "small"
+            ],
+            [
+              ".credit > h2"
+            ],
+            [
+              ".credit > .serif"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "state": "es-dark-tools",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "impact": "critical",
+          "targets": [
+            [
+              "#profile-open"
+            ],
+            [
+              ".profile-footer-link"
+            ]
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            [
+              ".availability > span:nth-child(2)"
+            ],
+            [
+              "h1"
+            ],
+            [
+              ".claim > .serif"
+            ],
+            [
+              ".claim > .serif > em"
+            ],
+            [
+              ".idea-main > p:nth-child(3)"
+            ],
+            [
+              ".idea-main > .serif"
+            ],
+            [
+              ".idea-side > .label"
+            ],
+            [
+              ".idea-side > .serif"
+            ],
+            [
+              ".idea-side > .serif > em"
+            ],
+            [
+              ".stat.glass.lift > .big-num"
+            ],
+            [
+              ".stat.glass.lift > div:nth-child(2) > span:nth-child(1)"
+            ],
+            [
+              ".stat.glass.lift > div:nth-child(2) > .serif"
+            ],
+            [
+              "div:nth-child(2) > .big-num"
+            ],
+            [
+              ".lift-rot > div:nth-child(2) > div:nth-child(2)"
+            ],
+            [
+              ".lift-rot > .serif"
+            ],
+            [
+              ".lift-rot > .serif > em"
+            ],
+            [
+              ".stat.dark.lift > .big-num"
+            ],
+            [
+              ".stat.dark.lift > div:nth-child(2)"
+            ],
+            [
+              ".stat.dark.lift > div:nth-child(2) > .serif"
+            ],
+            [
+              ".strip-head > span:nth-child(1)"
+            ],
+            [
+              ".strip-head > span:nth-child(2)"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(1) > b"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(1) > i"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(2) > b"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(2) > i"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(3) > b"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(3) > i"
+            ],
+            [
+              ".cap.glass.lift > .n"
+            ],
+            [
+              ".cap.glass.lift > h3"
+            ],
+            [
+              ".cap.glass.lift > p"
+            ],
+            [
+              ".cap.dark.lift > .n"
+            ],
+            [
+              ".cap.dark.lift > h3"
+            ],
+            [
+              ".cap.dark.lift > p"
+            ],
+            [
+              ".cap.orange.lift > .n"
+            ],
+            [
+              ".cap.orange.lift > h3"
+            ],
+            [
+              ".cap.orange.lift > p"
+            ],
+            [
+              ".sky.cap.lift > .n"
+            ],
+            [
+              ".sky.cap.lift > h3"
+            ],
+            [
+              ".sky.cap.lift > p"
+            ],
+            [
+              ".step.glass.lift:nth-child(1) > .yr"
+            ],
+            [
+              ".step.glass.lift:nth-child(1) > h3"
+            ],
+            [
+              ".step.glass.lift:nth-child(1) > p"
+            ],
+            [
+              ".step.glass.lift:nth-child(2) > .yr"
+            ],
+            [
+              ".step.glass.lift:nth-child(2) > h3"
+            ],
+            [
+              ".step.glass.lift:nth-child(2) > p"
+            ],
+            [
+              ".sky.step.lift > .yr"
+            ],
+            [
+              ".sky.step.lift > h3"
+            ],
+            [
+              ".sky.step.lift > p"
+            ],
+            [
+              ".orange.step.lift:nth-child(4) > .yr"
+            ],
+            [
+              ".orange.step.lift:nth-child(4) > h3"
+            ],
+            [
+              ".orange.step.lift:nth-child(4) > p"
+            ],
+            [
+              ".step.glass.lift:nth-child(5) > .yr"
+            ],
+            [
+              ".step.glass.lift:nth-child(5) > h3"
+            ],
+            [
+              ".step.glass.lift:nth-child(5) > p"
+            ],
+            [
+              ".dark.step.lift > .yr"
+            ],
+            [
+              ".dark.step.lift > h3"
+            ],
+            [
+              ".dark.step.lift > p"
+            ],
+            [
+              ".orange.step.lift:nth-child(7) > .yr"
+            ],
+            [
+              ".orange.step.lift:nth-child(7) > h3"
+            ],
+            [
+              ".orange.step.lift:nth-child(7) > p"
+            ],
+            [
+              ".xp > div[data-reveal=\"\"] > .h2"
+            ],
+            [
+              ".xp > div[data-reveal=\"\"] > .serif"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(2) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(2) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(2) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > .row-date"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .kpi"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > .row-date"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .kpi"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(7) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(7) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(7) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > .row-date"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > div:nth-child(2) > .kpi"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(9) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(9) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(9) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(10) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(10) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(10) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(11) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(11) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(11) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(12) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(12) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(12) > div:nth-child(2) > .row-org"
+            ],
+            [
+              "#expertise-title"
+            ],
+            [
+              ".expertise-hint"
+            ],
+            [
+              ".area-label[data-ui=\"productionName\"]"
+            ],
+            [
+              ".area-label[data-ui=\"operationsName\"]"
+            ],
+            [
+              ".area-label[data-ui=\"businessName\"]"
+            ],
+            [
+              ".area-label[data-ui=\"technologyName\"]"
+            ],
+            [
+              ".expertise-shared"
+            ],
+            [
+              ".area-title[data-ui=\"businessName\"]"
+            ],
+            [
+              "p[data-ui=\"businessSummary\"]"
+            ],
+            [
+              "li[data-ui=\"businessPoint1\"]"
+            ],
+            [
+              "li[data-ui=\"businessPoint2\"]"
+            ],
+            [
+              "li[data-ui=\"businessPoint3\"]"
+            ],
+            [
+              "li[data-ui=\"businessPoint4\"]"
+            ],
+            [
+              "details[open=\"\"] > summary"
+            ],
+            [
+              "details[open=\"\"] > .area-tools > .area-chips > .area-chip:nth-child(1)"
+            ],
+            [
+              "details[open=\"\"] > .area-tools > .area-chips > .area-chip:nth-child(2)"
+            ],
+            [
+              "details[open=\"\"] > .area-tools > .area-chips > .area-chip:nth-child(3)"
+            ],
+            [
+              "details[open=\"\"] > .area-tools > .area-chips > .area-chip:nth-child(4)"
+            ],
+            [
+              ".area-chip:nth-child(5)"
+            ],
+            [
+              ".area-chip:nth-child(6)"
+            ],
+            [
+              ".area-chip:nth-child(7)"
+            ],
+            [
+              ".area-chip:nth-child(8)"
+            ],
+            [
+              ".area-chip:nth-child(9)"
+            ],
+            [
+              ".area-chip:nth-child(10)"
+            ],
+            [
+              "p[data-ui=\"webTools\"]"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(1) > .h2"
+            ],
+            [
+              "div[lang=\"es\"]"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(1) > div > .serif"
+            ],
+            [
+              ".education-meta"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(2) > .serif"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(2) > div > span:nth-child(1)"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(2) > div > span:nth-child(2)"
+            ],
+            [
+              ".contact > .label"
+            ],
+            [
+              ".mail"
+            ],
+            [
+              ".phone"
+            ],
+            [
+              ".contact > div:nth-child(5)"
+            ],
+            [
+              ".dl > .serif"
+            ],
+            [
+              "a[href$=\"Omar-Vasquez-CV.pdf\"]"
+            ],
+            [
+              "a[href$=\"Omar-Vasquez-CV.pdf\"] > span"
+            ],
+            [
+              "a[href=\"Omar-Vasquez-CV-telefono.pdf\"]"
+            ],
+            [
+              "a[href=\"Omar-Vasquez-CV-telefono.pdf\"] > span"
+            ],
+            [
+              "small"
+            ],
+            [
+              ".credit > h2"
+            ],
+            [
+              ".credit > .serif"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "state": "es-dark-dialog",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "state": "en-light-main",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "impact": "critical",
+          "targets": [
+            [
+              "#profile-open"
+            ],
+            [
+              ".profile-footer-link"
+            ]
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            [
+              ".availability > span:nth-child(2)"
+            ],
+            [
+              ".profile-signature"
+            ],
+            [
+              "h1"
+            ],
+            [
+              ".surname"
+            ],
+            [
+              ".claim > .serif"
+            ],
+            [
+              ".claim > .serif > em"
+            ],
+            [
+              ".idea-main > p:nth-child(3)"
+            ],
+            [
+              ".idea-main > .serif"
+            ],
+            [
+              ".idea-side > .label"
+            ],
+            [
+              ".idea-side > .serif"
+            ],
+            [
+              ".idea-side > .serif > em"
+            ],
+            [
+              ".stat.glass.lift > .big-num"
+            ],
+            [
+              ".stat.glass.lift > div:nth-child(2) > span:nth-child(1)"
+            ],
+            [
+              ".stat.glass.lift > div:nth-child(2) > .serif"
+            ],
+            [
+              "div:nth-child(2) > .big-num"
+            ],
+            [
+              ".lift-rot > div:nth-child(2) > div:nth-child(2)"
+            ],
+            [
+              ".lift-rot > .serif"
+            ],
+            [
+              ".lift-rot > .serif > em"
+            ],
+            [
+              ".stat.dark.lift > .big-num"
+            ],
+            [
+              ".stat.dark.lift > div:nth-child(2)"
+            ],
+            [
+              ".stat.dark.lift > div:nth-child(2) > .serif"
+            ],
+            [
+              ".strip-head > span:nth-child(1)"
+            ],
+            [
+              ".strip-head > span:nth-child(2)"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(1) > b"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(1) > i"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(2) > b"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(2) > i"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(3) > b"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(3) > i"
+            ],
+            [
+              ".cap.glass.lift > .n"
+            ],
+            [
+              ".cap.glass.lift > h3"
+            ],
+            [
+              ".cap.glass.lift > p"
+            ],
+            [
+              ".cap.dark.lift > .n"
+            ],
+            [
+              ".cap.dark.lift > h3"
+            ],
+            [
+              ".cap.dark.lift > p"
+            ],
+            [
+              ".cap.orange.lift > .n"
+            ],
+            [
+              ".cap.orange.lift > h3"
+            ],
+            [
+              ".cap.orange.lift > p"
+            ],
+            [
+              ".sky.cap.lift > .n"
+            ],
+            [
+              ".sky.cap.lift > h3"
+            ],
+            [
+              ".sky.cap.lift > p"
+            ],
+            [
+              ".step.glass.lift:nth-child(1) > .yr"
+            ],
+            [
+              ".step.glass.lift:nth-child(1) > h3"
+            ],
+            [
+              ".step.glass.lift:nth-child(1) > p"
+            ],
+            [
+              ".step.glass.lift:nth-child(2) > .yr"
+            ],
+            [
+              ".step.glass.lift:nth-child(2) > h3"
+            ],
+            [
+              ".step.glass.lift:nth-child(2) > p"
+            ],
+            [
+              ".sky.step.lift > .yr"
+            ],
+            [
+              ".sky.step.lift > h3"
+            ],
+            [
+              ".sky.step.lift > p"
+            ],
+            [
+              ".orange.step.lift:nth-child(4) > .yr"
+            ],
+            [
+              ".orange.step.lift:nth-child(4) > h3"
+            ],
+            [
+              ".orange.step.lift:nth-child(4) > p"
+            ],
+            [
+              ".step.glass.lift:nth-child(5) > .yr"
+            ],
+            [
+              ".step.glass.lift:nth-child(5) > h3"
+            ],
+            [
+              ".step.glass.lift:nth-child(5) > p"
+            ],
+            [
+              ".dark.step.lift > .yr"
+            ],
+            [
+              ".dark.step.lift > h3"
+            ],
+            [
+              ".dark.step.lift > p"
+            ],
+            [
+              ".orange.step.lift:nth-child(7) > .yr"
+            ],
+            [
+              ".orange.step.lift:nth-child(7) > h3"
+            ],
+            [
+              ".orange.step.lift:nth-child(7) > p"
+            ],
+            [
+              ".xp > div[data-reveal=\"\"] > .h2"
+            ],
+            [
+              ".xp > div[data-reveal=\"\"] > .serif"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(2) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(2) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(2) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > .row-date"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .kpi"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > .row-date"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .kpi"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(7) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(7) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(7) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > .row-date"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > div:nth-child(2) > .kpi"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(9) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(9) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(9) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(10) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(10) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(10) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(11) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(11) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(11) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(12) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(12) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(12) > div:nth-child(2) > .row-org"
+            ],
+            [
+              "#expertise-title"
+            ],
+            [
+              ".expertise-hint"
+            ],
+            [
+              ".area-label[data-ui=\"productionName\"]"
+            ],
+            [
+              ".area-label[data-ui=\"operationsName\"]"
+            ],
+            [
+              ".area-label[data-ui=\"businessName\"]"
+            ],
+            [
+              ".area-label[data-ui=\"technologyName\"]"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(1) > .h2"
+            ],
+            [
+              "div[lang=\"es\"]"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(1) > div > .serif"
+            ],
+            [
+              ".education-meta"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(2) > .serif"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(2) > div > span:nth-child(1)"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(2) > div > span:nth-child(2)"
+            ],
+            [
+              ".contact > .label"
+            ],
+            [
+              ".mail"
+            ],
+            [
+              ".phone"
+            ],
+            [
+              ".contact > div:nth-child(5)"
+            ],
+            [
+              ".dl > .serif"
+            ],
+            [
+              "a[href$=\"Omar-Vasquez-CV.pdf\"]"
+            ],
+            [
+              "a[href$=\"Omar-Vasquez-CV.pdf\"] > span"
+            ],
+            [
+              "a[href=\"Omar-Vasquez-CV-telefono.pdf\"]"
+            ],
+            [
+              "a[href=\"Omar-Vasquez-CV-telefono.pdf\"] > span"
+            ],
+            [
+              "small"
+            ],
+            [
+              ".credit > h2"
+            ],
+            [
+              ".credit > .serif"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "state": "en-dark-main",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "impact": "critical",
+          "targets": [
+            [
+              "#profile-open"
+            ],
+            [
+              ".profile-footer-link"
+            ]
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            [
+              ".availability > span:nth-child(2)"
+            ],
+            [
+              ".profile-signature"
+            ],
+            [
+              "h1"
+            ],
+            [
+              ".surname"
+            ],
+            [
+              ".claim > .serif"
+            ],
+            [
+              ".claim > .serif > em"
+            ],
+            [
+              ".idea-main > p:nth-child(3)"
+            ],
+            [
+              ".idea-main > .serif"
+            ],
+            [
+              ".idea-side > .label"
+            ],
+            [
+              ".idea-side > .serif"
+            ],
+            [
+              ".idea-side > .serif > em"
+            ],
+            [
+              ".stat.glass.lift > .big-num"
+            ],
+            [
+              ".stat.glass.lift > div:nth-child(2) > span:nth-child(1)"
+            ],
+            [
+              ".stat.glass.lift > div:nth-child(2) > .serif"
+            ],
+            [
+              "div:nth-child(2) > .big-num"
+            ],
+            [
+              ".lift-rot > div:nth-child(2) > div:nth-child(2)"
+            ],
+            [
+              ".lift-rot > .serif"
+            ],
+            [
+              ".lift-rot > .serif > em"
+            ],
+            [
+              ".stat.dark.lift > .big-num"
+            ],
+            [
+              ".stat.dark.lift > div:nth-child(2)"
+            ],
+            [
+              ".stat.dark.lift > div:nth-child(2) > .serif"
+            ],
+            [
+              ".strip-head > span:nth-child(1)"
+            ],
+            [
+              ".strip-head > span:nth-child(2)"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(1) > b"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(1) > i"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(2) > b"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(2) > i"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(3) > b"
+            ],
+            [
+              ".seq.seq-langs:nth-child(1) > .lang:nth-child(3) > i"
+            ],
+            [
+              ".cap.glass.lift > .n"
+            ],
+            [
+              ".cap.glass.lift > h3"
+            ],
+            [
+              ".cap.glass.lift > p"
+            ],
+            [
+              ".cap.dark.lift > .n"
+            ],
+            [
+              ".cap.dark.lift > h3"
+            ],
+            [
+              ".cap.dark.lift > p"
+            ],
+            [
+              ".cap.orange.lift > .n"
+            ],
+            [
+              ".cap.orange.lift > h3"
+            ],
+            [
+              ".cap.orange.lift > p"
+            ],
+            [
+              ".sky.cap.lift > .n"
+            ],
+            [
+              ".sky.cap.lift > h3"
+            ],
+            [
+              ".sky.cap.lift > p"
+            ],
+            [
+              ".step.glass.lift:nth-child(1) > .yr"
+            ],
+            [
+              ".step.glass.lift:nth-child(1) > h3"
+            ],
+            [
+              ".step.glass.lift:nth-child(1) > p"
+            ],
+            [
+              ".step.glass.lift:nth-child(2) > .yr"
+            ],
+            [
+              ".step.glass.lift:nth-child(2) > h3"
+            ],
+            [
+              ".step.glass.lift:nth-child(2) > p"
+            ],
+            [
+              ".sky.step.lift > .yr"
+            ],
+            [
+              ".sky.step.lift > h3"
+            ],
+            [
+              ".sky.step.lift > p"
+            ],
+            [
+              ".orange.step.lift:nth-child(4) > .yr"
+            ],
+            [
+              ".orange.step.lift:nth-child(4) > h3"
+            ],
+            [
+              ".orange.step.lift:nth-child(4) > p"
+            ],
+            [
+              ".step.glass.lift:nth-child(5) > .yr"
+            ],
+            [
+              ".step.glass.lift:nth-child(5) > h3"
+            ],
+            [
+              ".step.glass.lift:nth-child(5) > p"
+            ],
+            [
+              ".dark.step.lift > .yr"
+            ],
+            [
+              ".dark.step.lift > h3"
+            ],
+            [
+              ".dark.step.lift > p"
+            ],
+            [
+              ".orange.step.lift:nth-child(7) > .yr"
+            ],
+            [
+              ".orange.step.lift:nth-child(7) > h3"
+            ],
+            [
+              ".orange.step.lift:nth-child(7) > p"
+            ],
+            [
+              ".xp > div[data-reveal=\"\"] > .h2"
+            ],
+            [
+              ".xp > div[data-reveal=\"\"] > .serif"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(1) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(2) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(2) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(2) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > .row-date"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .kpi"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(3) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(4) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(5) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > .row-date"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .kpi"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(6) > div:nth-child(2) > .row-note"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(7) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(7) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(7) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > .row-date"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".hl.row[data-reveal=\"\"]:nth-child(8) > div:nth-child(2) > .kpi"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(9) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(9) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(9) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(10) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(10) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(10) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(11) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(11) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(11) > div:nth-child(2) > .row-org"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(12) > .row-date"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(12) > div:nth-child(2) > .row-role"
+            ],
+            [
+              ".row[data-reveal=\"\"]:nth-child(12) > div:nth-child(2) > .row-org"
+            ],
+            [
+              "#expertise-title"
+            ],
+            [
+              ".expertise-hint"
+            ],
+            [
+              ".area-label[data-ui=\"productionName\"]"
+            ],
+            [
+              ".area-label[data-ui=\"operationsName\"]"
+            ],
+            [
+              ".area-label[data-ui=\"businessName\"]"
+            ],
+            [
+              ".area-label[data-ui=\"technologyName\"]"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(1) > .h2"
+            ],
+            [
+              "div[lang=\"es\"]"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(1) > div > .serif"
+            ],
+            [
+              ".education-meta"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(2) > .serif"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(2) > div > span:nth-child(1)"
+            ],
+            [
+              ".glass:nth-child(9) > div:nth-child(2) > div > span:nth-child(2)"
+            ],
+            [
+              ".contact > .label"
+            ],
+            [
+              ".mail"
+            ],
+            [
+              ".phone"
+            ],
+            [
+              ".contact > div:nth-child(5)"
+            ],
+            [
+              ".dl > .serif"
+            ],
+            [
+              "a[href$=\"Omar-Vasquez-CV.pdf\"]"
+            ],
+            [
+              "a[href$=\"Omar-Vasquez-CV.pdf\"] > span"
+            ],
+            [
+              "a[href=\"Omar-Vasquez-CV-telefono.pdf\"]"
+            ],
+            [
+              "a[href=\"Omar-Vasquez-CV-telefono.pdf\"] > span"
+            ],
+            [
+              "small"
+            ],
+            [
+              ".credit > h2"
+            ],
+            [
+              ".credit > .serif"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "access": [
+    {
+      "width": 320,
+      "height": 568,
+      "passed": true
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "passed": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "passed": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "passed": true
+    },
+    {
+      "width": 812,
+      "height": 375,
+      "passed": true
+    },
+    {
+      "width": 640,
+      "height": 450,
+      "passed": true
+    }
+  ],
+  "assets": [
+    {
+      "name": "Omar-Vasquez-CV.pdf",
+      "status": 200
+    },
+    {
+      "name": "Omar-Vasquez-CV-telefono.pdf",
+      "status": 200
+    }
+  ],
+  "reducedLanguageReflow": [
+    {
+      "width": 320,
+      "height": 568,
+      "language": "it",
+      "texts": [
+        "Spagnolomadrelingua",
+        "IngleseC2",
+        "Italianointermedio-avanzato"
+      ],
+      "passed": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "language": "es",
+      "texts": [
+        "Espa\u00f1olnativo",
+        "Ingl\u00e9sC2",
+        "Italianointermedio-avanzado"
+      ],
+      "passed": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "language": "en",
+      "texts": [
+        "Spanishnative",
+        "EnglishC2",
+        "Italianintermediate\u2013advanced"
+      ],
+      "passed": true
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "language": "it",
+      "texts": [
+        "Spagnolomadrelingua",
+        "IngleseC2",
+        "Italianointermedio-avanzato"
+      ],
+      "passed": true
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "language": "es",
+      "texts": [
+        "Espa\u00f1olnativo",
+        "Ingl\u00e9sC2",
+        "Italianointermedio-avanzado"
+      ],
+      "passed": true
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "language": "en",
+      "texts": [
+        "Spanishnative",
+        "EnglishC2",
+        "Italianintermediate\u2013advanced"
+      ],
+      "passed": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "language": "it",
+      "texts": [
+        "Spagnolomadrelingua",
+        "IngleseC2",
+        "Italianointermedio-avanzato"
+      ],
+      "passed": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "language": "es",
+      "texts": [
+        "Espa\u00f1olnativo",
+        "Ingl\u00e9sC2",
+        "Italianointermedio-avanzado"
+      ],
+      "passed": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "language": "en",
+      "texts": [
+        "Spanishnative",
+        "EnglishC2",
+        "Italianintermediate\u2013advanced"
+      ],
+      "passed": true
+    },
+    {
+      "width": 812,
+      "height": 375,
+      "language": "it",
+      "texts": [
+        "Spagnolomadrelingua",
+        "IngleseC2",
+        "Italianointermedio-avanzato"
+      ],
+      "passed": true
+    },
+    {
+      "width": 812,
+      "height": 375,
+      "language": "es",
+      "texts": [
+        "Espa\u00f1olnativo",
+        "Ingl\u00e9sC2",
+        "Italianointermedio-avanzado"
+      ],
+      "passed": true
+    },
+    {
+      "width": 812,
+      "height": 375,
+      "language": "en",
+      "texts": [
+        "Spanishnative",
+        "EnglishC2",
+        "Italianintermediate\u2013advanced"
+      ],
+      "passed": true
+    }
+  ]
+}

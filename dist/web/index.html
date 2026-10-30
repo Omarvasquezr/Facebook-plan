@@ -209,7 +209,6 @@ main{position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:88px cla
   .lift-rot:hover{transform:translateY(-6px) rotate(.6deg)}
   .tilt:hover{transform:rotate(-1.2deg) translateY(-4px)}
   .glass.lift:hover{background:rgba(255,255,255,.72)}
-  .strip:hover .marquee{animation-play-state:paused}
   .row:hover{background:rgba(255,255,255,.05)}
   .row:hover::before{transform:scaleY(1)}
   .mail:hover{color:var(--ink);background-size:100% 3px}
@@ -373,14 +372,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
     </section>
 
     <!-- idiomas -->
-    <section class="card sky strip" data-lit data-reveal>
+    <section class="card sky strip language-strip" data-lit data-reveal>
       <div class="strip-head">
         <span style="font-weight:900;font-size:64px;line-height:.8;letter-spacing:-.06em;">3</span>
         <span style="font-size:16px;font-weight:600;">lingue</span>
-        <button class="marquee-control" type="button" data-marquee-pause aria-pressed="false" data-label="pauseLanguages" aria-label="Metti in pausa lo scorrimento delle lingue"><svg class="pause-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 5v10m6-10v10"/></svg><svg class="play-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m7 4 9 6-9 6V4Z" stroke-linejoin="round"/></svg></button>
       </div>
       <div class="strip-track">
-        <div class="marquee marquee-langs">
+        <div class="marquee marquee-langs" id="language-marquee">
           <div class="seq seq-langs">
             <span class="lang"><b>Spagnolo</b><i>madrelingua</i></span>
             <span class="lang"><b>Inglese</b><i>C2</i></span>
@@ -523,13 +521,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
     <section class="card glass strip expertise" id="expertise" data-lit data-reveal aria-labelledby="expertise-title">
       <div class="strip-head">
         <h2 class="expertise-title" id="expertise-title" data-ui="areasTitle">Competenze</h2>
-        <p class="expertise-hint" data-ui="areasHint">Esplora le aree</p>
+        <p class="expertise-hint" data-ui="areasHint">Scegli un’area per vedere i dettagli</p>
       </div>
       <div class="area-nav" role="group" data-label="areasLabel" aria-label="Scegli un’area di lavoro">
-          <button type="button" class="area-button" id="choose-production" data-area="production" aria-expanded="false" aria-controls="area-production"><span class="area-label" data-ui="productionName">Produzione</span><span class="area-plus" aria-hidden="true">+</span></button>
-          <button type="button" class="area-button" id="choose-operations" data-area="operations" aria-expanded="false" aria-controls="area-operations"><span class="area-label" data-ui="operationsName">Operazioni</span><span class="area-plus" aria-hidden="true">+</span></button>
-          <button type="button" class="area-button" id="choose-business" data-area="business" aria-expanded="false" aria-controls="area-business"><span class="area-label" data-ui="businessName">Business</span><span class="area-plus" aria-hidden="true">+</span></button>
-          <button type="button" class="area-button" id="choose-technology" data-area="technology" aria-expanded="false" aria-controls="area-technology"><span class="area-label" data-ui="technologyName">Tecnologia</span><span class="area-plus" aria-hidden="true">+</span></button>
+          <button type="button" class="area-button" id="choose-production" data-area="production" aria-expanded="false" aria-controls="area-production"><span class="area-label" data-ui="productionName">Produzione</span><span class="area-plus" aria-hidden="true"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m5 7 5 5 5-5"/></svg></span></button>
+          <button type="button" class="area-button" id="choose-operations" data-area="operations" aria-expanded="false" aria-controls="area-operations"><span class="area-label" data-ui="operationsName">Operazioni</span><span class="area-plus" aria-hidden="true"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m5 7 5 5 5-5"/></svg></span></button>
+          <button type="button" class="area-button" id="choose-business" data-area="business" aria-expanded="false" aria-controls="area-business"><span class="area-label" data-ui="businessName">Business</span><span class="area-plus" aria-hidden="true"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m5 7 5 5 5-5"/></svg></span></button>
+          <button type="button" class="area-button" id="choose-technology" data-area="technology" aria-expanded="false" aria-controls="area-technology"><span class="area-label" data-ui="technologyName">Tecnologia</span><span class="area-plus" aria-hidden="true"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m5 7 5 5 5-5"/></svg></span></button>
       </div>
       <p class="expertise-shared" data-ui="leadershipShared">Leadership operativa, coordinamento multidisciplinare e capacità decisionale sotto pressione.</p>
       <div class="area-panels">
@@ -644,7 +642,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
           <span class="toggle-orb" aria-hidden="true"><i></i><i></i><i></i></span>
         </button>
         <span class="theme-caption" data-ui="night">Notte</span>
-      </div><button class="theme-auto" type="button" data-theme-auto aria-pressed="true" data-label="autoThemeLabel" aria-label="Tema automatico secondo l’ora italiana, notte dalle 18 alle 6"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="M10 5v5l3 2" stroke-linecap="round"/></svg><span data-ui="autoTheme">Auto · Italia</span></button></div>
+      </div><button class="theme-auto" type="button" data-theme-auto aria-pressed="true" data-label="autoThemeLabel" aria-label="Auto · Italia: tema automatico secondo l’ora italiana, notte dalle 18 alle 6"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="M10 5v5l3 2" stroke-linecap="round"/></svg><span data-ui="autoTheme">Auto · Italia</span></button></div>
     </section>
     <p class="sr-only" id="preference-status" aria-live="polite" aria-atomic="true"></p>
     <noscript><p>Le preferenze interattive richiedono JavaScript. La pagina e i PDF in italiano restano disponibili.</p></noscript>

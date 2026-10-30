@@ -169,27 +169,6 @@ async def main():
                     results["assets"].append({"name":name,"status":response.status})
             await context.close()
 
-        # Informative scrolling content has a keyboard-operable pause control.
-        context = await browser.new_context(viewport={"width":390,"height":844}, reduced_motion="no-preference")
-        await context.add_init_script("sessionStorage.setItem('ov-intro','1');localStorage.setItem('ov-theme','light')")
-        page = await context.new_page()
-        await page.goto(base, wait_until="networkidle")
-        pause = page.locator("[data-marquee-pause]")
-        assert await pause.count() == 1 and await pause.is_enabled()
-        await pause.scroll_into_view_if_needed()
-        await page.mouse.move(1,1)
-        await pause.focus()
-        await page.keyboard.press("Enter")
-        assert await pause.get_attribute("aria-pressed") == "true"
-        await page.locator(".compact-theme").focus()
-        assert await page.locator(".marquee-langs").evaluate("element=>getComputedStyle(element).animationPlayState") == "paused"
-        await pause.focus()
-        await page.keyboard.press("Space")
-        assert await pause.get_attribute("aria-pressed") == "false"
-        await page.locator(".compact-theme").focus()
-        await page.wait_for_function("getComputedStyle(document.querySelector('.marquee-langs')).animationPlayState === 'running'")
-        await context.close()
-
         results["reducedLanguageReflow"] = await check_reduced_language_reflow(browser, base)
 
         context = await browser.new_context(java_script_enabled=False, viewport={"width":320,"height":568})

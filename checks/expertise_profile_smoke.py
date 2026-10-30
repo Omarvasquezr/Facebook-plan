@@ -44,6 +44,21 @@ async def check_areas(page, label):
     buttons = page.locator("[data-area]")
     assert await buttons.count() == len(AREAS), (label, "duplicated area controls")
     assert await buttons.evaluate_all("els => els.map(el => el.dataset.area)") == list(AREAS), (label, "area order changed")
+    geometry = await buttons.evaluate_all("""elements => elements.map(button => {
+      const rect=button.getBoundingClientRect();
+      const icon=button.querySelector('.area-plus').getBoundingClientRect();
+      const range=document.createRange(); range.selectNodeContents(button.querySelector('.area-label'));
+      return {left:rect.left,right:rect.right,top:rect.top,height:rect.height,iconLeft:icon.left,
+              text:[...range.getClientRects()].map(item=>({left:item.left,right:item.right}))};
+    })""")
+    if page.viewport_size['width'] <= 700:
+        assert abs(geometry[0]['top']-geometry[1]['top']) < 1 and abs(geometry[2]['top']-geometry[3]['top']) < 1, (label, 'expected two rows of two buttons')
+        assert geometry[2]['top'] > geometry[0]['top'], (label, 'areas need two visible rows')
+        for item in geometry:
+            assert 0 <= item['left'] < item['right'] <= page.viewport_size['width'], (label, 'area outside viewport', item)
+            assert item['height'] >= 44, (label, 'small touch target', item)
+            for fragment in item['text']:
+                assert fragment['left'] >= item['left']+4 and fragment['right'] <= item['iconLeft']-2, (label, 'area text overlaps its chevron', item)
     assert not await visible_panels(page), (label, "initial panels should be collapsed")
     shared = page.locator(".expertise-shared")
     assert await shared.count() == 1, (label, "shared leadership paragraph duplicated")
